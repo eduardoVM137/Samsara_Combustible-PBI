@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
 
+from datetime import datetime, timedelta, timezone 
 load_dotenv()
 
 # Configuración
@@ -13,7 +14,7 @@ DATABASE_URL = os.getenv("POSTGRES_CONN_STRING") or os.getenv("DATABASE_URL")
 HEADERS = {
     "Authorization": f"Bearer {API_TOKEN}"
 }
-VEHICLE_IDS = []  # Llena esta lista con los IDs de tus vehículos
+VEHICLE_IDS = []  # Llena esta lista con los IDs de tus vehiculos
 DATA_TYPE = "fuelPercents"
 BASE_URL = "https://api.samsara.com/fleet/vehicles/stats/history"
 
@@ -42,25 +43,28 @@ def sync_vehicles():
 
         data = response.json()
         for vehicle in data.get("data", []):
-            cur.execute("""
-                INSERT INTO vehicles (id, vin, name, license_plate, make, model, year)
-                VALUES (%s, %s, %s, %s, %s, %s, %s)
-                ON CONFLICT (id) DO UPDATE SET
-                    vin = EXCLUDED.vin,
-                    name = EXCLUDED.name,
-                    license_plate = EXCLUDED.license_plate,
-                    make = EXCLUDED.make,
-                    model = EXCLUDED.model,
-                    year = EXCLUDED.year;
-            """, (
-                vehicle.get("id"),
-                vehicle.get("vin"),
-                vehicle.get("name"),
-                vehicle.get("licensePlate"),
-                vehicle.get("make"),
-                vehicle.get("model"),
-                int(vehicle.get("year")) if vehicle.get("year") else None
-            ))
+            vin = vehicle.get("vin")
+            if not vin:
+                continue  # ignora vehículos sin VIN
+
+            # Verificar si ya existe el VIN antes de insertar
+            cur.execute("SELECT 1 FROM vehicles WHERE vin = %s", (vin,))
+            existe = cur.fetchone()
+
+            if not existe:
+                cur.execute("""
+                    INSERT INTO vehicles (id, vin, name, license_plate, make, model, year)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s)
+                """, (
+                    vehicle.get("id"),
+                    vin,
+                    vehicle.get("name"),
+                    vehicle.get("licensePlate"),
+                    vehicle.get("make"),
+                    vehicle.get("model"),
+                    int(vehicle.get("year")) if vehicle.get("year") else None
+                ))
+                print(f"Insertado: {vin} - {vehicle.get('name')}")
 
         page_url = data.get("pagination", {}).get("endCursor")
         if page_url:
@@ -69,6 +73,8 @@ def sync_vehicles():
     conn.commit()
     cur.close()
     conn.close()
+    print("Catálogo de vehículos sincronizado (solo nuevos insertados).")
+ 
 
 def get_last_sync_time(cursor, vehicle_id, data_type):
     cursor.execute(
@@ -76,7 +82,8 @@ def get_last_sync_time(cursor, vehicle_id, data_type):
         (vehicle_id, data_type)
     )
     result = cursor.fetchone()
-    return result[0] if result else (datetime.utcnow() - timedelta(hours=1))
+ 
+    return result[0] if result else (datetime.now(timezone.utc) - timedelta(hours=1))
 
 def update_sync_time(cursor, vehicle_id, data_type, new_time):
     cursor.execute("""
@@ -87,80 +94,155 @@ def update_sync_time(cursor, vehicle_id, data_type, new_time):
     """, (vehicle_id, data_type, new_time))
 
 def fetch_and_store_data():
+    print("[INFO] Sincronizando datos históricos de combustible...")
+
     conn = psycopg2.connect(DATABASE_URL)
     cur = conn.cursor()
-    capacidades = obtener_capacidades_de_tanques()
 
-    for vehicle_id in VEHICLE_IDS:
-        start_time = get_last_sync_time(cur, vehicle_id, DATA_TYPE).isoformat() + "Z"
-        end_time = datetime.utcnow().isoformat() + "Z"
+    # Obtener capacidades de tanque
+    cur.execute("SELECT id, tank_capacity_liters FROM vehicles")
+    capacidades = {str(row[0]): float(row[1]) for row in cur.fetchall()}
 
-        params = {
-            "vehicleIds": vehicle_id,
-            "types": DATA_TYPE,
-            "startTime": start_time,
-            "endTime": end_time,
-            "decorations": "gps"
-        }
+    for vehicle_id in capacidades.keys():
+        last_sync = get_last_sync_time(cur, vehicle_id, DATA_TYPE)
+        start_time = last_sync.replace(tzinfo=timezone.utc).isoformat().replace("+00:00", "Z")
+        end_time = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
-        response = requests.get(BASE_URL, headers=HEADERS, params=params)
+        print(f"[INFO] [{vehicle_id}] Descargando datos desde {start_time} hasta {end_time}...")
+
+        url = f"{BASE_URL}?vehicleIds={vehicle_id}&startTime={start_time}&endTime={end_time}&types=fuelPercents&decorations=gps"
+        response = requests.get(url, headers=HEADERS)
+
         if response.status_code != 200:
-            print(f"Error con vehículo {vehicle_id}: {response.status_code} - {response.text}")
+            print(f"[ERROR] {response.status_code} - {response.text}")
             continue
 
-        data = response.json()
-        entries = []
-        prev_fuel = None
+        stats = response.json().get("data", [])
+        fuel_data = stats[0]["fuelPercents"] if stats and "fuelPercents" in stats[0] else []
 
-        for stat in data.get("data", []):
-            fuel_data = stat.get(DATA_TYPE, [])
-            for point in fuel_data:
-                fuel = point.get("value")
-                time = point.get("time")
-                gps = point.get("gps", {})
-                lat = gps.get("lat")
-                lon = gps.get("lon")
+        last_percent = None
+        rows_to_insert = []
 
-                is_refuel = False
-                refueled_liters = None
-                refueled_percent = None
-                if prev_fuel is not None and fuel > prev_fuel:
-                    is_refuel = True
-                    refueled_percent = round(fuel - prev_fuel, 2)
-                    capacidad = capacidades.get(vehicle_id, 200)  # fallback a 200 L si no se encuentra
-                    refueled_liters = round((refueled_percent / 100.0) * capacidad, 2)
+        for entry in fuel_data:
+            fuel_percent = entry.get("value")
+            timestamp = entry.get("time")
+            gps = entry.get("gps", {})
+            lat = gps.get("latitude")
+            lon = gps.get("longitude")
 
+            if last_percent is not None:
+                diff = round(fuel_percent - last_percent, 2)
+                litros = round(abs(diff) * capacidades.get(vehicle_id, 200) / 100, 2)
+                is_refuel = diff > 0
+                is_consumo = diff < 0
 
-                entries.append((
-                    vehicle_id,
-                    time,
-                    fuel,
-                    None, None, None,
-                    lat,
-                    lon,
-                    refueled_liters,
-                    refueled_percent,
-                    is_refuel
-                ))
+                if litros > 0.01:  # Solo eventos significativos
+                    rows_to_insert.append((
+                        vehicle_id,
+                        fuel_percent,
+                        litros if is_refuel else 0,
+                        diff if is_refuel else 0,
+                        litros if is_consumo else 0,
+                        is_refuel,
+                        lat,
+                        lon,
+                        timestamp
+                    ))
 
-                prev_fuel = fuel
+            last_percent = fuel_percent
 
-        if entries:
+        if rows_to_insert:
             execute_values(cur, """
                 INSERT INTO vehicle_fuel_stats (
-                    vehicle_id, timestamp, fuel_percent,
-                    fuel_consumed_liters, distance_meters, efficiency_km_l,
-                    latitude, longitude, refueled_liters, refueled_percent,
-                    is_refuel_event
+                    vehicle_id, fuel_percent, refueled_liters, refueled_percent,
+                    fuel_consumed_liters, is_refuel_event,
+                    latitude, longitude, timestamp
                 ) VALUES %s
                 ON CONFLICT (vehicle_id, timestamp) DO NOTHING
-            """, entries)
+            """, rows_to_insert)
 
-            update_sync_time(cur, vehicle_id, DATA_TYPE, datetime.utcnow())
+            print(f"[OK] {len(rows_to_insert)} registros insertados para unidad {vehicle_id}")
+
+        update_sync_time(cur, vehicle_id, DATA_TYPE, datetime.now(timezone.utc))
 
     conn.commit()
     cur.close()
     conn.close()
+    print("[OK] Sincronización de datos finalizada.")
+    print("[INFO] Sincronizando datos históricos de combustible...")
+
+    conn = psycopg2.connect(DATABASE_URL)
+    cur = conn.cursor()
+
+    # Obtener capacidades de tanque
+    cur.execute("SELECT id, tank_capacity_liters FROM vehicles")
+    capacidades = {str(row[0]): float(row[1]) for row in cur.fetchall()}
+
+    for vehicle_id in capacidades.keys():
+        last_sync = get_last_sync_time(cur, vehicle_id, DATA_TYPE)
+        start_time = last_sync.isoformat().replace("+00:00", "Z") if last_sync.tzinfo else last_sync.replace(tzinfo=timezone.utc).isoformat().replace("+00:00", "Z")
+        end_time = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
+        print(f"[INFO] [{vehicle_id}] Descargando datos desde {start_time} hasta {end_time}...")
+
+        url = f"{BASE_URL}?vehicleIds={vehicle_id}&startTime={start_time}&endTime={end_time}&types=fuelPercents&decorations=gps"
+        response = requests.get(url, headers=HEADERS)
+
+        if response.status_code != 200:
+            print(f"[ERROR] {response.status_code} - {response.text}")
+            continue
+
+        stats = response.json().get("data", [])
+        fuel_data = stats[0]["fuelPercents"] if stats and "fuelPercents" in stats[0] else []
+
+        last_percent = None
+        last_timestamp = None
+        for entry in fuel_data:
+            fuel_percent = entry.get("value")
+            timestamp = entry.get("time")
+            gps = entry.get("gps", {})
+            lat = gps.get("latitude")
+            lon = gps.get("longitude")
+
+            if last_percent is not None:
+                diff = round(fuel_percent - last_percent, 2)
+                litros = round(abs(diff) * capacidades.get(vehicle_id, 200) / 100, 2)
+                is_refuel = diff > 0
+                is_consumo = diff < 0
+
+                if litros > 0.01:
+                    cur.execute("""
+                        INSERT INTO vehicle_fuel_stats (
+                            vehicle_id, fuel_percent, refueled_liters, refueled_percent,
+                            fuel_consumed_liters, is_refuel_event,
+                            latitude, longitude, timestamp
+                        )
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (vehicle_id, timestamp) DO NOTHING
+                    """, (
+                        vehicle_id,
+                        fuel_percent,
+                        litros if is_refuel else 0,
+                        diff if is_refuel else 0,
+                        litros if is_consumo else 0,
+                        is_refuel,
+                        lat,
+                        lon,
+                        timestamp
+                    ))
+
+            last_percent = fuel_percent
+            last_timestamp = timestamp
+
+        update_sync_time(cur, vehicle_id, DATA_TYPE, datetime.now(timezone.utc))
+
+    conn.commit()
+    cur.close()
+    conn.close()
+    print("[OK] Datos históricos insertados en vehicle_fuel_stats.")
+
+
+
 
 if __name__ == "__main__":
     sync_vehicles()
