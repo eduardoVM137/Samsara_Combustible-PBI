@@ -138,7 +138,7 @@ def fetch_and_store_data():
 
         fuel_data = vehicle_stat.get("fuelPercents", [])
         capacidad = capacidades.get(vehicle_id, 200)
-        last_sync_time = sync_data.get(vehicle_id, default_start)
+        get_last_sync_time = sync_data.get(cur,vehicle_id, default_start)
 
         last_percent = None
 
