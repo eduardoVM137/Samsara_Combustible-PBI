@@ -1,0 +1,37 @@
+-- Catálogo de vehículos
+CREATE TABLE IF NOT EXISTS vehicles (
+    id TEXT PRIMARY KEY,
+    vin TEXT UNIQUE,
+    name TEXT,
+    license_plate TEXT,
+    make TEXT,
+    model TEXT,
+    year INTEGER
+);
+
+-- Registro de estadísticas por intervalo
+CREATE TABLE IF NOT EXISTS vehicle_fuel_stats (
+    id SERIAL PRIMARY KEY,
+    vehicle_id TEXT NOT NULL REFERENCES vehicles(id),
+    timestamp TIMESTAMP NOT NULL,
+    fuel_percent NUMERIC(5,2),
+    fuel_consumed_liters NUMERIC(10,2),
+    distance_meters NUMERIC(10,2),
+    efficiency_km_l NUMERIC(10,4),
+    latitude NUMERIC(9,6),
+    longitude NUMERIC(9,6),
+    refueled_liters NUMERIC(10,2),
+    refueled_percent NUMERIC(5,2),
+    is_refuel_event BOOLEAN,
+    UNIQUE(vehicle_id, timestamp)
+);
+
+-- Tabla para controlar última sincronización por tipo de dato
+CREATE TABLE IF NOT EXISTS vehicle_data_sync (
+    vehicle_id TEXT NOT NULL,
+    data_type TEXT NOT NULL, -- ejemplo: 'fuelPercents', 'gps', etc.
+    last_synced_at TIMESTAMP NOT NULL,
+    PRIMARY KEY (vehicle_id, data_type)
+);
+ALTER TABLE vehicles
+ADD COLUMN tank_capacity_liters NUMERIC(6,2) DEFAULT 200;
