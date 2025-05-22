@@ -38,19 +38,21 @@ def sync_vehicle_catalog():
                     if cur.fetchone():
                         continue
 
-                    cur.execute("""
-                        INSERT INTO vehicles (id, vin, name, license_plate, make, model, year)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s)
-                    """, (
-                        vehicle.get("id"),
-                        vin,
-                        vehicle.get("name"),
-                        vehicle.get("licensePlate"),
-                        vehicle.get("make"),
-                        vehicle.get("model"),
-                        int(vehicle.get("year")) if vehicle.get("year") else None
-                    ))
-                    print(f"[CATALOGO] Insertado: {vin} - {vehicle.get('name')}")
+                cur.execute("""
+                    INSERT INTO vehicles (id, vin, name, license_plate, make, model, year)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (id) DO NOTHING
+                """, (
+                    vehicle.get("id"),
+                    vin,
+                    vehicle.get("name"),
+                    vehicle.get("licensePlate"),
+                    vehicle.get("make"),
+                    vehicle.get("model"),
+                    int(vehicle.get("year")) if vehicle.get("year") else None
+                ))
+
+                print(f"[CATALOGO] Insertado: {vin} - {vehicle.get('name')}")
 
                 next_cursor = data.get("pagination", {}).get("endCursor")
                 page_url = f"{url}?after={next_cursor}" if next_cursor else None
@@ -141,6 +143,7 @@ def process_stat_data(stat, capacidades, cur):
                     ))
                     registros += 1
                     print(f"[INSERT] {vehicle_id} - {'Refuel' if is_refuel else 'Consumo'}: {litros} L @ {timestamp}")
+                    
                 except Exception as e:
                     print(f"[ERROR] Fallo al insertar en BD: {e}")
                     logger.exception("Error insertando en la base de datos")
