@@ -6,8 +6,9 @@ import sys
 import webbrowser
 import time
 import schedule
+from tkinter import simpledialog, Tk
 
-from sync_scheduler import tarea_sincronizacion, INTERVAL
+from sync_scheduler import tarea_sincronizacion, INTERVAL 
 from utils.logger import logger
 
 # Control de ejecución
@@ -53,6 +54,35 @@ def show_status(icon, item):
     print(msg)
     logger.info(msg)
 
+def editar_fecha_manual(icon, item):
+    def abrir_dialogo():
+        try:
+            root = Tk()
+            root.withdraw()
+            nueva_fecha = simpledialog.askstring("Editar fecha manual", "Ingresa la fecha (YYYY-MM-DD):")
+            root.destroy()
+
+            if nueva_fecha:
+                with open(".env", "r") as f:
+                    lineas = f.readlines()
+
+                with open(".env", "w") as f:
+                    modificada = False
+                    for linea in lineas:
+                        if linea.startswith("FECHA_CONSULTA="):
+                            f.write(f"FECHA_CONSULTA={nueva_fecha}\n")
+                            modificada = True
+                        else:
+                            f.write(linea)
+                    if not modificada:
+                        f.write(f"FECHA_CONSULTA={nueva_fecha}\n")
+
+                logger.info(f"[MANUAL] FECHA_CONSULTA actualizada a {nueva_fecha}")
+        except Exception as e:
+            logger.exception("Error al editar la fecha manual")
+
+    threading.Thread(target=abrir_dialogo, daemon=True).start()
+
 def quit_action(icon, item):
     global running
     logger.info("Cierre solicitado por el usuario.")
@@ -73,6 +103,7 @@ menu = Menu(
     MenuItem("Sincronizar ahora", sync_now),
     MenuItem("Pausar", toggle_pause),
     MenuItem("Mostrar estado", show_status),
+    MenuItem("Editar fecha manual", editar_fecha_manual),
     MenuItem("Salir", quit_action)
 )
 

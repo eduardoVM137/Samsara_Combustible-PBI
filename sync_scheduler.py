@@ -4,9 +4,9 @@ import schedule
 import time
 from pytz import timezone
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timezone
 from dotenv import load_dotenv
-
+load_dotenv()
 from api.samsara_client import (
     sincronizar_catalogo_vehiculos,
     obtener_estadisticas_combustible,
@@ -17,9 +17,11 @@ from db.database import get_vehicle_capacities, get_last_sync_times
 from utils.logger import logger
 
 # Cargar .env
-load_dotenv()
-INTERVAL = int(os.getenv("INTERVAL", 5))
-FECHA_MANUAL = os.getenv("FECHA_CONSULTA")  # Ejemplo: "2025-05-21"
+INTERVAL = int(os.getenv("INTERVAL", 5)) 
+def obtener_fecha_manual():
+    load_dotenv()
+    valor = os.getenv("FECHA_CONSULTA")
+    return datetime.strptime(valor, "%Y-%m-%d").date() if valor else datetime.now(timezone.utc).date()
 
 def tarea_sincronizacion():
     """
@@ -37,10 +39,10 @@ def tarea_sincronizacion():
         sincronizaciones = get_last_sync_times("fuelPercents")
         obtener_estadisticas_combustible(capacidades, sincronizaciones)
 
+        logger.info("---- Desarrollo DE SINCRONIZACIÓN ----")
         # Usar la fecha manual si está definida, si no usar la fecha actual
-        zona_local = timezone("America/Mexico_City")
-        fecha_base = datetime.strptime(FECHA_MANUAL, "%Y-%m-%d").date() if FECHA_MANUAL else datetime.now(zona_local).date()
 
+        fecha_base = obtener_fecha_manual()
         inicio = fecha_base.isoformat() + "T00:00:00Z"
         fin = fecha_base.isoformat() + "T23:59:59Z"
 

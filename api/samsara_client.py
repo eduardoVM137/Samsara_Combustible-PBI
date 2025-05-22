@@ -21,21 +21,24 @@
 
 import os
 import requests
-from datetime import datetime, timedelta, timezone
-from dotenv import load_dotenv
+from datetime import datetime, timedelta, timezone 
 from pytz import timezone as pytz_timezone
-
 from db.database import get_connection, update_sync_time, get_vehicle_capacities, get_last_sync_times
 from utils.logger import logger
-
-load_dotenv()
+ 
 TOKEN_API = os.getenv("SAMSARA_API_TOKEN")
 CABECERAS = {"Authorization": f"Bearer {TOKEN_API}"}
 URL_HISTORICO = "https://api.samsara.com/fleet/vehicles/stats/history"
 URL_FUEL_ENERGY = "https://api.samsara.com/fleet/reports/vehicles/fuel-energy"
-TIPO_DATO = "fuelPercents"
+TIPO_DATO = "fuelPercents" 
+from dotenv import load_dotenv 
+def obtener_fecha_manual():
+    load_dotenv()
+    valor = os.getenv("FECHA_CONSULTA")
+    return datetime.strptime(valor, "%Y-%m-%d").date() if valor else datetime.now(timezone.utc).date()
 
 def sincronizar_catalogo_vehiculos():
+    obtener_fecha_manual()
     logger.info("Sincronizando catálogo de vehículos...")
     url = "https://api.samsara.com/fleet/vehicles"
     pagina = url
@@ -79,15 +82,21 @@ def sincronizar_catalogo_vehiculos():
 def obtener_estadisticas_combustible(capacidades, sincronizaciones, fecha_inicio_forzada=None, fecha_fin_forzada=None):
     logger.info("Descargando datos históricos de combustible...")
     ids_vehiculos = list(capacidades.keys())
-    inicio_default = datetime.now(timezone.utc) - timedelta(hours=1)
 
     with get_connection() as conn:
         with conn.cursor() as cur:
-            inicio = min(sincronizaciones.get(vid, inicio_default).replace(tzinfo=timezone.utc) for vid in ids_vehiculos)
-            fecha_inicio = fecha_inicio_forzada if fecha_inicio_forzada else inicio.isoformat().replace("+00:00", "Z")
-            fecha_fin = fecha_fin_forzada if fecha_fin_forzada else datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+            # Se usa fecha manual o la más antigua registrada
+            if not fecha_inicio_forzada and not fecha_fin_forzada:
+                base = obtener_fecha_manual()
+                fecha_inicio = f"{base.isoformat()}T00:00:00Z"
+                fecha_fin = f"{base.isoformat()}T23:59:59Z"
+            else:
+                # En caso de que se haya forzado el rango
+                fecha_inicio = fecha_inicio_forzada
+                fecha_fin = fecha_fin_forzada
 
             url = f"{URL_HISTORICO}?vehicleIds={','.join(ids_vehiculos)}&startTime={fecha_inicio}&endTime={fecha_fin}&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
+            
             try:
                 respuesta = requests.get(url, headers=CABECERAS)
                 if respuesta.status_code != 200:
@@ -103,7 +112,10 @@ def obtener_estadisticas_combustible(capacidades, sincronizaciones, fecha_inicio
             except Exception as e:
                 logger.exception("Error procesando estadísticas de combustible")
 
+
+
 def procesar_estadistica(registro, capacidades, cur, fecha_filtro=None):
+    obtener_fecha_manual()
     vehiculo_id = str(registro.get("id"))
     if not vehiculo_id:
         logger.warning("[AVISO] Entrada sin ID de vehículo: %s", registro)
@@ -180,6 +192,7 @@ def procesar_estadistica(registro, capacidades, cur, fecha_filtro=None):
         logger.exception("Error actualizando tiempo de sincronización")
 
 def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
+    obtener_fecha_manual()
     logger.info(f"[REPORTE] Consultando fuel-energy de {fecha_inicio} a {fecha_fin}")
     url = URL_FUEL_ENERGY
     parametros = {
@@ -214,7 +227,8 @@ def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
                         ralenti_s = int(reporte.get("engineIdleTimeDurationMs", 0) / 1000)
 
                         # Usar la fecha configurada o UTC
-                        fecha_reporte = datetime.strptime(FECHA_MANUAL, "%Y-%m-%d").date() if FECHA_MANUAL else datetime.utcnow().date()
+                        fecha_reporte = datetime.strptime(fecha_inicio[:10], "%Y-%m-%d").date()
+                        logger.debug(f"[REPORTE] Insertando para fecha: {fecha_reporte} y vehículo: {vehiculo_id}")
 
                         cur.execute("""
                             INSERT INTO reporte_combustible (
@@ -250,45 +264,67 @@ def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
 
 
 
-def limpiar_y_actualizar_fuel_stats_dia_anterior():
-    zona_local = pytz_timezone('America/Mexico_City')
-    ayer = datetime.now(zona_local).date() - timedelta(days=1)
-    inicio = ayer.isoformat() + "T00:00:00Z"
-    fin = ayer.isoformat() + "T23:59:59Z"
+def limpiar_y_actualizar_fuel_stats_dia(fecha_obj):
+    obtener_fecha_manual()
+    fecha_str = fecha_obj.isoformat()
+    inicio = f"{fecha_str}T00:00:00Z"
+    fin = f"{fecha_str}T23:59:59Z"
 
     try:
-        logger.info(f"[FUEL-STATS] Eliminando registros de {ayer} para recalcular...")
+        logger.info(f"[FUEL-STATS] Eliminando registros de {fecha_str} para recalcular...")
         with get_connection() as conn:
             with conn.cursor() as cur:
-                cur.execute("DELETE FROM vehicle_fuel_stats WHERE fecha_hora::date = %s", (ayer,))
+                cur.execute("""
+                    DELETE FROM vehicle_fuel_stats
+                    WHERE DATE(fecha_hora AT TIME ZONE 'UTC' AT TIME ZONE 'America/Mexico_City') = %s
+                """, (fecha_str,))
+
                 capacidades = get_vehicle_capacities()
-                sincronizaciones = get_last_sync_times("fuelPercents")
-                obtener_estadisticas_combustible(capacidades, sincronizaciones)
+                ids = list(capacidades.keys())
+                url = f"{URL_HISTORICO}?vehicleIds={','.join(ids)}&startTime={inicio}&endTime={fin}&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
+
+                respuesta = requests.get(url, headers=CABECERAS)
+                datos = respuesta.json().get("data", [])
+
+                for registro in datos:
+                    procesar_estadistica(registro, capacidades, cur, fecha_filtro=fecha_str)
                 conn.commit()
     except Exception as e:
-        logger.exception(f"[FUEL-STATS] Error actualizando registros del {ayer}")
+        logger.exception(f"[FUEL-STATS] Error actualizando registros del {fecha_str}")
 
-def recalcular_resumen_combustible_dia_menos_3():
-    zona_local = pytz_timezone('America/Mexico_City')
-    fecha = datetime.now(zona_local).date() - timedelta(days=3)
-    inicio = fecha.isoformat() + "T00:00:00Z"
-    fin = fecha.isoformat() + "T23:59:59Z"
+
+def recalcular_resumen_combustible_dia(fecha_obj):
+    obtener_fecha_manual()
+    fecha_str = fecha_obj.isoformat()
+    inicio = f"{fecha_str}T00:00:00Z"
+    fin = f"{fecha_str}T23:59:59Z"
 
     try:
-        logger.info(f"[REPORTE] Eliminando resumen previo del {fecha} por recálculo de 72h.")
+        logger.info(f"[REPORTE] Eliminando resumen previo del {fecha_str} por recálculo de 72h.")
         with get_connection() as conn:
             with conn.cursor() as cur:
-                cur.execute("DELETE FROM reporte_combustible WHERE fecha_reporte = %s", (fecha,))
+                cur.execute("DELETE FROM reporte_combustible WHERE fecha_reporte = %s", (fecha_str,))
                 conn.commit()
 
-        logger.info(f"[REPORTE] Recalculando resumen de {fecha}")
+        logger.info(f"[REPORTE] Recalculando resumen de {fecha_str}")
         sincronizar_reporte_resumen_combustible(inicio, fin)
     except Exception as e:
-        logger.exception(f"[REPORTE] Error recalculando resumen del día {fecha}")
+        logger.exception(f"[REPORTE] Error recalculando resumen del día {fecha_str}")
+
 
 def sincronizar_eventos_combustible():
+    obtener_fecha_manual()
     logger.info("[SYNC] Iniciando sincronización de eventos de combustible")
-    limpiar_y_actualizar_fuel_stats_dia_anterior()
-    logger.info("[SYNC] Recalculando resumen de combustible de hace 3 días")
-    recalcular_resumen_combustible_dia_menos_3()
+
+    # Usamos UTC o fecha del .env para todos los cálculos
+    base = obtener_fecha_manual()
+
+    ayer = base - timedelta(days=1)
+    menos_tres = base - timedelta(days=3)
+ 
+
+    limpiar_y_actualizar_fuel_stats_dia(ayer)
+    recalcular_resumen_combustible_dia(menos_tres)
+
     logger.info("[SYNC] Sincronización extendida de combustible completada")
+
