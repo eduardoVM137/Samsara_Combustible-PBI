@@ -1,36 +1,56 @@
+# ───────────────────────────────────────────────────────────────
+# Equivalencia de campos: Inglés → Español
+#
+# vehicle_id               → vehiculo_id
+# timestamp                → fecha_hora
+# fuel_percent             → porcentaje_combustible
+# fuel_consumed_liters     → litros_consumidos
+# refueled_liters          → litros_recargados
+# refueled_percent         → porcentaje_recargado
+# is_refuel_event          → es_evento_recarga
+# distance_meters          → distancia_metros
+# efficiency_km_l          → rendimiento_km_por_litro
+# latitude / longitude     → latitud / longitud
+# engineRunTimeDurationMs  → tiempo_motor_s
+# engineIdleTimeDurationMs→ tiempo_ralenti_s
+# fuelConsumedMl           → litros_totales
+# distanceTraveledMeters   → kilometros_recorridos
+# cost                     → costo_combustible_usd
+# fecha                    → fecha_reporte
+# ───────────────────────────────────────────────────────────────
 
 import os
 import requests
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
+from pytz import timezone as pytz_timezone
 
-from db.database import get_connection, update_sync_time
+from db.database import get_connection, update_sync_time, get_vehicle_capacities, get_last_sync_times
 from utils.logger import logger
 
 load_dotenv()
-API_TOKEN = os.getenv("SAMSARA_API_TOKEN")
-HEADERS = {"Authorization": f"Bearer " + API_TOKEN}
-BASE_URL = "https://api.samsara.com/fleet/vehicles/stats/history"
-DATA_TYPE = "fuelPercents"
+TOKEN_API = os.getenv("SAMSARA_API_TOKEN")
+CABECERAS = {"Authorization": f"Bearer {TOKEN_API}"}
+URL_HISTORICO = "https://api.samsara.com/fleet/vehicles/stats/history"
+URL_FUEL_ENERGY = "https://api.samsara.com/fleet/reports/vehicles/fuel-energy"
+TIPO_DATO = "fuelPercents"
 
-def sync_vehicle_catalog():
+def sincronizar_catalogo_vehiculos():
     logger.info("Sincronizando catálogo de vehículos...")
-    print("[CATALOGO] Iniciando sincronización de vehículos...")
     url = "https://api.samsara.com/fleet/vehicles"
-    page_url = url
+    pagina = url
 
     with get_connection() as conn:
         with conn.cursor() as cur:
-            while page_url:
-                response = requests.get(page_url, headers=HEADERS)
-                if response.status_code != 200:
-                    logger.error(f"Error: {response.status_code} - {response.text}")
-                    print("[ERROR] No se pudo sincronizar vehículos.")
+            while pagina:
+                respuesta = requests.get(pagina, headers=CABECERAS)
+                if respuesta.status_code != 200:
+                    logger.error(f"Error {respuesta.status_code} - {respuesta.text}")
                     break
 
-                data = response.json()
-                for vehicle in data.get("data", []):
-                    vin = vehicle.get("vin")
+                datos = respuesta.json()
+                for vehiculo in datos.get("data", []):
+                    vin = vehiculo.get("vin")
                     if not vin:
                         continue
 
@@ -38,122 +58,195 @@ def sync_vehicle_catalog():
                     if cur.fetchone():
                         continue
 
-                cur.execute("""
-                    INSERT INTO vehicles (id, vin, name, license_plate, make, model, year)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s)
-                    ON CONFLICT (id) DO NOTHING
-                """, (
-                    vehicle.get("id"),
-                    vin,
-                    vehicle.get("name"),
-                    vehicle.get("licensePlate"),
-                    vehicle.get("make"),
-                    vehicle.get("model"),
-                    int(vehicle.get("year")) if vehicle.get("year") else None
-                ))
+                    cur.execute("""
+                        INSERT INTO vehicles (id, vin, name, license_plate, make, model, year)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (id) DO NOTHING
+                    """, (
+                        vehiculo.get("id"),
+                        vin,
+                        vehiculo.get("name"),
+                        vehiculo.get("licensePlate"),
+                        vehiculo.get("make"),
+                        vehiculo.get("model"),
+                        int(vehiculo.get("year")) if vehiculo.get("year") else None
+                    ))
 
-                print(f"[CATALOGO] Insertado: {vin} - {vehicle.get('name')}")
-
-                next_cursor = data.get("pagination", {}).get("endCursor")
-                page_url = f"{url}?after={next_cursor}" if next_cursor else None
-
+                pagina = f"{url}?after={datos.get('pagination', {}).get('endCursor')}" if datos.get("pagination", {}).get("endCursor") else None
         conn.commit()
     logger.info("Catálogo sincronizado.")
-    print("[CATALOGO] Sincronización finalizada.")
 
-def fetch_fuel_stats(capacidades, sync_data):
-    print("[SYNC] Iniciando sincronización reducida (una sola petición)...")
-    logger.info("Descargando datos históricos (una sola llamada)...")
-
-    vehicle_ids = list(capacidades.keys())
-    default_start = datetime.now(timezone.utc) - timedelta(hours=1)
+def obtener_estadisticas_combustible(capacidades, sincronizaciones):
+    logger.info("Descargando datos históricos de combustible...")
+    ids_vehiculos = list(capacidades.keys())
+    inicio_default = datetime.now(timezone.utc) - timedelta(hours=1)
 
     with get_connection() as conn:
         with conn.cursor() as cur:
-            start_time = min(sync_data.get(vid, default_start).replace(tzinfo=timezone.utc) for vid in vehicle_ids)
-            start_str = start_time.isoformat().replace("+00:00", "Z")
-            end_str = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+            inicio = min(sincronizaciones.get(vid, inicio_default).replace(tzinfo=timezone.utc) for vid in ids_vehiculos)
+            fecha_inicio = inicio.isoformat().replace("+00:00", "Z")
+            fecha_fin = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
-            url = f"{BASE_URL}?vehicleIds={','.join(vehicle_ids)}&startTime={start_str}&endTime={end_str}&types={DATA_TYPE}&decorations=gps"
+            url = f"{URL_HISTORICO}?vehicleIds={','.join(ids_vehiculos)}&startTime={fecha_inicio}&endTime={fecha_fin}&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
             try:
-                response = requests.get(url, headers=HEADERS)
-                if response.status_code != 200:
-                    print(f"[ERROR] Petición API falló: {response.status_code} - {response.text}")
-                    logger.error(f"Error API: {response.status_code} - {response.text}")
+                respuesta = requests.get(url, headers=CABECERAS)
+                if respuesta.status_code != 200:
+                    logger.error(f"Error API: {respuesta.status_code} - {respuesta.text}")
                     return
 
-                stats = response.json().get("data", [])
-                print(f"[API] Datos recibidos: {len(stats)} vehículos")
-
-                for stat in stats:
-                    process_stat_data(stat, capacidades, cur)
+                registros = respuesta.json().get("data", [])
+                for registro in registros:
+                    procesar_estadistica(registro, capacidades, cur)
 
                 conn.commit()
-                print("[SYNC] Datos insertados exitosamente.")
+                logger.info("Estadísticas guardadas correctamente.")
             except Exception as e:
-                print(f"[ERROR] Fallo en la petición o procesamiento: {e}")
-                logger.exception("Error durante la sincronización reducida")
+                logger.exception("Error procesando estadísticas de combustible")
 
-def process_stat_data(stat, capacidades, cur):
-    vehicle_id = str(stat.get("id"))
-    if not vehicle_id:
-        print("[AVISO] Entrada sin ID de vehículo:", stat)
+def procesar_estadistica(registro, capacidades, cur):
+    vehiculo_id = str(registro.get("id"))
+    if not vehiculo_id:
         return
 
-    capacidad = capacidades.get(vehicle_id, 200)
-    fuel_data = stat.get("fuelPercents", [])
-    print(f"[PROCESO] Procesando {vehicle_id} con {len(fuel_data)} registros")
+    capacidad = capacidades.get(vehiculo_id, 200)
+    datos = registro.get("fuelPercents", [])
+    anterior_porcentaje = None
+    registros_insertados = 0
+    CAMBIO_MINIMO = 2
+    UMBRAL_RECARGA = 5
 
-    last_percent = None
-    registros = 0
+    for entrada in datos:
+        porcentaje = entrada.get("value")
+        fecha = entrada.get("time")
+        decoraciones = entrada.get("decorations", {})
+        gps = decoraciones.get("gps", {})
+        latitud = gps.get("latitude")
+        longitud = gps.get("longitude")
 
-    for entry in fuel_data:
-        percent = entry.get("value")
-        timestamp = entry.get("time")
+        if anterior_porcentaje is not None and porcentaje is not None:
+            diferencia = round(porcentaje - anterior_porcentaje, 2)
+            if abs(diferencia) < CAMBIO_MINIMO:
+                anterior_porcentaje = porcentaje
+                continue
 
-        decorations = entry.get("decorations", {})
-        gps = decorations.get("gps", {})
-        lat = gps.get("latitude")
-        lon = gps.get("longitude")
-
-        if last_percent is not None and percent is not None:
-            diff = round(percent - last_percent, 2)
-            litros = round(abs(diff) * capacidad / 100, 2)
-            is_refuel = diff > 0
-            is_consumo = diff < 0
+            litros = round(abs(diferencia) * capacidad / 100, 2)
+            es_recarga = diferencia >= UMBRAL_RECARGA
+            es_consumo = diferencia < 0
 
             if litros > 0.01:
                 try:
                     cur.execute("""
                         INSERT INTO vehicle_fuel_stats (
-                            vehicle_id, fuel_percent, refueled_liters, refueled_percent,
-                            fuel_consumed_liters, is_refuel_event, latitude, longitude, timestamp
+                            vehiculo_id, porcentaje_combustible, litros_recargados, porcentaje_recargado,
+                            litros_consumidos, es_evento_recarga, latitud, longitud, fecha_hora
                         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-                        ON CONFLICT (vehicle_id, timestamp) DO NOTHING
+                        ON CONFLICT (vehiculo_id, fecha_hora) DO NOTHING
                     """, (
-                        vehicle_id,
-                        percent,
-                        litros if is_refuel else 0,
-                        diff if is_refuel else 0,
-                        litros if is_consumo else 0,
-                        is_refuel,
-                        lat if lat is not None else None,
-                        lon if lon is not None else None,
-                        timestamp
+                        vehiculo_id, porcentaje,
+                        litros if es_recarga else 0,
+                        diferencia if es_recarga else 0,
+                        litros if es_consumo else 0,
+                        es_recarga,
+                        latitud, longitud, fecha
                     ))
-                    registros += 1
-                    print(f"[INSERT] {vehicle_id} - {'Refuel' if is_refuel else 'Consumo'}: {litros} L @ {timestamp}")
-                    
+                    registros_insertados += 1
                 except Exception as e:
-                    print(f"[ERROR] Fallo al insertar en BD: {e}")
-                    logger.exception("Error insertando en la base de datos")
+                    logger.exception("Error insertando evento de combustible")
 
-        last_percent = percent
-
-    print(f"[FINAL] {vehicle_id}: {registros} registros insertados")
+        anterior_porcentaje = porcentaje
 
     try:
-        update_sync_time(cur, vehicle_id, DATA_TYPE, datetime.now(timezone.utc))
+        update_sync_time(cur, vehiculo_id, TIPO_DATO, datetime.now(timezone.utc))
     except Exception as e:
-        print(f"[ERROR] Fallo al actualizar sincronización: {e}")
-        logger.exception("Error actualizando tiempo de sync")
+        logger.exception("Error actualizando tiempo de sincronización")
+
+def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
+    logger.info(f"[REPORTE] Consultando fuel-energy de {fecha_inicio} a {fecha_fin}")
+    parametros = {
+        "startDate": fecha_inicio,
+        "endDate": fecha_fin,
+        "energyType": "fuel"
+    }
+
+    try:
+        respuesta = requests.get(URL_FUEL_ENERGY, headers=CABECERAS, params=parametros)
+        if respuesta.status_code != 200:
+            logger.error(f"[ERROR] Fallo API: {respuesta.status_code} - {respuesta.text}")
+            return
+
+        reportes = respuesta.json().get("data", {}).get("vehicleReports", [])
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                for reporte in reportes:
+                    vehiculo = reporte.get("vehicle", {})
+                    vehiculo_id = vehiculo.get("id")
+                    if not vehiculo_id:
+                        continue
+
+                    try:
+                        litros = round(reporte.get("fuelConsumedMl", 0) / 1000, 2)
+                        km = round(reporte.get("distanceTraveledMeters", 0) / 1000, 2)
+                        rendimiento = round(km / litros, 2) if litros > 0 else None
+                        costo = reporte.get("estFuelEnergyCost", {}).get("amount")
+                        motor_s = int(reporte.get("engineRunTimeDurationMs", 0) / 1000)
+                        ralenti_s = int(reporte.get("engineIdleTimeDurationMs", 0) / 1000)
+                        fecha = datetime.utcnow().date()
+
+                        cur.execute("""
+                            INSERT INTO reporte_combustible (
+                                vehiculo_id, fecha_reporte, litros_totales,
+                                kilometros_recorridos, rendimiento_km_por_litro,
+                                costo_combustible_usd, tiempo_motor_s, tiempo_ralenti_s
+                            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                            ON CONFLICT DO NOTHING
+                        """, (
+                            vehiculo_id, fecha, litros, km, rendimiento, costo, motor_s, ralenti_s
+                        ))
+                    except Exception as e:
+                        logger.exception(f"[ERROR] Al guardar resumen del vehículo {vehiculo_id}")
+            conn.commit()
+    except Exception as e:
+        logger.exception("Error al obtener reporte fuel-energy")
+
+def limpiar_y_actualizar_fuel_stats_dia_anterior():
+    zona_local = pytz_timezone('America/Mexico_City')
+    ayer = datetime.now(zona_local).date() - timedelta(days=1)
+    inicio = ayer.isoformat() + "T00:00:00Z"
+    fin = ayer.isoformat() + "T23:59:59Z"
+
+    try:
+        logger.info(f"[FUEL-STATS] Eliminando registros de {ayer} para recalcular...")
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("DELETE FROM vehicle_fuel_stats WHERE fecha_hora::date = %s", (ayer,))
+                capacidades = get_vehicle_capacities()
+                sincronizaciones = get_last_sync_times("fuelPercents")
+                obtener_estadisticas_combustible(capacidades, sincronizaciones)
+                conn.commit()
+    except Exception as e:
+        logger.exception(f"[FUEL-STATS] Error actualizando registros del {ayer}")
+
+def recalcular_resumen_combustible_dia_menos_3():
+    zona_local = pytz_timezone('America/Mexico_City')
+    fecha = datetime.now(zona_local).date() - timedelta(days=3)
+    inicio = fecha.isoformat() + "T00:00:00Z"
+    fin = fecha.isoformat() + "T23:59:59Z"
+
+    try:
+        logger.info(f"[REPORTE] Eliminando resumen previo del {fecha} por recálculo de 72h.")
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("DELETE FROM reporte_combustible WHERE fecha_reporte = %s", (fecha,))
+                conn.commit()
+
+        logger.info(f"[REPORTE] Recalculando resumen de {fecha}")
+        sincronizar_reporte_resumen_combustible(inicio, fin)
+    except Exception as e:
+        logger.exception(f"[REPORTE] Error recalculando resumen del día {fecha}")
+
+def sincronizar_eventos_combustible():
+    logger.info("[SYNC] Iniciando sincronización de eventos de combustible")
+    limpiar_y_actualizar_fuel_stats_dia_anterior()
+    logger.info("[SYNC] Recalculando resumen de combustible de hace 3 días")
+    recalcular_resumen_combustible_dia_menos_3()
+    logger.info("[SYNC] Sincronización extendida de combustible completada")
