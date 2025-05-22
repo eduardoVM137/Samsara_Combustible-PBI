@@ -1,83 +1,37 @@
- # 📊 Sincronización de Combustible – Samsara API
+# Samsara Combustible
 
-Este módulo integra y sincroniza datos de combustible, eficiencia, ubicación y catálogo de vehículos desde la API de **Samsara**, almacenándolos en una base de datos PostgreSQL para su análisis posterior, por ejemplo en Power BI.
+Este proyecto sincroniza datos de combustible de la API de Samsara, almacenando:
 
----
+- Eventos de consumo y recarga (`vehicle_fuel_stats`)
+- Resúmenes diarios por vehículo (`reporte_combustible`)
+- Catálogo de vehículos (`vehicles`)
 
-## ⚙️ Funcionalidades principales
+## 🧩 Componentes principales
 
-| Función                                       | Descripción |
-|----------------------------------------------|-------------|
-| `sincronizar_catalogo_vehiculos()`           | Sincroniza vehículos activos en la flota desde Samsara. |
-| `obtener_estadisticas_combustible()`         | Descarga registros individuales de combustible (`fuelPercents`). |
-| `procesar_estadistica()`                     | Guarda eventos de consumo o recarga en `vehicle_fuel_stats`. |
-| `sincronizar_reporte_resumen_combustible()`  | Descarga resumen diario de consumo por vehículo desde `/fuel-energy`. |
+- **samsara_client.py** – Módulo principal que contiene:
+  - `sincronizar_catalogo_vehiculos`: Inserta los vehículos si no existen.
+  - `obtener_estadisticas_combustible`: Obtiene `fuelPercents` y guarda eventos.
+  - `procesar_estadistica`: Guarda cada cambio significativo de nivel de combustible.
+  - `sincronizar_reporte_resumen_combustible`: Descarga resúmenes desde `/fuel-energy`.
+  - `limpiar_y_actualizar_fuel_stats_dia_anterior`: Elimina registros del día anterior y los actualiza.
+  - `recalcular_resumen_combustible_dia_menos_3`: Vuelve a insertar resúmenes de hace 3 días.
+  - `sincronizar_eventos_combustible`: Ejecuta ambos procesos anteriores juntos.
 
----
+- **sync_scheduler.py** – Ejecuta automáticamente la sincronización cada X minutos.
+- **db/database.py** – Conexión a PostgreSQL y utilidades.
+- **utils/logger.py** – Logger de eventos.
 
-## 🗃️ Tablas utilizadas
+## 🗃️ Tablas involucradas
 
-### 📌 `vehicles`
-Catálogo general de unidades.
+| Tabla                  | Descripción |
+|------------------------|-------------|
+| `vehicles`             | Vehículos registrados. |
+| `vehicle_fuel_stats`   | Cambios de nivel de combustible por timestamp. |
+| `reporte_combustible`  | Resumen diario por vehículo. |
+| `vehicle_data_sync`    | Marca el último punto sincronizado. |
 
-### 📌 `vehicle_fuel_stats`
-Registros puntuales con variaciones de combustible.
+## ⚙️ .env requerido
 
-| Campo (Español)             | Descripción                     |
-|-----------------------------|---------------------------------|
-| `vehiculo_id`               | ID del vehículo                 |
-| `fecha_hora`                | Timestamp de registro           |
-| `porcentaje_combustible`   | % de combustible en ese momento |
-| `litros_consumidos`        | Litros consumidos               |
-| `litros_recargados`        | Litros recargados               |
-| `es_evento_recarga`        | Si el evento fue una recarga    |
-| `latitud`, `longitud`      | Posición GPS                    |
-
-### 📌 `reporte_combustible`
-Resumen diario de cada vehículo.
-
-| Campo (Español)                | Descripción                         |
-|--------------------------------|-------------------------------------|
-| `vehiculo_id`                  | ID de unidad                        |
-| `fecha_reporte`                | Fecha del resumen                   |
-| `litros_totales`              | Litros consumidos                   |
-| `kilometros_recorridos`       | Kilómetros recorridos               |
-| `rendimiento_km_por_litro`     | Rendimiento                         |
-| `costo_combustible_usd`       | Costo estimado                      |
-| `tiempo_motor_s`, `ralenti_s` | Tiempo encendido y ralentí (seg)    |
-
----
-
-## 🔁 Equivalencia de nombres
-
-| Inglés                    | Español                    |
-|---------------------------|-----------------------------|
-| `vehicle_id`              | `vehiculo_id`              |
-| `timestamp`               | `fecha_hora`               |
-| `fuel_percent`            | `porcentaje_combustible`   |
-| `fuelConsumedMl`          | `litros_totales`           |
-| `distanceTraveledMeters`  | `kilometros_recorridos`    |
-| `refueled_liters`         | `litros_recargados`        |
-| `fuel_consumed_liters`    | `litros_consumidos`        |
-| `efficiency_km_l`         | `rendimiento_km_por_litro` |
-| `engineRunTimeDurationMs` | `tiempo_motor_s`           |
-| `engineIdleTimeDurationMs`| `tiempo_ralenti_s`         |
-
----
-
-## ✅ Evita duplicados
-
-- `vehicle_fuel_stats`: usa `(vehiculo_id, fecha_hora)` como clave única.
-- `reporte_combustible`: evita repetir `vehiculo_id + fecha_reporte`.
-
----
-
-## 🧪 Ejemplo de ejecución manual
-
-```python
-from api.samsara_client import sincronizar_reporte_resumen_combustible
-
-sincronizar_reporte_resumen_combustible(
-    "2025-05-01T00:00:00Z",
-    "2025-05-01T23:59:59Z"
-)
+```env
+SAMSARA_API_TOKEN=tu_token
+INTERVAL=5
