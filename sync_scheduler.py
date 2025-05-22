@@ -1,4 +1,3 @@
-
 # sync_scheduler.py
 
 import schedule
@@ -20,6 +19,7 @@ from utils.logger import logger
 # Cargar .env
 load_dotenv()
 INTERVAL = int(os.getenv("INTERVAL", 5))
+FECHA_MANUAL = os.getenv("FECHA_CONSULTA")  # Ejemplo: "2025-05-21"
 
 def tarea_sincronizacion():
     """
@@ -37,11 +37,14 @@ def tarea_sincronizacion():
         sincronizaciones = get_last_sync_times("fuelPercents")
         obtener_estadisticas_combustible(capacidades, sincronizaciones)
 
-        hoy = datetime.now(timezone('America/Mexico_City')).date()
-        inicio = hoy.isoformat() + "T00:00:00Z"
-        fin = hoy.isoformat() + "T23:59:59Z"
+        # Usar la fecha manual si está definida, si no usar la fecha actual
+        zona_local = timezone("America/Mexico_City")
+        fecha_base = datetime.strptime(FECHA_MANUAL, "%Y-%m-%d").date() if FECHA_MANUAL else datetime.now(zona_local).date()
 
-        logger.info(f"[REPORTE] Intentando insertar resumen diario del {hoy}")
+        inicio = fecha_base.isoformat() + "T00:00:00Z"
+        fin = fecha_base.isoformat() + "T23:59:59Z"
+
+        logger.info(f"[REPORTE] Intentando insertar resumen diario del {fecha_base}")
         sincronizar_reporte_resumen_combustible(inicio, fin)
 
         # Corrección: día anterior y hace 3 días

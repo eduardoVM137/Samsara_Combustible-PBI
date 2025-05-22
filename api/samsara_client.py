@@ -76,7 +76,7 @@ def sincronizar_catalogo_vehiculos():
         conn.commit()
     logger.info("Catálogo sincronizado.")
 
-def obtener_estadisticas_combustible(capacidades, sincronizaciones):
+def obtener_estadisticas_combustible(capacidades, sincronizaciones, fecha_inicio_forzada=None, fecha_fin_forzada=None):
     logger.info("Descargando datos históricos de combustible...")
     ids_vehiculos = list(capacidades.keys())
     inicio_default = datetime.now(timezone.utc) - timedelta(hours=1)
@@ -84,8 +84,8 @@ def obtener_estadisticas_combustible(capacidades, sincronizaciones):
     with get_connection() as conn:
         with conn.cursor() as cur:
             inicio = min(sincronizaciones.get(vid, inicio_default).replace(tzinfo=timezone.utc) for vid in ids_vehiculos)
-            fecha_inicio = inicio.isoformat().replace("+00:00", "Z")
-            fecha_fin = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+            fecha_inicio = fecha_inicio_forzada if fecha_inicio_forzada else inicio.isoformat().replace("+00:00", "Z")
+            fecha_fin = fecha_fin_forzada if fecha_fin_forzada else datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
             url = f"{URL_HISTORICO}?vehicleIds={','.join(ids_vehiculos)}&startTime={fecha_inicio}&endTime={fecha_fin}&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
             try:
@@ -103,13 +103,16 @@ def obtener_estadisticas_combustible(capacidades, sincronizaciones):
             except Exception as e:
                 logger.exception("Error procesando estadísticas de combustible")
 
-def procesar_estadistica(registro, capacidades, cur):
+def procesar_estadistica(registro, capacidades, cur, fecha_filtro=None):
     vehiculo_id = str(registro.get("id"))
     if not vehiculo_id:
+        logger.warning("[AVISO] Entrada sin ID de vehículo: %s", registro)
         return
 
     capacidad = capacidades.get(vehiculo_id, 200)
     datos = registro.get("fuelPercents", [])
+    logger.info("[PROCESO] %s con %d registros", vehiculo_id, len(datos))
+
     anterior_porcentaje = None
     registros_insertados = 0
     CAMBIO_MINIMO = 2
@@ -118,6 +121,10 @@ def procesar_estadistica(registro, capacidades, cur):
     for entrada in datos:
         porcentaje = entrada.get("value")
         fecha = entrada.get("time")
+
+        if fecha_filtro and not fecha.startswith(fecha_filtro):
+            continue
+
         decoraciones = entrada.get("decorations", {})
         gps = decoraciones.get("gps", {})
         latitud = gps.get("latitude")
@@ -125,6 +132,7 @@ def procesar_estadistica(registro, capacidades, cur):
 
         if anterior_porcentaje is not None and porcentaje is not None:
             diferencia = round(porcentaje - anterior_porcentaje, 2)
+
             if abs(diferencia) < CAMBIO_MINIMO:
                 anterior_porcentaje = porcentaje
                 continue
@@ -137,17 +145,27 @@ def procesar_estadistica(registro, capacidades, cur):
                 try:
                     cur.execute("""
                         INSERT INTO vehicle_fuel_stats (
-                            vehiculo_id, porcentaje_combustible, litros_recargados, porcentaje_recargado,
-                            litros_consumidos, es_evento_recarga, latitud, longitud, fecha_hora
+                            vehiculo_id,
+                            porcentaje_combustible,
+                            litros_recargados,
+                            porcentaje_recargado,
+                            litros_consumidos,
+                            es_evento_recarga,
+                            latitud,
+                            longitud,
+                            fecha_hora
                         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                         ON CONFLICT (vehiculo_id, fecha_hora) DO NOTHING
                     """, (
-                        vehiculo_id, porcentaje,
+                        vehiculo_id,
+                        porcentaje,
                         litros if es_recarga else 0,
                         diferencia if es_recarga else 0,
                         litros if es_consumo else 0,
                         es_recarga,
-                        latitud, longitud, fecha
+                        latitud,
+                        longitud,
+                        fecha
                     ))
                     registros_insertados += 1
                 except Exception as e:
@@ -155,6 +173,7 @@ def procesar_estadistica(registro, capacidades, cur):
 
         anterior_porcentaje = porcentaje
 
+    logger.info("[FINAL] %s: %d registros insertados", vehiculo_id, registros_insertados)
     try:
         update_sync_time(cur, vehiculo_id, TIPO_DATO, datetime.now(timezone.utc))
     except Exception as e:
@@ -162,6 +181,7 @@ def procesar_estadistica(registro, capacidades, cur):
 
 def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
     logger.info(f"[REPORTE] Consultando fuel-energy de {fecha_inicio} a {fecha_fin}")
+    url = URL_FUEL_ENERGY
     parametros = {
         "startDate": fecha_inicio,
         "endDate": fecha_fin,
@@ -169,12 +189,14 @@ def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
     }
 
     try:
-        respuesta = requests.get(URL_FUEL_ENERGY, headers=CABECERAS, params=parametros)
+        respuesta = requests.get(url, headers=CABECERAS, params=parametros)
         if respuesta.status_code != 200:
             logger.error(f"[ERROR] Fallo API: {respuesta.status_code} - {respuesta.text}")
             return
 
         reportes = respuesta.json().get("data", {}).get("vehicleReports", [])
+        registros = 0
+
         with get_connection() as conn:
             with conn.cursor() as cur:
                 for reporte in reportes:
@@ -190,23 +212,43 @@ def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
                         costo = reporte.get("estFuelEnergyCost", {}).get("amount")
                         motor_s = int(reporte.get("engineRunTimeDurationMs", 0) / 1000)
                         ralenti_s = int(reporte.get("engineIdleTimeDurationMs", 0) / 1000)
-                        fecha = datetime.utcnow().date()
+
+                        # Usar la fecha configurada o UTC
+                        fecha_reporte = datetime.strptime(FECHA_MANUAL, "%Y-%m-%d").date() if FECHA_MANUAL else datetime.utcnow().date()
 
                         cur.execute("""
                             INSERT INTO reporte_combustible (
-                                vehiculo_id, fecha_reporte, litros_totales,
-                                kilometros_recorridos, rendimiento_km_por_litro,
-                                costo_combustible_usd, tiempo_motor_s, tiempo_ralenti_s
+                                vehiculo_id,
+                                fecha_reporte,
+                                litros_totales,
+                                kilometros_recorridos,
+                                rendimiento_km_por_litro,
+                                costo_combustible_usd,
+                                tiempo_motor_s,
+                                tiempo_ralenti_s
                             ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                             ON CONFLICT DO NOTHING
                         """, (
-                            vehiculo_id, fecha, litros, km, rendimiento, costo, motor_s, ralenti_s
+                            vehiculo_id,
+                            fecha_reporte,
+                            litros,
+                            km,
+                            rendimiento,
+                            costo,
+                            motor_s,
+                            ralenti_s
                         ))
+                        registros += 1
                     except Exception as e:
                         logger.exception(f"[ERROR] Al guardar resumen del vehículo {vehiculo_id}")
+
             conn.commit()
+        logger.info(f"[REPORTE] {registros} resúmenes guardados correctamente.")
+
     except Exception as e:
         logger.exception("Error al obtener reporte fuel-energy")
+
+
 
 def limpiar_y_actualizar_fuel_stats_dia_anterior():
     zona_local = pytz_timezone('America/Mexico_City')

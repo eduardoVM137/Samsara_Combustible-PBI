@@ -4632,3 +4632,901 @@ psycopg2.errors.InFailedSqlTransaction: transacción abortada, las órdenes ser�
 [2025-05-21 21:08:53] INFO: [REPORTE] 23 resúmenes guardados correctamente.
 [2025-05-21 21:08:53] INFO: ---- FIN DE SINCRONIZACIÓN ----
 [2025-05-21 21:08:53] INFO: Icono cargado y systray en ejecución.
+[2025-05-21 23:13:11] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:13:11] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:13:11] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:13:11] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:13:11] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:13:12] INFO: Catálogo sincronizado.
+[2025-05-21 23:13:12] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:13:17] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:13:17] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:13:17] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:13:18] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:13:18] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:13:18] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:18:11] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:18:11] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:18:12] INFO: Catálogo sincronizado.
+[2025-05-21 23:18:12] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:30:42] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:30:42] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:30:42] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:30:42] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:30:42] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:30:42] INFO: Catálogo sincronizado.
+[2025-05-21 23:30:43] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:31:26] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:31:26] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:31:26] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:31:27] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:31:27] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:31:27] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:35:42] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:35:42] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:35:42] INFO: Catálogo sincronizado.
+[2025-05-21 23:35:43] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:41:13] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:41:13] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:41:13] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:41:13] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:41:13] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:41:14] INFO: Catálogo sincronizado.
+[2025-05-21 23:41:14] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-21 23:41:18] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-21 23:41:18] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-21 23:41:19] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-21 23:41:19] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-21 23:41:19] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:41:19] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:41:19] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:41:20] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-21 23:41:20] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:41:20] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:41:20] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:41:21] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:41:25] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:41:25] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:41:25] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:41:25] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:41:25] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:44:19] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:44:19] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:44:19] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:44:19] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:44:19] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:44:21] INFO: Catálogo sincronizado.
+[2025-05-21 23:44:21] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-21 23:44:25] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-21 23:44:25] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-21 23:44:26] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-21 23:44:26] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-21 23:44:26] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:44:26] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:44:26] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:44:27] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-21 23:44:27] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:44:28] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:44:28] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:44:28] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:44:31] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:44:31] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:44:31] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:44:31] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:44:31] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:45:05] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:45:05] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:45:05] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:45:05] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:45:05] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:45:07] INFO: Catálogo sincronizado.
+[2025-05-21 23:45:07] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-21 23:45:10] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-21 23:45:10] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-21 23:45:11] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-21 23:45:11] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-21 23:45:11] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:45:12] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:45:12] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:45:12] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-21 23:45:12] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:45:13] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:45:13] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:45:14] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:45:17] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:45:17] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:45:17] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:45:17] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:45:17] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:45:46] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:45:46] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:45:46] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:45:46] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:45:46] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:45:47] INFO: Catálogo sincronizado.
+[2025-05-21 23:45:48] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-21 23:45:51] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-21 23:45:51] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-21 23:45:51] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:45:52] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:45:52] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:45:52] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-21 23:45:52] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:45:53] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:45:53] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:45:54] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:45:58] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:45:58] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:45:58] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:45:58] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:45:58] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:47:25] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:47:25] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:47:25] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:47:25] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:47:25] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:47:26] INFO: Catálogo sincronizado.
+[2025-05-21 23:47:27] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:47:30] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:47:30] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:47:30] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:47:30] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:47:30] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:47:30] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-21 23:47:30] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-21 23:47:30] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-21 23:47:30] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-21 23:47:30] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-21 23:47:30] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-21 23:47:30] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-21 23:47:31] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-21 23:47:31] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-21 23:47:31] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:47:32] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:47:32] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984438177
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984440532
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984468469
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984471474
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984489038
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984490449
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984779335
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984780699
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984796823
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984917931
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474984939926
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474985273793
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474989145452
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474989447252
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474992992431
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995276012
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995276074
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995276075
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995276076
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995276077
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995276402
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995276403
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] ERROR: [ERROR] Al guardar resumen del vehículo 281474995511888
+Traceback (most recent call last):
+  File "c:\Users\blodc\Documents\Panacea\Samsara_Combustible\api\samsara_client.py", line 317, in sincronizar_reporte_resumen_combustible
+    fecha,
+    ^^^^^
+UnboundLocalError: cannot access local variable 'fecha' where it is not associated with a value
+[2025-05-21 23:47:32] INFO: [REPORTE] 0 resúmenes guardados correctamente.
+[2025-05-21 23:47:32] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:47:33] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:47:33] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:47:33] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:47:37] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:47:37] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:47:37] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:47:37] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:47:37] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:51:18] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:51:18] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:51:18] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:51:18] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:51:18] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:51:19] INFO: Catálogo sincronizado.
+[2025-05-21 23:51:19] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-21 23:51:24] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-21 23:51:24] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-21 23:51:25] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-21 23:51:25] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-21 23:51:25] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:51:25] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:51:25] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:51:26] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-21 23:51:26] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:51:26] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:51:26] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:51:27] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:51:30] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:51:30] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:51:30] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:51:30] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:51:30] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:51:55] INFO: Intervalo configurado en 5 minutos
+[2025-05-21 23:51:55] INFO: Iniciando loop del scheduler...
+[2025-05-21 23:51:55] INFO: Ejecutando sincronización inicial...
+[2025-05-21 23:51:55] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-21 23:51:55] INFO: Sincronizando catálogo de vehículos...
+[2025-05-21 23:51:56] INFO: Catálogo sincronizado.
+[2025-05-21 23:51:56] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:51:59] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:51:59] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-21 23:51:59] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-21 23:51:59] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-21 23:51:59] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-21 23:51:59] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-21 23:51:59] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-21 23:51:59] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-21 23:52:00] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-21 23:52:00] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-21 23:52:00] INFO: Estadísticas guardadas correctamente.
+[2025-05-21 23:52:00] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-21 23:52:00] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:52:01] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-21 23:52:01] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-21 23:52:02] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-21 23:52:02] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-21 23:52:02] INFO: Descargando datos históricos de combustible...
+[2025-05-21 23:52:05] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-21 23:52:05] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-21 23:52:05] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-21 23:52:05] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-21 23:52:05] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-22 00:00:03] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:00:03] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:00:03] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:00:03] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:00:03] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:00:05] INFO: Catálogo sincronizado.
+[2025-05-22 00:00:05] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-22 00:00:09] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-22 00:00:09] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-22 00:00:09] INFO: Estadísticas guardadas correctamente.
+[2025-05-22 00:00:10] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-22 00:00:10] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-22 00:00:10] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-22 00:00:10] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-22 00:00:11] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-22 00:00:11] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-22 00:00:11] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:00:15] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:00:15] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:00:15] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-22 00:00:15] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-22 00:00:15] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-22 00:00:49] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:00:49] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:00:49] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:00:49] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:00:49] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:00:50] INFO: Catálogo sincronizado.
+[2025-05-22 00:00:50] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:00:53] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-22 00:00:53] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-22 00:00:53] INFO: [FINAL] 281474984468469: 36 registros insertados
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984471474 con 79 registros
+[2025-05-22 00:00:53] INFO: [FINAL] 281474984471474: 21 registros insertados
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984489038 con 58 registros
+[2025-05-22 00:00:53] INFO: [FINAL] 281474984489038: 34 registros insertados
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984490449 con 55 registros
+[2025-05-22 00:00:53] INFO: [FINAL] 281474984490449: 28 registros insertados
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984779335 con 187 registros
+[2025-05-22 00:00:53] INFO: [FINAL] 281474984779335: 40 registros insertados
+[2025-05-22 00:00:53] INFO: [PROCESO] 281474984796823 con 151 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474984796823: 80 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474984917931 con 66 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474984917931: 16 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474984939926 con 55 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474984939926: 24 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474985214514 con 3 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474985214514: 0 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474985273793 con 28 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474985273793: 10 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474985935537 con 197 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474985935537: 65 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474989145452 con 104 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474989145452: 52 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474989447252 con 123 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474989447252: 48 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474992703779 con 1 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474992703779: 0 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474992992431 con 205 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474992992431: 59 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474992992552 con 35 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474992992552: 14 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474992996203 con 163 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474992996203: 56 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474995276012 con 139 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474995276012: 79 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474995276074 con 9 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474995276074: 5 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474995276403 con 51 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474995276403: 24 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474995276404 con 65 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474995276404: 35 registros insertados
+[2025-05-22 00:00:54] INFO: [PROCESO] 281474995511888 con 29 registros
+[2025-05-22 00:00:54] INFO: [FINAL] 281474995511888: 2 registros insertados
+[2025-05-22 00:00:54] INFO: Estadísticas guardadas correctamente.
+[2025-05-22 00:00:59] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-21
+[2025-05-22 00:00:59] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-22 00:01:00] INFO: [REPORTE] 23 resúmenes guardados correctamente.
+[2025-05-22 00:01:00] INFO: [REPORTE] Consultando fuel-energy de 2025-05-21T00:00:00Z a 2025-05-21T23:59:59Z
+[2025-05-22 00:01:00] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-22 00:01:00] INFO: [FUEL-STATS] Eliminando registros de 2025-05-20 para recalcular...
+[2025-05-22 00:01:01] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:01:04] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:01:04] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:01:04] INFO: [PROCESO] 281474984440532 con 1 registros
+[2025-05-22 00:01:04] INFO: [FINAL] 281474984440532: 0 registros insertados
+[2025-05-22 00:01:04] INFO: [PROCESO] 281474984468469 con 96 registros
+[2025-05-22 00:05:36] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:05:36] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:05:36] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:05:36] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:05:36] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:05:37] INFO: Catálogo sincronizado.
+[2025-05-22 00:05:37] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:05:40] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:05:40] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:05:50] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:05:50] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:05:50] INFO: Catálogo sincronizado.
+[2025-05-22 00:05:50] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:05:54] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:05:54] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:06:31] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:06:31] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:06:31] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:06:31] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:06:31] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:06:32] INFO: Catálogo sincronizado.
+[2025-05-22 00:06:32] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:06:36] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:06:36] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:10:04] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:10:04] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:10:04] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:10:04] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:10:04] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:10:16] INFO: Catálogo sincronizado.
+[2025-05-22 00:10:16] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:10:20] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:10:20] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:13:22] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:13:22] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:13:22] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:13:22] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:13:22] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:13:23] INFO: Catálogo sincronizado.
+[2025-05-22 00:13:23] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:13:27] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:13:27] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:14:10] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:14:10] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:14:10] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:14:10] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:14:10] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:14:11] INFO: Catálogo sincronizado.
+[2025-05-22 00:14:11] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:14:15] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:14:15] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:14:44] INFO: Intervalo configurado en 5 minutos
+[2025-05-22 00:14:44] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:14:44] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:14:44] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:14:44] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:14:45] INFO: Catálogo sincronizado.
+[2025-05-22 00:14:45] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:14:49] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:14:49] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:18:18] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 00:18:18] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:18:18] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:18:18] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:18:18] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:18:19] INFO: Catálogo sincronizado.
+[2025-05-22 00:18:19] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:18:23] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:18:23] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:24:04] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 00:24:04] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:24:04] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:24:04] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:24:04] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:24:05] INFO: Catálogo sincronizado.
+[2025-05-22 00:24:05] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:24:08] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:24:08] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:25:42] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 00:25:42] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:25:42] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:25:42] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:25:42] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:25:43] INFO: Catálogo sincronizado.
+[2025-05-22 00:25:43] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:25:47] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:25:47] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 00:28:27] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 00:28:27] INFO: Iniciando loop del scheduler...
+[2025-05-22 00:28:27] INFO: Ejecutando sincronización inicial...
+[2025-05-22 00:28:27] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 00:28:27] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 00:28:28] INFO: Catálogo sincronizado.
+[2025-05-22 00:28:28] INFO: Descargando datos históricos de combustible...
+[2025-05-22 00:28:31] INFO: [PROCESO] 281474984438177 con 1 registros
+[2025-05-22 00:28:31] INFO: [FINAL] 281474984438177: 0 registros insertados
