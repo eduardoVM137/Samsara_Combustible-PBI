@@ -197,7 +197,7 @@ def editar_fecha_manual(icon, item):
     try:
         root = Tk()
         root.title("Panacea Combustible - Selecciona el rango de fechas")
-        # Si tienes el logo, descomenta la siguiente línea y pon el archivo en la carpeta
+      
         #logo = PhotoImage(file=resource_path("panacea_logo.png"))
         #Label(root, image=logo).pack()
         Label(root, text="Panacea Combustible", font=("Arial", 14, "bold"), fg="#851f18").pack(pady=(10, 0))
