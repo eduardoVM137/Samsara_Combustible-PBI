@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from api.samsara_client import (
     sincronizar_catalogo_vehiculos,
-    obtener_estadisticas_combustible,
+    getHistorical_stats,
     sincronizar_reporte_resumen_combustible,
     sincronizar_eventos_combustible
 )
@@ -18,9 +18,13 @@ from utils.logger import logger
 
 # Cargar .env
 INTERVAL = int(os.getenv("INTERVAL", 5)) 
-def obtener_fecha_manual():
+def obtener_fecha_inicio_manual():
     load_dotenv()
-    valor = os.getenv("FECHA_CONSULTA")
+    valor = os.getenv("FECHA_CONSULTA_INICIO")
+    return datetime.strptime(valor, "%Y-%m-%d").date() if valor else datetime.now(timezone.utc).date()
+def obtener_fecha_fin_manual():
+    load_dotenv()
+    valor = os.getenv("FECHA_CONSULTA_FIN")
     return datetime.strptime(valor, "%Y-%m-%d").date() if valor else datetime.now(timezone.utc).date()
 
 def tarea_sincronizacion():
@@ -34,23 +38,27 @@ def tarea_sincronizacion():
     try:
         logger.info("---- INICIO DE SINCRONIZACIÓN ----")
 ##cambiar logica para actualizar la info de hoy y la anterior ,considerar fuel stats para ver si lo hago x dia
-        fecha_base = obtener_fecha_manual()
+        
         sincronizar_catalogo_vehiculos()#ok
         capacidades = get_vehicle_capacities()#ok
         sincronizaciones = get_last_sync_times("fuelPercents")#ok pero no se usa
-        obtener_estadisticas_combustible(capacidades, sincronizaciones,fecha_base)#verificar que hacer cuando se actualiza la info(fuel_stats),no creo que haga falta considerar multiples fechas
+        fecha_inicio = obtener_fecha_inicio_manual()
+        fecha_fin = obtener_fecha_fin_manual()
+
+        getHistorical_stats(capacidades, sincronizaciones,fecha_inicio,fecha_fin)
+        #verificar que hacer cuando se actualiza la info(fuel_stats),no creo que haga falta considerar multiples fechas
 
         logger.info("---- Desarrollo DE SINCRONIZACIÓN ----")
         # Usar la fecha manual si está definida, si no usar la fecha actual
 
-        inicio = fecha_base.isoformat() + "T00:00:00Z"
-        fin = fecha_base.isoformat() + "T23:59:59Z"
+        inicio = fecha_inicio.isoformat() + "T00:00:00Z"
+        fin = fecha_fin.isoformat() + "T23:59:59Z"
 
-        logger.info(f"[REPORTE] Intentando insertar resumen diario del {fecha_base}")
-        sincronizar_reporte_resumen_combustible(inicio, fin)
+        logger.info(f"[REPORTE] Intentando no insertar resumen diario del {inicio}")
+       # sincronizar_reporte_resumen_combustible(inicio, fin)
 
         # Corrección: día anterior y hace 3 días
-        sincronizar_eventos_combustible()
+        #sincronizar_eventos_combustible()
 
         logger.info("---- FIN DE SINCRONIZACIÓN ----")
     except Exception as e:
