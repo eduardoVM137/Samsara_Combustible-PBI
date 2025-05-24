@@ -10,8 +10,7 @@ load_dotenv()
 from api.samsara_client import (
     sincronizar_catalogo_vehiculos,
     getHistorical_stats,
-    sincronizar_reporte_resumen_combustible,
-    sincronizar_eventos_combustible
+    sync_fuel_energy_summary
 )
 from db.database import get_vehicle_capacities, get_last_sync_times
 from utils.logger import logger
@@ -49,27 +48,12 @@ def tarea_sincronizacion():
         #verificar que hacer cuando se actualiza la info(fuel_stats),no creo que haga falta considerar multiples fechas
 
         logger.info("---- Desarrollo DE SINCRONIZACIÓN ----")
-        # Usar la fecha manual si está definida, si no usar la fecha actual
 
-        inicio = fecha_inicio.isoformat() + "T00:00:00Z"
-        fin = fecha_fin.isoformat() + "T23:59:59Z"
-
-        logger.info(f"[REPORTE] Intentando no insertar resumen diario del {inicio}")
-       # sincronizar_reporte_resumen_combustible(inicio, fin)
-
-        # Corrección: día anterior y hace 3 días
-        #sincronizar_eventos_combustible()
+  
+        logger.info(f"[REPORTE] Intentando no insertar resumen diario del {fecha_inicio} al {fecha_fin}")
+        sync_fuel_energy_summary(fecha_inicio, fecha_fin)
 
         logger.info("---- FIN DE SINCRONIZACIÓN ----")
     except Exception as e:
         logger.exception("Error durante la sincronización")
 
-def iniciar_programador():
-    """
-    Inicia el programador con el intervalo de ejecución configurado
-    """
-    schedule.every(INTERVAL).minutes.do(tarea_sincronizacion)
-    logger.info(f"Programador iniciado. Ejecutando cada {INTERVAL} minutos.")
-    while True:
-        schedule.run_pending()
-        time.sleep(5)

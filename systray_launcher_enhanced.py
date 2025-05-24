@@ -7,7 +7,8 @@ import webbrowser
 import time
 import schedule
 from tkinter import simpledialog, Tk
-
+from tkinter import Tk, Label, Button
+from tkcalendar import DateEntry
 from sync_scheduler import tarea_sincronizacion, INTERVAL 
 from utils.logger import logger
 
@@ -57,29 +58,47 @@ def show_status(icon, item):
 def editar_fecha_manual(icon, item):
     def abrir_dialogo():
         try:
+
+            def guardar_fechas():
+                nueva_fecha_inicio = cal_inicio.get_date().strftime("%Y-%m-%d")
+                nueva_fecha_fin = cal_fin.get_date().strftime("%Y-%m-%d")
+                root.destroy()
+
+                if nueva_fecha_inicio and nueva_fecha_fin:
+                    with open(".env", "r") as f:
+                        lineas = f.readlines()
+                    modificada_inicio = False
+                    modificada_fin = False
+                    with open(".env", "w") as f:
+                        for linea in lineas:
+                            if linea.startswith("FECHA_CONSULTA_INICIO="):
+                                f.write(f"FECHA_CONSULTA_INICIO={nueva_fecha_inicio}\n")
+                                modificada_inicio = True
+                            elif linea.startswith("FECHA_CONSULTA_FIN="):
+                                f.write(f"FECHA_CONSULTA_FIN={nueva_fecha_fin}\n")
+                                modificada_fin = True
+                            else:
+                                f.write(linea)
+                        if not modificada_inicio:
+                            f.write(f"FECHA_CONSULTA_INICIO={nueva_fecha_inicio}\n")
+                        if not modificada_fin:
+                            f.write(f"FECHA_CONSULTA_FIN={nueva_fecha_fin}\n")
+
+                    logger.info(f"[MANUAL] FECHA_CONSULTA_INICIO actualizada a {nueva_fecha_inicio}")
+                    logger.info(f"[MANUAL] FECHA_CONSULTA_FIN actualizada a {nueva_fecha_fin}")
+
             root = Tk()
-            root.withdraw()
-            nueva_fecha = simpledialog.askstring("Editar fecha manual", "Ingresa la fecha (YYYY-MM-DD):")
-            root.destroy()
-
-            if nueva_fecha:
-                with open(".env", "r") as f:
-                    lineas = f.readlines()
-
-                with open(".env", "w") as f:
-                    modificada = False
-                    for linea in lineas:
-                        if linea.startswith("FECHA_CONSULTA="):
-                            f.write(f"FECHA_CONSULTA={nueva_fecha}\n")
-                            modificada = True
-                        else:
-                            f.write(linea)
-                    if not modificada:
-                        f.write(f"FECHA_CONSULTA={nueva_fecha}\n")
-
-                logger.info(f"[MANUAL] FECHA_CONSULTA actualizada a {nueva_fecha}")
+            root.title("Selecciona el rango de fechas")
+            Label(root, text="Fecha de inicio:").pack()
+            cal_inicio = DateEntry(root, date_pattern="yyyy-mm-dd")
+            cal_inicio.pack()
+            Label(root, text="Fecha de fin:").pack()
+            cal_fin = DateEntry(root, date_pattern="yyyy-mm-dd")
+            cal_fin.pack()
+            Button(root, text="Guardar", command=guardar_fechas).pack()
+            root.mainloop()
         except Exception as e:
-            logger.exception("Error al editar la fecha manual")
+            logger.exception("Error al editar el rango de fechas manualmente")
 
     threading.Thread(target=abrir_dialogo, daemon=True).start()
 

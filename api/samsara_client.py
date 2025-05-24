@@ -81,103 +81,105 @@ def chunks(lst, n):
     # Generador que divide una lista en sublistas de tamaño n
     for i in range(0, len(lst), n):
         yield lst[i:i + n]
-
 def getHistorical_stats(capacidades, lista_ultima_sincronizacion, mifecha_inicio, mifecha_fin):
     # Inicia la descarga de datos históricos de combustible
-    logger.info(" Iniciando descarga de datos históricos de combustible...")
+    logger.info("Iniciando descarga de datos históricos de combustible...")
 
     ids_vehiculos = list(capacidades.keys())
-    fecha_inicio = f"{mifecha_inicio.isoformat()}T00:00:00Z"
-    fecha_fin = f"{mifecha_fin.isoformat()}T23:59:59Z"
-
-    total_lotes = ceil(len(ids_vehiculos) / 10)
-    lote_actual = 1
+    dias_totales = (mifecha_fin - mifecha_inicio).days + 1
+    total_lotes = ceil(len(ids_vehiculos) / 10)  # Procesa en lotes de 10 vehículos
 
     with get_connection() as conn:
         with conn.cursor() as cur:
-            # Procesa los vehículos en lotes de 10
-            for lote in chunks(ids_vehiculos, 10):
-                logger.info(" Procesando lote %d/%d: %s", lote_actual, total_lotes, lote)
-                lote_actual += 1
+            # Recorre cada día del rango solicitado
+            for dia in range(dias_totales):
+                fecha_actual = mifecha_inicio + timedelta(days=dia)
+                fecha_inicio = f"{fecha_actual.isoformat()}T00:00:00Z"
+                fecha_fin = f"{fecha_actual.isoformat()}T23:59:59Z"
+                logger.info("[Día %d/%d] Fecha: %s", dia+1, dias_totales, fecha_actual)
 
-                # Construye la URL base para la consulta de la API
-                url_base = (
-                    f"{URL_HISTORICO}?vehicleIds={','.join(lote)}"
-                    f"&startTime={fecha_inicio}&endTime={fecha_fin}"
-                    f"&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
-                )
+                lote_actual = 1
+                # Procesa los vehículos en lotes de 10
+                for lote in chunks(ids_vehiculos, 10):
+                    logger.info("Procesando lote %d/%d: %s", lote_actual, total_lotes, lote)
+                    lote_actual += 1
 
-                end_cursor = None
-                pagina = 1
-                seen_cursors = set()
-                vehiculos_agrupados = defaultdict(list)
+                    # Construye la URL base para la consulta de la API
+                    url_base = (
+                        f"{URL_HISTORICO}?vehicleIds={','.join(lote)}"
+                        f"&startTime={fecha_inicio}&endTime={fecha_fin}"
+                        f"&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
+                    )
 
-                while True:
-                    # Agrega el cursor de paginación si existe
-                    url = url_base + (f"&startingAfter={end_cursor}" if end_cursor else "")
-                    logger.info("[Página %d] Solicitando datos con cursor: %s", pagina, end_cursor)
+                    end_cursor = None
+                    pagina = 1
+                    seen_cursors = set()
+                    vehiculos_agrupados = defaultdict(list)
 
-                    try:
-                        respuesta = requests.get(url, headers=CABECERAS)
+                    # Maneja la paginación de la API
+                    while True:
+                        url = url_base + (f"&startingAfter={end_cursor}" if end_cursor else "")
+                        logger.info("[Página %d] Solicitando datos con cursor: %s", pagina, end_cursor)
 
-                        # Si la API responde con rate limit, espera y reintenta
-                        if respuesta.status_code == 429:
-                            logger.warning(" Rate limit alcanzado. Esperando 10 segundos...")
-                            time.sleep(10)
-                            continue
+                        try:
+                            respuesta = requests.get(url, headers=CABECERAS)
 
-                        # Si hay error, sale del ciclo de paginación
-                        if respuesta.status_code != 200:
-                            logger.error("[Página %d] Error API: %s - %s", pagina, respuesta.status_code, respuesta.text)
-                            break
-
-                        data_json = respuesta.json()
-                        registros = data_json.get("data", [])
-
-                        logger.info("[Página %d] Registros obtenidos: %d", pagina, len(registros))
-
-                        # Agrupa los registros de fuelPercents por vehículo
-                        for registro in registros:
-                            vehiculo_id = str(registro.get("id"))
-                            if not vehiculo_id:
+                            # Si hay rate limit, espera y reintenta
+                            if respuesta.status_code == 429:
+                                logger.warning("Rate limit alcanzado. Esperando 10 segundos...")
+                                time.sleep(10)
                                 continue
-                            vehiculos_agrupados[vehiculo_id].extend(registro.get("fuelPercents", []))
 
-                        # Manejo de paginación
-                        pagination = data_json.get("pagination", {})
-                        end_cursor = pagination.get("endCursor")
-                        has_next = pagination.get("hasNextPage", False)
+                            # Si hay error, sale del ciclo de paginación
+                            if respuesta.status_code != 200:
+                                logger.error("[Página %d] Error API: %s - %s", pagina, respuesta.status_code, respuesta.text)
+                                break
 
-                        logger.info("[Página %d] hasNextPage = %s | endCursor = %s", pagina, has_next, end_cursor)
+                            data_json = respuesta.json()
+                            registros = data_json.get("data", [])
 
-                        # Evita bucles infinitos por cursor repetido
-                        if end_cursor in seen_cursors:
-                            logger.warning("[Página %d] Cursor repetido detectado: posible bucle de paginación", pagina)
+                            logger.info("[Página %d] Registros obtenidos: %d", pagina, len(registros))
+
+                            # Agrupa los registros de fuelPercents por vehículo
+                            for registro in registros:
+                                vehiculo_id = str(registro.get("id"))
+                                if not vehiculo_id:
+                                    continue
+                                vehiculos_agrupados[vehiculo_id].extend(registro.get("fuelPercents", []))
+
+                            # Manejo de paginación
+                            pagination = data_json.get("pagination", {})
+                            end_cursor = pagination.get("endCursor")
+                            has_next = pagination.get("hasNextPage", False)
+
+                            logger.info("[Página %d] hasNextPage = %s | endCursor = %s", pagina, has_next, end_cursor)
+
+                            # Evita bucles infinitos por cursor repetido
+                            if end_cursor in seen_cursors:
+                                logger.warning("[Página %d] Cursor repetido detectado: posible bucle de paginación", pagina)
+                                break
+                            seen_cursors.add(end_cursor)
+
+                            # Si no hay más páginas, termina el ciclo
+                            if not has_next:
+                                logger.info("[Página %d] Fin de paginación alcanzado.", pagina)
+                                break
+
+                            pagina += 1
+                            time.sleep(0.3)  # Espera corta entre páginas para no saturar la API
+
+                        except Exception:
+                            logger.exception("Error procesando datos históricos de combustible.")
                             break
-                        seen_cursors.add(end_cursor)
 
-                        # Si no hay más páginas, termina el ciclo
-                        if not has_next:
-                            logger.info("[Página %d] Fin de paginación alcanzado.", pagina)
-                            break
+                    # Procesa los registros agrupados por vehículo
+                    for vehiculo_id, lista_registros in vehiculos_agrupados.items():
+                        lista_registros.sort(key=lambda r: r["time"])
+                        postVehicle_fuel_stats({"id": vehiculo_id, "fuelPercents": lista_registros}, capacidades, cur)
 
-                        pagina += 1
-                        time.sleep(0.3)  # Espera corta entre páginas para no saturar la API
-
-                    except Exception:
-                        logger.exception(" Error procesando datos históricos de combustible.")
-                        break
-
-                # Procesa los registros agrupados por vehículo
-                for vehiculo_id, lista_registros in vehiculos_agrupados.items():
-                    lista_registros.sort(key=lambda r: r["time"])
-                    postVehicle_fuel_stats({"id": vehiculo_id, "fuelPercents": lista_registros}, capacidades, cur)
-
-                conn.commit()
-                logger.info(" Lote procesado correctamente. Esperando 0.5 segundos...")
-                time.sleep(0.5)
-
-
+                    conn.commit()
+                    logger.info("Lote procesado correctamente. Esperando 0.5 segundos...")
+                    time.sleep(0.5)
 def postVehicle_fuel_stats(registro_vehiculo, capacidades_vehiculos, cursor_bd):
     # Obtiene el ID del vehículo
     vehiculo_id = str(registro_vehiculo.get("id"))
@@ -350,240 +352,140 @@ def postVehicle_fuel_stats(registro_vehiculo, capacidades_vehiculos, cursor_bd):
 
 
 #           Fin de la función postVehicle_fuel_stats
-
-#           Incio de la función reporte_combustible
-def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
-    
-    logger.info(f"[REPORTE] Consultando fuel-energy de {fecha_inicio} a {fecha_fin}")
-    url = URL_FUEL_ENERGY
-    parametros = {
-        "startDate": fecha_inicio,
-        "endDate": fecha_fin,
-        "energyType": "fuel"
-    }
-
-    logger.info(f"[respuesta1 ] URL_FUEL_ENERGY 222 : {URL_FUEL_ENERGY}  a:")
-    try:
-        
-        logger.info(f"[respuesta1 ] 0000urlfecha_inicioccccccc: {url} y aparametros a: ")
-        respuesta = requests.get(url, headers=CABECERAS, params=parametros)
-        
-        logger.info(f"[respuesta] 0000urlfecha_inicioccccccc: {respuesta} y aa: {fecha_inicio}")
-        if respuesta.status_code != 200:
-            logger.error(f"[ERROR] Fallo API: {respuesta.status_code} - {respuesta.text}")
-            return
-
-        reportes = respuesta.json().get("data", {}).get("vehicleReports", [])
-        registros = 0
-        
-        logger.info(f"[REPORTE] cfecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
-        with get_connection() as conn:
-            with conn.cursor() as cur:
-                
-                logger.info(f"[REPORTE] 2 fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
-                for reporte in reportes:
-                    vehiculo = reporte.get("vehicle", {})
-                    vehiculo_id = vehiculo.get("id")
-                    
-                    logger.info(f"[REPORTE] 3 fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
-                    if not vehiculo_id:
-                        
-                        logger.info(f"[REPORTE] 4 cont fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
-                        continue
-
-                    try:
-                        
-                        logger.info(f"[REPORTE] 5 try cont fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
-                        litros = round(reporte.get("fuelConsumedMl", 0) / 1000, 2)
-                        km = round(reporte.get("distanceTraveledMeters", 0) / 1000, 2)
-                        rendimiento = round(km / litros, 2) if litros > 0 else None
-                        costo = reporte.get("estFuelEnergyCost", {}).get("amount")
-                        motor_s = int(reporte.get("engineRunTimeDurationMs", 0) / 1000)
-                        ralenti_s = int(reporte.get("engineIdleTimeDurationMs", 0) / 1000)
-
-                        # Usar la fecha configurada o UTC
-                        fecha_reporte = datetime.strptime(fecha_inicio[:10], "%Y-%m-%d").date()
-                        logger.info(f"[REPORTE] Insertando para fecha: {fecha_reporte} y vehículo: {vehiculo_id}")
-
-                        cur.execute("""
-                            INSERT INTO reporte_combustible (
-                                vehiculo_id,
-                                fecha_reporte,
-                                litros_totales,
-                                kilometros_recorridos,
-                                rendimiento_km_por_litro,
-                                costo_combustible_usd,
-                                tiempo_motor_s,
-                                tiempo_ralenti_s
-                            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                            ON CONFLICT DO NOTHING
-                        """, (
-                            vehiculo_id,
-                            fecha_reporte,
-                            litros,
-                            km,
-                            rendimiento,
-                            costo,
-                            motor_s,
-                            ralenti_s
-                        ))
-                        registros += 1
-                    except Exception as e:
-                        logger.exception(f"[ERROR] Al guardar resumen del vehículo {vehiculo_id}")
-
-            conn.commit()
-        logger.info(f"[REPORTE] {registros} resúmenes guardados correctamente.")
-
-    except Exception as e:
-        logger.exception("Error al obtener reporte fuel-energy")
+#           Inicio  de la función reporte_combustible
 
 
-
-def limpiar_y_actualizar_fuel_stats_dia(fecha_obj):
-    
-    fecha_str = fecha_obj.isoformat()
-    inicio = f"{fecha_str}T00:00:00Z"
-    fin = f"{fecha_str}T23:59:59Z"
+def sync_fuel_energy_summary(start_date, end_date):
+    # Inicia la sincronización del resumen de combustible para el rango de fechas dado
+    logger.info(f"[FUEL-ENERGY] Sincronizando resumen de combustible entre {start_date} y {end_date}")
 
     try:
-        logger.info(f"[FUEL-STATS] Eliminando registros de {fecha_str} para recalcular...")
-        with get_connection() as conn:
-            with conn.cursor() as cur:
-                cur.execute("""
-                    DELETE FROM vehicle_fuel_stats
-                    WHERE DATE(fecha_hora AT TIME ZONE 'UTC' AT TIME ZONE 'America/Mexico_City') = %s
-                """, (fecha_str,))
-
-                capacidades = get_vehicle_capacities()
-                ids = list(capacidades.keys())
-                url = f"{URL_HISTORICO}?vehicleIds={','.join(ids)}&startTime={inicio}&endTime={fin}&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
-
-                respuesta = requests.get(url, headers=CABECERAS)
-                datos = respuesta.json().get("data", [])
-
-                for registro in datos:
-                    postVehicle_fuel_stats(registro, capacidades, cur)
-                conn.commit()
-    except Exception as e:
-        logger.exception(f"[FUEL-STATS] Error actualizando registros del {fecha_str}")
-
-
-def recalcular_resumen_combustible_dia(fecha_obj):
-
-    fecha_str = fecha_obj.isoformat()
-    inicio = f"{fecha_str}T00:00:00Z"
-    fin = f"{fecha_str}T23:59:59Z"
-
-    try:
-        logger.info(f"[REPORTE] Eliminando resumen previo del {fecha_str} por recálculo de 72h.")
-        with get_connection() as conn:
-            with conn.cursor() as cur:
-                cur.execute("DELETE FROM reporte_combustible WHERE fecha_reporte = %s", (fecha_str,))
-                conn.commit()
-
-        logger.info(f"[REPORTE] Recalculando resumen de {fecha_str}")
-        sincronizar_reporte_resumen_combustible(inicio, fin)
-    except Exception as e:
-        logger.exception(f"[REPORTE] Error recalculando resumen del día {fecha_str}")
-
-
-def sincronizar_eventos_combustible(base):#menos 3 dias
-    
-    logger.info("[SYNC] Iniciando sincronización de eventos de combustible")
-
-    # Usamos UTC o fecha del .env para todos los cálculos
-
-
-    ayer = base - timedelta(days=1)
-    menos_tres = base - timedelta(days=3)
- 
-
-    limpiar_y_actualizar_fuel_stats_dia(ayer)
-    recalcular_resumen_combustible_dia(menos_tres)
-
-    logger.info("[SYNC] Sincronización extendida de combustible completada")
-
-
-
-def registrar_eventos_combustible_vehiculo(registro_vehiculo, capacidades_vehiculos, cursor_bd):
-    """
-    Procesa los registros de combustible de un solo vehículo y los inserta en la tabla vehicle_fuel_stats.
-    Se calcula el consumo y recarga de combustible a partir de los cambios de porcentaje reportados.
-    Evita duplicados usando ON CONFLICT.
-    """
-    logger.info("[PROCESO] Procesando registros de combustible para vehículo: %s", registro_vehiculo)
-    
-    vehiculo_id = str(registro_vehiculo.get("id"))
-    if not vehiculo_id:
-        logger.warning("[AVISO] Entrada sin ID de vehículo: %s", registro_vehiculo)
+        # Intenta convertir las fechas de entrada a objetos date
+        start_dt = datetime.strptime(str(start_date), "%Y-%m-%d").date()
+        end_dt = datetime.strptime(str(end_date), "%Y-%m-%d").date()
+    except Exception:
+        logger.error("[FUEL-ENERGY] Formato de fecha inválido. Use 'YYYY-MM-DD', datetime o date")
         return
 
-    capacidad_tanque = capacidades_vehiculos.get(vehiculo_id, 200)
-    registros_combustible = registro_vehiculo.get("fuelPercents", [])
-    logger.info("[PROCESO] Vehículo %s con %d registros de combustible", vehiculo_id, len(registros_combustible))
+    # Valida que la fecha final no sea anterior a la inicial
+    if end_dt < start_dt:
+        logger.warning("[FUEL-ENERGY] Fecha final es anterior a fecha inicial. Cancelando.")
+        return
 
-    porcentaje_anterior = None
-    total_registros_insertados = 0
-    CAMBIO_MINIMO_PORCENTAJE = 2
-    UMBRAL_RECARGA_PORCENTAJE = 5
+    total_days = (end_dt - start_dt).days + 1  # Calcula el número de días a procesar
 
-    # Recorre cada registro de porcentaje de combustible
-    for registro in registros_combustible:
-        porcentaje_actual = registro.get("value")
-        fecha_registro = registro.get("time")
-        decoraciones = registro.get("decorations", {})
-        gps = decoraciones.get("gps", {})
-        latitud = gps.get("latitude")
-        longitud = gps.get("longitude")
-
-        if porcentaje_anterior is not None and porcentaje_actual is not None:
-            diferencia_porcentaje = round(porcentaje_actual - porcentaje_anterior, 2)
-
-            # Ignora cambios menores al umbral mínimo
-            if abs(diferencia_porcentaje) < CAMBIO_MINIMO_PORCENTAJE:
-                porcentaje_anterior = porcentaje_actual
-                continue
-
-            # Calcula los litros cambiados según la diferencia de porcentaje y la capacidad del tanque
-            litros_cambiados = round(abs(diferencia_porcentaje) * capacidad_tanque / 100, 2)
-            es_recarga = diferencia_porcentaje >= UMBRAL_RECARGA_PORCENTAJE
-            es_consumo = diferencia_porcentaje < 0
-
-            # Solo inserta si el cambio es relevante
-            if litros_cambiados > 0.01:
-                try:
-                    cursor_bd.execute("""
-                        INSERT INTO vehicle_fuel_stats (
-                            vehiculo_id,
-                            porcentaje_combustible,
-                            litros_recargados,
-                            porcentaje_recargado,
-                            litros_consumidos,
-                            es_evento_recarga,
-                            latitud,
-                            longitud,
-                            fecha_hora
-                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-                        ON CONFLICT (vehiculo_id, fecha_hora) DO NOTHING
-                    """, (
-                        vehiculo_id,
-                        porcentaje_actual,
-                        litros_cambiados if es_recarga else 0,
-                        diferencia_porcentaje if es_recarga else 0,
-                        litros_cambiados if es_consumo else 0,
-                        es_recarga,
-                        latitud,
-                        longitud,
-                        fecha_registro
-                    ))
-                    total_registros_insertados += 1
-                except Exception as error:
-                    logger.exception("Error insertando evento de combustible: %s", error)
-
-        porcentaje_anterior = porcentaje_actual
-
-    logger.info("[FINAL] Vehículo %s: %d registros insertados", vehiculo_id, total_registros_insertados)
     try:
-        update_sync_time(cursor_bd, vehiculo_id, TIPO_DATO, datetime.now(timezone.utc))
-    except Exception as error:
-        logger.exception("Error actualizando tiempo de sincronización: %s", error)
+        # Obtiene todos los IDs de vehículos y los divide en lotes de 20 para optimizar las llamadas a la API
+        all_vehicle_ids = get_vehicle_capacities().keys()
+        vehicle_chunks = list(chunks(list(all_vehicle_ids), 20))
+
+        # Recorre cada día del rango solicitado
+        for i in range(total_days):
+            current_day = start_dt + timedelta(days=i)
+            # Define el inicio y fin del día con zona horaria -07:00 (ajustar si es necesario)
+            day_start = f"{current_day}T00:00:00.00-07:00"
+            day_end = f"{current_day}T23:59:59.99-07:00"
+
+            logger.info(f"[FUEL-ENERGY] Día {i+1}/{total_days}: {day_start} a {day_end}")
+
+            # Procesa los vehículos en lotes
+            for chunk_index, vehicle_ids in enumerate(vehicle_chunks):
+                logger.info(f"[Lote {chunk_index+1}/{len(vehicle_chunks)}] Vehículos: {vehicle_ids}")
+
+                page = 1
+                end_cursor = None
+                seen_cursors = set()  # Para evitar bucles infinitos de paginación
+
+                with get_connection() as conn:
+                    with conn.cursor() as cur:
+                        while True:
+                            # Prepara los parámetros para la consulta a la API
+                            params = {
+                                "startDate": day_start,
+                                "endDate": day_end,
+                                "energyType": "fuel",
+                                "vehicleIds": ",".join(vehicle_ids)
+                            }
+                            if end_cursor:
+                                params["startingAfter"] = end_cursor
+
+                            logger.info(f"[Página {page}] Solicitando con cursor: {end_cursor}")
+                            response = requests.get(URL_FUEL_ENERGY, headers=CABECERAS, params=params)
+
+                            # Si la API responde con error, lo registra y termina la paginación de ese lote
+                            if response.status_code != 200:
+                                logger.error(f"[ERROR] API: {response.status_code} - {response.text}")
+                                break
+
+                            # Obtiene los datos de la respuesta
+                            data = response.json().get("data", {}).get("vehicleReports", [])
+                            pagination = response.json().get("pagination", {})
+                            end_cursor = pagination.get("endCursor")
+                            has_next = pagination.get("hasNextPage", False)
+
+                            logger.info(f"[Página {page}] Registros obtenidos: {len(data)} | hasNext: {has_next}")
+
+                            # Inserta cada reporte de vehículo en la base de datos
+                            for report in data:
+                                vehicle = report.get("vehicle", {})
+                                vehicle_id = vehicle.get("id")
+                                if not vehicle_id:
+                                    continue
+
+                                try:
+                                    # Obtiene la fecha del reporte, litros consumidos, km recorridos, rendimiento, costo, tiempos de motor y ralentí
+                                    ts = report.get("startMs")
+                                    report_date = datetime.fromtimestamp(int(ts) / 1000).date() if ts else current_day
+
+                                    litros = round(report.get("fuelConsumedMl", 0) / 1000, 2)
+                                    km = round(report.get("distanceTraveledMeters", 0) / 1000, 2)
+                                    rendimiento = round(km / litros, 2) if litros > 0 else None
+                                    costo = report.get("estFuelEnergyCost", {}).get("amount")
+                                    motor_s = int(report.get("engineRunTimeDurationMs", 0) / 1000)
+                                    ralenti_s = int(report.get("engineIdleTimeDurationMs", 0) / 1000)
+
+                                    # Inserta o actualiza el registro en la tabla reporte_combustible
+                                    cur.execute("""
+                                        INSERT INTO reporte_combustible (
+                                            vehiculo_id,
+                                            fecha_reporte,
+                                            litros_totales,
+                                            kilometros_recorridos,
+                                            rendimiento_km_por_litro,
+                                            costo_combustible_usd,
+                                            tiempo_motor_s,
+                                            tiempo_ralenti_s
+                                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                                        ON CONFLICT (vehiculo_id, fecha_reporte) DO UPDATE SET
+                                            litros_totales = EXCLUDED.litros_totales,
+                                            kilometros_recorridos = EXCLUDED.kilometros_recorridos,
+                                            rendimiento_km_por_litro = EXCLUDED.rendimiento_km_por_litro,
+                                            costo_combustible_usd = EXCLUDED.costo_combustible_usd,
+                                            tiempo_motor_s = EXCLUDED.tiempo_motor_s,
+                                            tiempo_ralenti_s = EXCLUDED.tiempo_ralenti_s
+                                    """, (
+                                        vehicle_id,
+                                        report_date,
+                                        litros,
+                                        km,
+                                        rendimiento,
+                                        costo,
+                                        motor_s,
+                                        ralenti_s
+                                    ))
+                                except Exception as e:
+                                    logger.exception(f"[ERROR] Al insertar reporte de vehículo {vehicle_id}")
+
+                            conn.commit()
+
+                            # Si no hay más páginas o el cursor ya fue visto, termina la paginación
+                            if not has_next or end_cursor in seen_cursors:
+                                break
+                            seen_cursors.add(end_cursor)
+                            page += 1
+                            time.sleep(0.5)  # Espera recomendada para no saturar la API
+
+        logger.info("[FUEL-ENERGY] Sincronización completa.")
+
+    except Exception as e:
+        logger.exception("[FUEL-ENERGY] Error en la sincronización de fuel-energy")

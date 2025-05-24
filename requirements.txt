@@ -6,3 +6,4 @@ schedule
 pystray
 Pillow
 pytz
+tkcalendar
