@@ -10,10 +10,23 @@ from tkinter import Tk, Label, Button, PhotoImage, messagebox
 from tkcalendar import DateEntry
 from sync_scheduler import tarea_sincronizacion, INTERVAL, obtener_fecha_inicio_manual, obtener_fecha_fin_manual
 from utils.logger import logger
+import tkinter as tk
 
 # Control de ejecución
 paused = False
 running = False
+
+def run_in_tk_mainloop(func):
+    try:
+        root = tk._default_root
+        if root is None:
+            root = tk.Tk()
+            root.withdraw()
+        root.after(0, func)
+    except Exception:
+        # Silenciar el error, ya que Tkinter no siempre tiene un mainloop activo
+        func()
+
 
 def resource_path(relative_path):
     """Obtiene la ruta absoluta al recurso, compatible con PyInstaller."""
@@ -241,84 +254,88 @@ def editar_fecha_manual(icon, item):
     threading.Thread(target=abrir_dialogo, daemon=True).start()
 
 def editar_configuracion_env(icon, item):
-    def abrir_dialogo():
+    # Lanza la ventana de edición en un proceso aparte
+    import subprocess
+    python_exe = sys.executable
+    script_path = resource_path("edit_env_window.py")
+    subprocess.Popen([python_exe, script_path])
+
+def abrir_dialogo():
+    try:
+        from tkinter import Tk, Label, Entry, Button, StringVar, messagebox
+
+        env_path = resource_path(".env")
+        # Valores por defecto
+        valores = {
+            "SAMSARA_API_TOKEN": "",
+            "DATABASE_URL": "",
+            "INTERVAL": ""
+        }
+        # Leer valores actuales
         try:
-            from tkinter import Tk, Label, Entry, Button, StringVar, messagebox
+            with open(env_path, "r", encoding="utf-8") as f:
+                for linea in f:
+                    for key in valores:
+                        if linea.startswith(f"{key}="):
+                            valores[key] = linea.strip().split("=", 1)[1]
+        except FileNotFoundError:
+            pass
 
-            env_path = resource_path(".env")
-            # Valores por defecto
-            valores = {
-                "SAMSARA_API_TOKEN": "",
-                "DATABASE_URL": "",
-                "INTERVAL": ""
+        root = Tk()
+        root.title("Editar configuración .env")
+        root.geometry("500x220")
+        root.resizable(False, False)
+
+        Label(root, text="SAMSARA_API_TOKEN:").pack()
+        token_var = StringVar(value=valores["SAMSARA_API_TOKEN"])
+        Entry(root, textvariable=token_var, width=60).pack()
+
+        Label(root, text="DATABASE_URL:").pack()
+        db_var = StringVar(value=valores["DATABASE_URL"])
+        Entry(root, textvariable=db_var, width=60).pack()
+
+        Label(root, text="INTERVAL (minutos):").pack()
+        interval_var = StringVar(value=valores["INTERVAL"])
+        Entry(root, textvariable=interval_var, width=20).pack()
+
+        def guardar():
+            nuevos = {
+                "SAMSARA_API_TOKEN": token_var.get().strip(),
+                "DATABASE_URL": db_var.get().strip(),
+                "INTERVAL": interval_var.get().strip()
             }
-            # Leer valores actuales
+            # Leer todas las líneas y reemplazar solo los campos editados
             try:
-                with open(env_path, "r", encoding="utf-8") as f:
-                    for linea in f:
-                        for key in valores:
-                            if linea.startswith(f"{key}="):
-                                valores[key] = linea.strip().split("=", 1)[1]
-            except FileNotFoundError:
-                pass
-
-            root = Tk()
-            root.title("Editar configuración .env")
-            root.geometry("500x220")
-            root.resizable(False, False)
-
-            Label(root, text="SAMSARA_API_TOKEN:").pack()
-            token_var = StringVar(value=valores["SAMSARA_API_TOKEN"])
-            Entry(root, textvariable=token_var, width=60).pack()
-
-            Label(root, text="DATABASE_URL:").pack()
-            db_var = StringVar(value=valores["DATABASE_URL"])
-            Entry(root, textvariable=db_var, width=60).pack()
-
-            Label(root, text="INTERVAL (minutos):").pack()
-            interval_var = StringVar(value=valores["INTERVAL"])
-            Entry(root, textvariable=interval_var, width=20).pack()
-
-            def guardar():
-                nuevos = {
-                    "SAMSARA_API_TOKEN": token_var.get().strip(),
-                    "DATABASE_URL": db_var.get().strip(),
-                    "INTERVAL": interval_var.get().strip()
-                }
-                # Leer todas las líneas y reemplazar solo los campos editados
                 try:
-                    try:
-                        with open(env_path, "r", encoding="utf-8") as f:
-                            lineas = f.readlines()
-                    except FileNotFoundError:
-                        lineas = []
-                    claves_actualizadas = set()
-                    with open(env_path, "w", encoding="utf-8") as f:
-                        for linea in lineas:
-                            escrito = False
-                            for key, val in nuevos.items():
-                                if linea.startswith(f"{key}="):
-                                    f.write(f"{key}={val}\n")
-                                    claves_actualizadas.add(key)
-                                    escrito = True
-                                    break
-                            if not escrito:
-                                f.write(linea)
-                        # Si algún campo no estaba, lo agregamos
+                    with open(env_path, "r", encoding="utf-8") as f:
+                        lineas = f.readlines()
+                except FileNotFoundError:
+                    lineas = []
+                claves_actualizadas = set()
+                with open(env_path, "w", encoding="utf-8") as f:
+                    for linea in lineas:
+                        escrito = False
                         for key, val in nuevos.items():
-                            if key not in claves_actualizadas:
+                            if linea.startswith(f"{key}="):
                                 f.write(f"{key}={val}\n")
-                    messagebox.showinfo("Éxito", "Configuración guardada correctamente.")
-                    root.destroy()
-                except Exception as e:
-                    messagebox.showerror("Error", f"No se pudo guardar la configuración:\n{e}")
+                                claves_actualizadas.add(key)
+                                escrito = True
+                                break
+                        if not escrito:
+                            f.write(linea)
+                    # Si algún campo no estaba, lo agregamos
+                    for key, val in nuevos.items():
+                        if key not in claves_actualizadas:
+                            f.write(f"{key}={val}\n")
+                messagebox.showinfo("Éxito", "Configuración guardada correctamente.")
+                root.destroy()
+            except Exception as e:
+                messagebox.showerror("Error", f"No se pudo guardar la configuración:\n{e}")
 
-            Button(root, text="Guardar", command=guardar, bg="#10810686", fg="white").pack(pady=10)
-            root.mainloop()
-        except Exception as e:
-            logger.exception("Error al editar configuración .env")
-
-    threading.Thread(target=abrir_dialogo, daemon=True).start()
+        Button(root, text="Guardar", command=guardar, bg="#1e90ff", fg="white").pack(pady=10)
+        root.mainloop()
+    except Exception as e:
+        logger.exception("Error al editar configuración .env")
 
 def quit_action(icon, item):
     global running
