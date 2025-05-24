@@ -33,16 +33,16 @@ def tarea_sincronizacion():
     """
     try:
         logger.info("---- INICIO DE SINCRONIZACIÓN ----")
-
-        sincronizar_catalogo_vehiculos()
-        capacidades = get_vehicle_capacities()
-        sincronizaciones = get_last_sync_times("fuelPercents")
-        obtener_estadisticas_combustible(capacidades, sincronizaciones)
+##cambiar logica para actualizar la info de hoy y la anterior ,considerar fuel stats para ver si lo hago x dia
+        fecha_base = obtener_fecha_manual()
+        sincronizar_catalogo_vehiculos()#ok
+        capacidades = get_vehicle_capacities()#ok
+        sincronizaciones = get_last_sync_times("fuelPercents")#ok pero no se usa
+        obtener_estadisticas_combustible(capacidades, sincronizaciones,fecha_base)#verificar que hacer cuando se actualiza la info(fuel_stats),no creo que haga falta considerar multiples fechas
 
         logger.info("---- Desarrollo DE SINCRONIZACIÓN ----")
         # Usar la fecha manual si está definida, si no usar la fecha actual
 
-        fecha_base = obtener_fecha_manual()
         inicio = fecha_base.isoformat() + "T00:00:00Z"
         fin = fecha_base.isoformat() + "T23:59:59Z"
 

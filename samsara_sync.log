@@ -8537,3 +8537,557 @@ TypeError: procesar_estadistica() got an unexpected keyword argument 'fecha_filt
 [2025-05-22 17:12:16] INFO: [SYNC] Sincronización extendida de combustible completada
 [2025-05-22 17:12:16] INFO: ---- FIN DE SINCRONIZACIÓN ----
 [2025-05-22 17:12:16] INFO: Icono cargado y systray en ejecución.
+[2025-05-22 17:19:31] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 17:19:31] INFO: Iniciando loop del scheduler...
+[2025-05-22 17:19:31] INFO: Ejecutando sincronización inicial...
+[2025-05-22 17:19:31] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 17:19:31] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 17:19:32] INFO: Catálogo sincronizado.
+[2025-05-22 17:19:32] INFO: Descargando datos históricos de combustible...
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984468469 con 127 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984468469: 18 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984471474 con 48 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984471474: 16 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984489038 con 70 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984489038: 29 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984490449 con 1 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984490449: 0 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984667006 con 40 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984667006: 17 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984779335 con 137 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984779335: 28 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984780699 con 1 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984780699: 0 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984796823 con 106 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984796823: 47 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984884925 con 1 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984884925: 0 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984917931 con 25 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984917931: 15 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474984939926 con 83 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474984939926: 23 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474985273793 con 83 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474985273793: 26 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474985935537 con 162 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474985935537: 54 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474989145452 con 80 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474989145452: 24 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474992992431 con 1 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474992992431: 0 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474992992552 con 1 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474992992552: 0 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474992996203 con 55 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474992996203: 5 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-22 17:19:36] INFO: [PROCESO] 281474995511888 con 81 registros
+[2025-05-22 17:19:36] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:19:36] INFO: Estadísticas guardadas correctamente.
+[2025-05-22 17:19:36] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-22 17:19:36] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-19
+[2025-05-22 17:19:36] INFO: [REPORTE] Consultando fuel-energy de 2025-05-19T00:00:00Z a 2025-05-19T23:59:59Z
+[2025-05-22 17:19:36] INFO: [REPORTE] 32 resúmenes guardados correctamente.
+[2025-05-22 17:19:36] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-22 17:19:36] INFO: [FUEL-STATS] Eliminando registros de 2025-05-18 para recalcular...
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984438177 con 82 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984468469 con 40 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984468469: 22 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984471474 con 1 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984471474: 0 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984489038 con 75 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984489038: 35 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984667006 con 21 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984667006: 6 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984780699 con 58 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984780699: 11 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984796823 con 82 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984796823: 62 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474984917931 con 31 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474984917931: 3 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474985273793 con 63 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474985273793: 41 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474985935537 con 1 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474985935537: 0 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474989145452 con 159 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474989145452: 56 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474992992433 con 4 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474992992433: 2 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474992992552 con 81 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474992992552: 27 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474992996203 con 1 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474992996203: 0 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474995276074 con 13 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474995276074: 6 registros insertados
+[2025-05-22 17:19:40] INFO: [PROCESO] 281474995511888 con 41 registros
+[2025-05-22 17:19:40] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:19:40] INFO: [REPORTE] Eliminando resumen previo del 2025-05-16 por recálculo de 72h.
+[2025-05-22 17:19:40] INFO: [REPORTE] Recalculando resumen de 2025-05-16
+[2025-05-22 17:19:40] INFO: [REPORTE] Consultando fuel-energy de 2025-05-16T00:00:00Z a 2025-05-16T23:59:59Z
+[2025-05-22 17:19:41] INFO: [REPORTE] 28 resúmenes guardados correctamente.
+[2025-05-22 17:19:41] INFO: [SYNC] Sincronización extendida de combustible completada
+[2025-05-22 17:19:41] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-22 17:19:41] INFO: Icono cargado y systray en ejecución.
+[2025-05-22 17:20:19] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 17:20:19] INFO: Iniciando loop del scheduler...
+[2025-05-22 17:20:19] INFO: Ejecutando sincronización inicial...
+[2025-05-22 17:20:19] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 17:20:19] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 17:20:20] INFO: Catálogo sincronizado.
+[2025-05-22 17:20:21] INFO: Descargando datos históricos de combustible...
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984468469 con 127 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984468469: 18 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984471474 con 48 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984471474: 16 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984489038 con 70 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984489038: 29 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984490449 con 1 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984490449: 0 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984667006 con 40 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984667006: 17 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984779335 con 137 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984779335: 28 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984780699 con 1 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984780699: 0 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984796823 con 106 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984796823: 47 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984884925 con 1 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984884925: 0 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984917931 con 25 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984917931: 15 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474984939926 con 83 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474984939926: 23 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474985273793 con 83 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474985273793: 26 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474985935537 con 162 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474985935537: 54 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474989145452 con 80 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474989145452: 24 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474992992431 con 1 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474992992431: 0 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474992992552 con 1 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474992992552: 0 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474992996203 con 55 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474992996203: 5 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-22 17:20:24] INFO: [PROCESO] 281474995511888 con 81 registros
+[2025-05-22 17:20:24] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:20:24] INFO: Estadísticas guardadas correctamente.
+[2025-05-22 17:20:24] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-22 17:20:24] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-19
+[2025-05-22 17:20:24] INFO: [REPORTE] Consultando fuel-energy de 2025-05-19T00:00:00Z a 2025-05-19T23:59:59Z
+[2025-05-22 17:20:25] INFO: [REPORTE] 32 resúmenes guardados correctamente.
+[2025-05-22 17:20:25] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-22 17:20:25] INFO: [FUEL-STATS] Eliminando registros de 2025-05-18 para recalcular...
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984438177 con 82 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984468469 con 40 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984468469: 22 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984471474 con 1 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984471474: 0 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984489038 con 75 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984489038: 35 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984667006 con 21 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984667006: 6 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984780699 con 58 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984780699: 11 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984796823 con 82 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984796823: 62 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474984917931 con 31 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474984917931: 3 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474985273793 con 63 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474985273793: 41 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474985935537 con 1 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474985935537: 0 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474989145452 con 159 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474989145452: 56 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474992992433 con 4 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474992992433: 2 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474992992552 con 81 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474992992552: 27 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474992996203 con 1 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474992996203: 0 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474995276074 con 13 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474995276074: 6 registros insertados
+[2025-05-22 17:20:28] INFO: [PROCESO] 281474995511888 con 41 registros
+[2025-05-22 17:20:28] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:20:28] INFO: [REPORTE] Eliminando resumen previo del 2025-05-16 por recálculo de 72h.
+[2025-05-22 17:20:28] INFO: [REPORTE] Recalculando resumen de 2025-05-16
+[2025-05-22 17:20:28] INFO: [REPORTE] Consultando fuel-energy de 2025-05-16T00:00:00Z a 2025-05-16T23:59:59Z
+[2025-05-22 17:20:29] INFO: [REPORTE] 28 resúmenes guardados correctamente.
+[2025-05-22 17:20:29] INFO: [SYNC] Sincronización extendida de combustible completada
+[2025-05-22 17:20:29] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-22 17:20:29] INFO: Icono cargado y systray en ejecución.
+[2025-05-22 17:21:10] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 17:21:10] INFO: Iniciando loop del scheduler...
+[2025-05-22 17:21:10] INFO: Ejecutando sincronización inicial...
+[2025-05-22 17:21:10] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 17:21:10] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 17:21:11] INFO: Catálogo sincronizado.
+[2025-05-22 17:21:12] INFO: Descargando datos históricos de combustible...
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984468469 con 127 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984468469: 18 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984471474 con 48 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984471474: 16 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984489038 con 70 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984489038: 29 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984490449 con 1 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984490449: 0 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984667006 con 40 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984667006: 17 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984779335 con 137 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984779335: 28 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984780699 con 1 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984780699: 0 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984796823 con 106 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984796823: 47 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984884925 con 1 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984884925: 0 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984917931 con 25 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984917931: 15 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474984939926 con 83 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474984939926: 23 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474985273793 con 83 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474985273793: 26 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474985935537 con 162 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474985935537: 54 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474989145452 con 80 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474989145452: 24 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474992992431 con 1 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474992992431: 0 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474992992552 con 1 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474992992552: 0 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474992996203 con 55 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474992996203: 5 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-22 17:21:14] INFO: [PROCESO] 281474995511888 con 81 registros
+[2025-05-22 17:21:14] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:21:14] INFO: Estadísticas guardadas correctamente.
+[2025-05-22 17:21:14] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-22 17:21:14] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-19
+[2025-05-22 17:21:14] INFO: [REPORTE] Consultando fuel-energy de 2025-05-19T00:00:00Z a 2025-05-19T23:59:59Z
+[2025-05-22 17:21:15] INFO: [REPORTE] 32 resúmenes guardados correctamente.
+[2025-05-22 17:21:15] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-22 17:21:15] INFO: [FUEL-STATS] Eliminando registros de 2025-05-18 para recalcular...
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984438177 con 82 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984468469 con 40 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984468469: 22 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984471474 con 1 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984471474: 0 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984489038 con 75 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984489038: 35 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984667006 con 21 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984667006: 6 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984780699 con 58 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984780699: 11 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984796823 con 82 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984796823: 62 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474984917931 con 31 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474984917931: 3 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474985273793 con 63 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474985273793: 41 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474985935537 con 1 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474985935537: 0 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474989145452 con 159 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474989145452: 56 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474992992433 con 4 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474992992433: 2 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474992992552 con 81 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474992992552: 27 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474992996203 con 1 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474992996203: 0 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474995276074 con 13 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474995276074: 6 registros insertados
+[2025-05-22 17:21:18] INFO: [PROCESO] 281474995511888 con 41 registros
+[2025-05-22 17:21:18] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:21:18] INFO: [REPORTE] Eliminando resumen previo del 2025-05-16 por recálculo de 72h.
+[2025-05-22 17:21:18] INFO: [REPORTE] Recalculando resumen de 2025-05-16
+[2025-05-22 17:21:18] INFO: [REPORTE] Consultando fuel-energy de 2025-05-16T00:00:00Z a 2025-05-16T23:59:59Z
+[2025-05-22 17:21:19] INFO: [REPORTE] 28 resúmenes guardados correctamente.
+[2025-05-22 17:21:19] INFO: [SYNC] Sincronización extendida de combustible completada
+[2025-05-22 17:21:19] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-22 17:21:19] INFO: Icono cargado y systray en ejecución.
+[2025-05-22 17:23:21] INFO: Intervalo configurado en 20 minutos
+[2025-05-22 17:23:21] INFO: Iniciando loop del scheduler...
+[2025-05-22 17:23:21] INFO: Ejecutando sincronización inicial...
+[2025-05-22 17:23:21] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-22 17:23:21] INFO: Sincronizando catálogo de vehículos...
+[2025-05-22 17:23:22] INFO: Catálogo sincronizado.
+[2025-05-22 17:23:22] INFO: Descargando datos históricos de combustible...
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984468469 con 127 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984468469: 18 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984471474 con 48 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984471474: 16 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984489038 con 70 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984489038: 29 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984490449 con 1 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984490449: 0 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984667006 con 40 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984667006: 17 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984779335 con 137 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984779335: 28 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984780699 con 1 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984780699: 0 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984796823 con 106 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984796823: 47 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984884925 con 1 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984884925: 0 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984917931 con 25 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984917931: 15 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474984939926 con 83 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474984939926: 23 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474985273793 con 83 registros
+[2025-05-22 17:23:25] INFO: [FINAL] 281474985273793: 26 registros insertados
+[2025-05-22 17:23:25] INFO: [PROCESO] 281474985935537 con 162 registros
+[2025-05-22 17:23:26] INFO: [FINAL] 281474985935537: 54 registros insertados
+[2025-05-22 17:23:26] INFO: [PROCESO] 281474989145452 con 80 registros
+[2025-05-22 17:23:26] INFO: [FINAL] 281474989145452: 24 registros insertados
+[2025-05-22 17:23:26] INFO: [PROCESO] 281474992992431 con 1 registros
+[2025-05-22 17:23:26] INFO: [FINAL] 281474992992431: 0 registros insertados
+[2025-05-22 17:23:26] INFO: [PROCESO] 281474992992552 con 1 registros
+[2025-05-22 17:23:26] INFO: [FINAL] 281474992992552: 0 registros insertados
+[2025-05-22 17:23:26] INFO: [PROCESO] 281474992996203 con 55 registros
+[2025-05-22 17:23:26] INFO: [FINAL] 281474992996203: 5 registros insertados
+[2025-05-22 17:23:26] INFO: [PROCESO] 281474995276402 con 1 registros
+[2025-05-22 17:23:26] INFO: [FINAL] 281474995276402: 0 registros insertados
+[2025-05-22 17:23:26] INFO: [PROCESO] 281474995511888 con 81 registros
+[2025-05-22 17:23:26] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:23:26] INFO: Estadísticas guardadas correctamente.
+[2025-05-22 17:23:26] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-22 17:23:26] INFO: [REPORTE] Intentando insertar resumen diario del 2025-05-19
+[2025-05-22 17:23:26] INFO: [REPORTE] Consultando fuel-energy de 2025-05-19T00:00:00Z a 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [respuesta1 ] URL_FUEL_ENERGY 222 : https://api.samsara.com/fleet/reports/vehicles/fuel-energy  a:
+[2025-05-22 17:23:26] INFO: [respuesta1 ] 0000urlfecha_inicioccccccc: https://api.samsara.com/fleet/reports/vehicles/fuel-energy y aparametros a: 
+[2025-05-22 17:23:26] INFO: [respuesta] 0000urlfecha_inicioccccccc: <Response [200]> y aa: 2025-05-19T00:00:00Z
+[2025-05-22 17:23:26] INFO: [REPORTE] cfecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 2 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984421245
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984438177
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984440532
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984468469
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984471474
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984489038
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984490449
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984667006
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984779335
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984780699
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984796823
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984884925
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984917931
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474984939926
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474985214514
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474985273793
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474985935537
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474989145452
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474989447252
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474992703779
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474992992431
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474992992433
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474992992552
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474992996203
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995276012
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995276075
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995276076
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995276077
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995276402
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995276403
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995276404
+[2025-05-22 17:23:26] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-19T00:00:00Z y aa: 2025-05-19T23:59:59Z
+[2025-05-22 17:23:26] INFO: [REPORTE] Insertando para fecha: 2025-05-19 y vehículo: 281474995511888
+[2025-05-22 17:23:26] INFO: [REPORTE] 32 resúmenes guardados correctamente.
+[2025-05-22 17:23:26] INFO: [SYNC] Iniciando sincronización de eventos de combustible
+[2025-05-22 17:23:26] INFO: [FUEL-STATS] Eliminando registros de 2025-05-18 para recalcular...
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984438177 con 82 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984438177: 0 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984468469 con 40 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984468469: 22 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984471474 con 1 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984471474: 0 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984489038 con 75 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984489038: 35 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984667006 con 21 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984667006: 6 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984780699 con 58 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984780699: 11 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984796823 con 82 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984796823: 62 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474984917931 con 31 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474984917931: 3 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474985273793 con 63 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474985273793: 41 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474985935537 con 1 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474985935537: 0 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474989145452 con 159 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474989145452: 56 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474992992433 con 4 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474992992433: 2 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474992992552 con 81 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474992992552: 27 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474992996203 con 1 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474992996203: 0 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474995276074 con 13 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474995276074: 6 registros insertados
+[2025-05-22 17:23:29] INFO: [PROCESO] 281474995511888 con 41 registros
+[2025-05-22 17:23:29] INFO: [FINAL] 281474995511888: 1 registros insertados
+[2025-05-22 17:23:29] INFO: [REPORTE] Eliminando resumen previo del 2025-05-16 por recálculo de 72h.
+[2025-05-22 17:23:30] INFO: [REPORTE] Recalculando resumen de 2025-05-16
+[2025-05-22 17:23:30] INFO: [REPORTE] Consultando fuel-energy de 2025-05-16T00:00:00Z a 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [respuesta1 ] URL_FUEL_ENERGY 222 : https://api.samsara.com/fleet/reports/vehicles/fuel-energy  a:
+[2025-05-22 17:23:30] INFO: [respuesta1 ] 0000urlfecha_inicioccccccc: https://api.samsara.com/fleet/reports/vehicles/fuel-energy y aparametros a: 
+[2025-05-22 17:23:30] INFO: [respuesta] 0000urlfecha_inicioccccccc: <Response [200]> y aa: 2025-05-16T00:00:00Z
+[2025-05-22 17:23:30] INFO: [REPORTE] cfecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 2 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984421245
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984438177
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984440532
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984454844
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984471474
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984489038
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984490449
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984667006
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984692138
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984779335
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984780699
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984884925
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474984939926
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474989447252
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474992703779
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474992992431
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474992992433
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474992992552
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474992996203
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276012
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276074
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276075
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276076
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276077
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276402
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276403
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995276404
+[2025-05-22 17:23:30] INFO: [REPORTE] 3 fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] 5 try cont fecha_inicioccccccc: 2025-05-16T00:00:00Z y aa: 2025-05-16T23:59:59Z
+[2025-05-22 17:23:30] INFO: [REPORTE] Insertando para fecha: 2025-05-16 y vehículo: 281474995511888
+[2025-05-22 17:23:30] INFO: [REPORTE] 28 resúmenes guardados correctamente.
+[2025-05-22 17:23:30] INFO: [SYNC] Sincronización extendida de combustible completada
+[2025-05-22 17:23:30] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-22 17:23:30] INFO: Icono cargado y systray en ejecución.

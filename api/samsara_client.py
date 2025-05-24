@@ -79,21 +79,16 @@ def sincronizar_catalogo_vehiculos():
         conn.commit()
     logger.info("Catálogo sincronizado.")
 
-def obtener_estadisticas_combustible(capacidades, sincronizaciones, fecha_inicio_forzada=None, fecha_fin_forzada=None):
+def obtener_estadisticas_combustible(capacidades, lista_ultima_sincronizacion,base):#de un solo dia para reportes de combustible,considerar que se envian id de vehiculs necesito olvidarlo
     logger.info("Descargando datos históricos de combustible...")
     ids_vehiculos = list(capacidades.keys())
 
     with get_connection() as conn:
         with conn.cursor() as cur:
-            # Se usa fecha manual o la más antigua registrada
-            if not fecha_inicio_forzada and not fecha_fin_forzada:
-                base = obtener_fecha_manual()
-                fecha_inicio = f"{base.isoformat()}T00:00:00Z"
-                fecha_fin = f"{base.isoformat()}T23:59:59Z"
-            else:
-                # En caso de que se haya forzado el rango
-                fecha_inicio = fecha_inicio_forzada
-                fecha_fin = fecha_fin_forzada
+                
+            fecha_inicio = f"{base.isoformat()}T00:00:00Z"
+            fecha_fin = f"{base.isoformat()}T23:59:59Z"
+       
 
             url = f"{URL_HISTORICO}?vehicleIds={','.join(ids_vehiculos)}&startTime={fecha_inicio}&endTime={fecha_fin}&types={TIPO_DATO}&decorations=gps,obdOdometerMeters"
             
@@ -113,9 +108,11 @@ def obtener_estadisticas_combustible(capacidades, sincronizaciones, fecha_inicio
                 logger.exception("Error procesando estadísticas de combustible")
 
 
-
-def procesar_estadistica(registro, capacidades, cur, fecha_filtro=None):
-    obtener_fecha_manual()
+# correginr estadisticas para que no se dupliquen
+def procesar_estadistica(registro, capacidades, cur):#aqui solo recibo los datos de un vehiculo y calculo y los ingresa a vechile_fuel_stats
+    
+    logger.info("[PROCESO] Procesando registros", registro)
+    logger.info("[PROCESO] %s con %d registros", vehiculo_id, len(registro))
     vehiculo_id = str(registro.get("id"))
     if not vehiculo_id:
         logger.warning("[AVISO] Entrada sin ID de vehículo: %s", registro)
@@ -133,10 +130,6 @@ def procesar_estadistica(registro, capacidades, cur, fecha_filtro=None):
     for entrada in datos:
         porcentaje = entrada.get("value")
         fecha = entrada.get("time")
-
-        if fecha_filtro and not fecha.startswith(fecha_filtro):
-            continue
-
         decoraciones = entrada.get("decorations", {})
         gps = decoraciones.get("gps", {})
         latitud = gps.get("latitude")
@@ -192,7 +185,7 @@ def procesar_estadistica(registro, capacidades, cur, fecha_filtro=None):
         logger.exception("Error actualizando tiempo de sincronización")
 
 def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
-    obtener_fecha_manual()
+  
     logger.info(f"[REPORTE] Consultando fuel-energy de {fecha_inicio} a {fecha_fin}")
     url = URL_FUEL_ENERGY
     parametros = {
@@ -201,24 +194,38 @@ def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
         "energyType": "fuel"
     }
 
+    logger.info(f"[respuesta1 ] URL_FUEL_ENERGY 222 : {URL_FUEL_ENERGY}  a:")
     try:
+        
+        logger.info(f"[respuesta1 ] 0000urlfecha_inicioccccccc: {url} y aparametros a: ")
         respuesta = requests.get(url, headers=CABECERAS, params=parametros)
+        
+        logger.info(f"[respuesta] 0000urlfecha_inicioccccccc: {respuesta} y aa: {fecha_inicio}")
         if respuesta.status_code != 200:
             logger.error(f"[ERROR] Fallo API: {respuesta.status_code} - {respuesta.text}")
             return
 
         reportes = respuesta.json().get("data", {}).get("vehicleReports", [])
         registros = 0
-
+        
+        logger.info(f"[REPORTE] cfecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
         with get_connection() as conn:
             with conn.cursor() as cur:
+                
+                logger.info(f"[REPORTE] 2 fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
                 for reporte in reportes:
                     vehiculo = reporte.get("vehicle", {})
                     vehiculo_id = vehiculo.get("id")
+                    
+                    logger.info(f"[REPORTE] 3 fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
                     if not vehiculo_id:
+                        
+                        logger.info(f"[REPORTE] 4 cont fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
                         continue
 
                     try:
+                        
+                        logger.info(f"[REPORTE] 5 try cont fecha_inicioccccccc: {fecha_inicio} y aa: {fecha_fin}")
                         litros = round(reporte.get("fuelConsumedMl", 0) / 1000, 2)
                         km = round(reporte.get("distanceTraveledMeters", 0) / 1000, 2)
                         rendimiento = round(km / litros, 2) if litros > 0 else None
@@ -228,7 +235,7 @@ def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
 
                         # Usar la fecha configurada o UTC
                         fecha_reporte = datetime.strptime(fecha_inicio[:10], "%Y-%m-%d").date()
-                        logger.debug(f"[REPORTE] Insertando para fecha: {fecha_reporte} y vehículo: {vehiculo_id}")
+                        logger.info(f"[REPORTE] Insertando para fecha: {fecha_reporte} y vehículo: {vehiculo_id}")
 
                         cur.execute("""
                             INSERT INTO reporte_combustible (
@@ -265,7 +272,7 @@ def sincronizar_reporte_resumen_combustible(fecha_inicio: str, fecha_fin: str):
 
 
 def limpiar_y_actualizar_fuel_stats_dia(fecha_obj):
-    obtener_fecha_manual()
+    
     fecha_str = fecha_obj.isoformat()
     inicio = f"{fecha_str}T00:00:00Z"
     fin = f"{fecha_str}T23:59:59Z"
@@ -287,14 +294,14 @@ def limpiar_y_actualizar_fuel_stats_dia(fecha_obj):
                 datos = respuesta.json().get("data", [])
 
                 for registro in datos:
-                    procesar_estadistica(registro, capacidades, cur, fecha_filtro=fecha_str)
+                    procesar_estadistica(registro, capacidades, cur)
                 conn.commit()
     except Exception as e:
         logger.exception(f"[FUEL-STATS] Error actualizando registros del {fecha_str}")
 
 
 def recalcular_resumen_combustible_dia(fecha_obj):
-    obtener_fecha_manual()
+
     fecha_str = fecha_obj.isoformat()
     inicio = f"{fecha_str}T00:00:00Z"
     fin = f"{fecha_str}T23:59:59Z"
@@ -313,7 +320,7 @@ def recalcular_resumen_combustible_dia(fecha_obj):
 
 
 def sincronizar_eventos_combustible():
-    obtener_fecha_manual()
+    
     logger.info("[SYNC] Iniciando sincronización de eventos de combustible")
 
     # Usamos UTC o fecha del .env para todos los cálculos
