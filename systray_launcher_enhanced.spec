@@ -7,6 +7,7 @@ a = Analysis(
     binaries=[],
     datas=[('icon.ico', '.'),       
         ('.env', '.'),
+        ('panacea_logo.png', '.'),
         ('edit_env_window.py', '.'),  ], 
     hiddenimports=[],
     hookspath=[],

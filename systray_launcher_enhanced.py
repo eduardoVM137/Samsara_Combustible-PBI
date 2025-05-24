@@ -194,64 +194,61 @@ def modo_manual():
     tarea_sincronizacion(fecha_inicio, fecha_fin)
 
 def editar_fecha_manual(icon, item):
-    def abrir_dialogo():
-        try:
-            root = Tk()
-            root.title("Panacea Combustible - Selecciona el rango de fechas")
-            # Si tienes el logo, descomenta la siguiente línea y pon el archivo en la carpeta
-            logo = PhotoImage(file=resource_path("panacea_logo.png"))
-            Label(root, image=logo).pack()
-            Label(root, text="Panacea Combustible", font=("Arial", 14, "bold"), fg="#851f18").pack(pady=(10, 0))
-            web_label = Label(root, text="https://www.panaceast.com/", fg="#927E63", cursor="hand2")
-            web_label.pack()
-            web_label.bind("<Button-1>", lambda e: webbrowser.open("https://www.panaceast.com/"))
-            Label(root, text="Fecha de inicio:").pack()
-            cal_inicio = DateEntry(root, date_pattern="yyyy-mm-dd")
-            cal_inicio.pack()
-            Label(root, text="Fecha de fin:").pack()
-            cal_fin = DateEntry(root, date_pattern="yyyy-mm-dd")
-            cal_fin.pack()
+    try:
+        root = Tk()
+        root.title("Panacea Combustible - Selecciona el rango de fechas")
+        # Si tienes el logo, descomenta la siguiente línea y pon el archivo en la carpeta
+        #logo = PhotoImage(file=resource_path("panacea_logo.png"))
+        #Label(root, image=logo).pack()
+        Label(root, text="Panacea Combustible", font=("Arial", 14, "bold"), fg="#851f18").pack(pady=(10, 0))
+        web_label = Label(root, text="https://www.panaceast.com/", fg="#927E63", cursor="hand2")
+        web_label.pack()
+        web_label.bind("<Button-1>", lambda e: webbrowser.open("https://www.panaceast.com/"))
+        Label(root, text="Fecha de inicio:").pack()
+        cal_inicio = DateEntry(root, date_pattern="yyyy-mm-dd")
+        cal_inicio.pack()
+        Label(root, text="Fecha de fin:").pack()
+        cal_fin = DateEntry(root, date_pattern="yyyy-mm-dd")
+        cal_fin.pack()
 
-            def guardar_fechas():
-                nueva_fecha_inicio = cal_inicio.get_date().strftime("%Y-%m-%d")
-                nueva_fecha_fin = cal_fin.get_date().strftime("%Y-%m-%d")
-                root.destroy()
+        def guardar_fechas():
+            nueva_fecha_inicio = cal_inicio.get_date().strftime("%Y-%m-%d")
+            nueva_fecha_fin = cal_fin.get_date().strftime("%Y-%m-%d")
+            root.destroy()
 
-                if nueva_fecha_inicio and nueva_fecha_fin:
-                    env_path = resource_path(".env")
-                    try:
-                        with open(env_path, "r") as f:
-                            lineas = f.readlines()
-                    except FileNotFoundError:
-                        lineas = []
-                    modificada_inicio = False
-                    modificada_fin = False
-                    with open(env_path, "w") as f:
-                        for linea in lineas:
-                            if linea.startswith("FECHA_CONSULTA_INICIO="):
-                                f.write(f"FECHA_CONSULTA_INICIO={nueva_fecha_inicio}\n")
-                                modificada_inicio = True
-                            elif linea.startswith("FECHA_CONSULTA_FIN="):
-                                f.write(f"FECHA_CONSULTA_FIN={nueva_fecha_fin}\n")
-                                modificada_fin = True
-                            else:
-                                f.write(linea)
-                        if not modificada_inicio:
+            if nueva_fecha_inicio and nueva_fecha_fin:
+                env_path = resource_path(".env")
+                try:
+                    with open(env_path, "r") as f:
+                        lineas = f.readlines()
+                except FileNotFoundError:
+                    lineas = []
+                modificada_inicio = False
+                modificada_fin = False
+                with open(env_path, "w") as f:
+                    for linea in lineas:
+                        if linea.startswith("FECHA_CONSULTA_INICIO="):
                             f.write(f"FECHA_CONSULTA_INICIO={nueva_fecha_inicio}\n")
-                        if not modificada_fin:
+                            modificada_inicio = True
+                        elif linea.startswith("FECHA_CONSULTA_FIN="):
                             f.write(f"FECHA_CONSULTA_FIN={nueva_fecha_fin}\n")
+                            modificada_fin = True
+                        else:
+                            f.write(linea)
+                    if not modificada_inicio:
+                        f.write(f"FECHA_CONSULTA_INICIO={nueva_fecha_inicio}\n")
+                    if not modificada_fin:
+                        f.write(f"FECHA_CONSULTA_FIN={nueva_fecha_fin}\n")
 
-                    logger.info(f"[MANUAL] FECHA_CONSULTA_INICIO actualizada a {nueva_fecha_inicio}")
-                    logger.info(f"[MANUAL] FECHA_CONSULTA_FIN actualizada a {nueva_fecha_fin}")
-                    # Ejecuta sincronización manual solo una vez con las fechas del .env
-                    modo_manual()
+                logger.info(f"[MANUAL] FECHA_CONSULTA_INICIO actualizada a {nueva_fecha_inicio}")
+                logger.info(f"[MANUAL] FECHA_CONSULTA_FIN actualizada a {nueva_fecha_fin}")
+                # Ejecuta sincronización manual solo una vez con las fechas del .env
+                modo_manual()
 
-            Button(root, text="Guardar", command=guardar_fechas, bg="#1e90ff", fg="white").pack(pady=10)
-            root.mainloop()
-        except Exception as e:
-            logger.exception("Error al editar el rango de fechas manualmente")
-
-    threading.Thread(target=abrir_dialogo, daemon=True).start()
+        Button(root, text="Guardar", command=guardar_fechas, bg="#1e90ff", fg="white").pack(pady=10)
+        root.mainloop()
+    except Exception as e:
+        logger.exception("Error al editar el rango de fechas manualmente")
 
 def editar_configuracion_env(icon, item):
     # Lanza la ventana de edición en un proceso aparte
