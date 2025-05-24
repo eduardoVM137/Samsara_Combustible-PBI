@@ -21637,3 +21637,1687 @@ _tkinter.TclError: Can't find a usable init.tcl in the following directories:
 This probably means that Tcl wasn't installed properly.
 
 [2025-05-24 03:27:27] INFO: Cierre solicitado por el usuario.
+[2025-05-24 03:42:28] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 03:42:28] INFO: Iniciando loop del scheduler...
+[2025-05-24 03:42:28] INFO: Ejecutando sincronización inicial...
+[2025-05-24 03:42:28] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:42:28] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:42:28] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 03:42:42] INFO: [MANUAL] FECHA_CONSULTA_INICIO actualizada a 2025-05-23
+[2025-05-24 03:42:42] INFO: [MANUAL] FECHA_CONSULTA_FIN actualizada a 2025-05-23
+[2025-05-24 03:42:48] INFO: Sincronización manual ejecutada
+[2025-05-24 03:42:48] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:42:48] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:43:03] INFO: Cierre solicitado por el usuario.
+[2025-05-24 03:46:59] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 03:46:59] INFO: Iniciando loop del scheduler...
+[2025-05-24 03:46:59] INFO: Ejecutando sincronización inicial...
+[2025-05-24 03:46:59] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:46:59] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 03:47:01] INFO: Catálogo sincronizado.
+[2025-05-24 03:47:01] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 03:47:01] INFO: [Día 1/1] Fecha: 2025-05-23
+[2025-05-24 03:47:01] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 03:47:01] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:03] INFO: [Página 1] Registros obtenidos: 4
+[2025-05-24 03:47:03] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:03] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:03] INFO: [VEHÍCULO 281474984438177] 270 registros
+[2025-05-24 03:47:03] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:37:30+00:00
+[2025-05-24 03:47:03] INFO: [FINAL] Vehículo 281474984438177: 268 registros insertados
+[2025-05-24 03:47:03] INFO: [VEHÍCULO 281474984440532] 105 registros
+[2025-05-24 03:47:03] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 21:26:54+00:00
+[2025-05-24 03:47:03] INFO: [FINAL] Vehículo 281474984440532: 103 registros insertados
+[2025-05-24 03:47:03] INFO: [VEHÍCULO 281474984471474] 52 registros
+[2025-05-24 03:47:03] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 11:53:44+00:00
+[2025-05-24 03:47:03] INFO: [FINAL] Vehículo 281474984471474: 50 registros insertados
+[2025-05-24 03:47:03] INFO: [VEHÍCULO 281474984489038] 2 registros
+[2025-05-24 03:47:03] INFO: [FINAL] Vehículo 281474984489038: 1 registros insertados
+[2025-05-24 03:47:03] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:04] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:47:04] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:06] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 03:47:06] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:06] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:06] INFO: [VEHÍCULO 281474984490449] 78 registros
+[2025-05-24 03:47:06] INFO: [FINAL] Vehículo 281474984490449: 77 registros insertados
+[2025-05-24 03:47:06] INFO: [VEHÍCULO 281474984779335] 337 registros
+[2025-05-24 03:47:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 00:57:00+00:00
+[2025-05-24 03:47:06] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:47:06] INFO: [IGNORADO] Evento ignorado por ser muy cercano (6.0s) y sin cambio relevante
+[2025-05-24 03:47:06] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:47:06] INFO: [IGNORADO] Evento ignorado por ser muy cercano (3.0s) y sin cambio relevante
+[2025-05-24 03:47:06] INFO: [FINAL] Vehículo 281474984779335: 331 registros insertados
+[2025-05-24 03:47:06] INFO: [VEHÍCULO 281474984780699] 195 registros
+[2025-05-24 03:47:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 18:46:16+00:00
+[2025-05-24 03:47:06] INFO: [FINAL] Vehículo 281474984780699: 193 registros insertados
+[2025-05-24 03:47:06] INFO: [VEHÍCULO 281474984884925] 240 registros
+[2025-05-24 03:47:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:29:34+00:00
+[2025-05-24 03:47:06] INFO: [FINAL] Vehículo 281474984884925: 238 registros insertados
+[2025-05-24 03:47:06] INFO: [VEHÍCULO 281474984917931] 21 registros
+[2025-05-24 03:47:06] INFO: [FINAL] Vehículo 281474984917931: 20 registros insertados
+[2025-05-24 03:47:06] INFO: [VEHÍCULO 281474984939926] 127 registros
+[2025-05-24 03:47:06] INFO: [FINAL] Vehículo 281474984939926: 126 registros insertados
+[2025-05-24 03:47:06] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:07] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 03:47:07] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:08] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:47:08] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:08] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:08] INFO: [VEHÍCULO 281474985214514] 30 registros
+[2025-05-24 03:47:08] INFO: [FINAL] Vehículo 281474985214514: 29 registros insertados
+[2025-05-24 03:47:08] INFO: [VEHÍCULO 281474989145452] 224 registros
+[2025-05-24 03:47:08] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:18:14+00:00
+[2025-05-24 03:47:08] INFO: [FINAL] Vehículo 281474989145452: 222 registros insertados
+[2025-05-24 03:47:08] INFO: [VEHÍCULO 281474989447252] 47 registros
+[2025-05-24 03:47:08] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:56:15+00:00
+[2025-05-24 03:47:08] INFO: [FINAL] Vehículo 281474989447252: 45 registros insertados
+[2025-05-24 03:47:08] INFO: [VEHÍCULO 281474992703779] 14 registros
+[2025-05-24 03:47:08] INFO: [FINAL] Vehículo 281474992703779: 13 registros insertados
+[2025-05-24 03:47:08] INFO: [VEHÍCULO 281474992992431] 2 registros
+[2025-05-24 03:47:08] INFO: [FINAL] Vehículo 281474992992431: 1 registros insertados
+[2025-05-24 03:47:08] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:09] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:47:09] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:10] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:47:10] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:10] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:10] INFO: [VEHÍCULO 281474995276012] 7 registros
+[2025-05-24 03:47:10] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 15:10:34+00:00
+[2025-05-24 03:47:10] INFO: [FINAL] Vehículo 281474995276012: 5 registros insertados
+[2025-05-24 03:47:10] INFO: [VEHÍCULO 281474995276074] 228 registros
+[2025-05-24 03:47:10] INFO: [FINAL] Vehículo 281474995276074: 227 registros insertados
+[2025-05-24 03:47:10] INFO: [VEHÍCULO 281474995276402] 112 registros
+[2025-05-24 03:47:10] INFO: [FINAL] Vehículo 281474995276402: 111 registros insertados
+[2025-05-24 03:47:10] INFO: [VEHÍCULO 281474995276403] 185 registros
+[2025-05-24 03:47:10] INFO: [IGNORADO] Evento ignorado por ser muy cercano (7.0s) y sin cambio relevante
+[2025-05-24 03:47:10] INFO: [IGNORADO] Evento ignorado por ser muy cercano (22.0s) y sin cambio relevante
+[2025-05-24 03:47:10] INFO: [FINAL] Vehículo 281474995276403: 182 registros insertados
+[2025-05-24 03:47:10] INFO: [VEHÍCULO 281474995276404] 8 registros
+[2025-05-24 03:47:10] INFO: [FINAL] Vehículo 281474995276404: 7 registros insertados
+[2025-05-24 03:47:10] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:11] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 03:47:11] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:11] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 03:47:11] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:11] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:11] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:12] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 03:47:12] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-23 al 2025-05-23
+[2025-05-24 03:47:12] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-23 y 2025-05-23
+[2025-05-24 03:47:12] INFO: [FUEL-ENERGY] Día 1/1: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 03:47:12] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:47:12] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:47:13] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 03:47:13] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:47:13] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:47:13] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 03:47:13] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 03:47:13] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:47:14] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 03:47:14] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 03:47:14] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:47:14] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 03:47:36] INFO: [MANUAL] FECHA_CONSULTA_INICIO actualizada a 2025-05-24
+[2025-05-24 03:47:36] INFO: [MANUAL] FECHA_CONSULTA_FIN actualizada a 2025-05-24
+[2025-05-24 03:47:42] INFO: Sincronización manual ejecutada
+[2025-05-24 03:47:42] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:47:42] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 03:47:43] INFO: Catálogo sincronizado.
+[2025-05-24 03:47:44] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 03:47:44] INFO: [Día 1/1] Fecha: 2025-05-23
+[2025-05-24 03:47:44] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 03:47:44] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:45] INFO: [Página 1] Registros obtenidos: 4
+[2025-05-24 03:47:45] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:45] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:45] INFO: [VEHÍCULO 281474984438177] 270 registros
+[2025-05-24 03:47:45] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:37:30+00:00
+[2025-05-24 03:47:45] INFO: [FINAL] Vehículo 281474984438177: 268 registros insertados
+[2025-05-24 03:47:45] INFO: [VEHÍCULO 281474984440532] 105 registros
+[2025-05-24 03:47:45] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 21:26:54+00:00
+[2025-05-24 03:47:45] INFO: [FINAL] Vehículo 281474984440532: 103 registros insertados
+[2025-05-24 03:47:45] INFO: [VEHÍCULO 281474984471474] 52 registros
+[2025-05-24 03:47:45] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 11:53:44+00:00
+[2025-05-24 03:47:45] INFO: [FINAL] Vehículo 281474984471474: 50 registros insertados
+[2025-05-24 03:47:45] INFO: [VEHÍCULO 281474984489038] 2 registros
+[2025-05-24 03:47:45] INFO: [FINAL] Vehículo 281474984489038: 1 registros insertados
+[2025-05-24 03:47:45] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:46] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:47:46] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:48] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 03:47:48] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:48] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:48] INFO: [VEHÍCULO 281474984490449] 78 registros
+[2025-05-24 03:47:48] INFO: [FINAL] Vehículo 281474984490449: 77 registros insertados
+[2025-05-24 03:47:48] INFO: [VEHÍCULO 281474984779335] 337 registros
+[2025-05-24 03:47:48] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 00:57:00+00:00
+[2025-05-24 03:47:49] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:47:49] INFO: [IGNORADO] Evento ignorado por ser muy cercano (6.0s) y sin cambio relevante
+[2025-05-24 03:47:49] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:47:49] INFO: [IGNORADO] Evento ignorado por ser muy cercano (3.0s) y sin cambio relevante
+[2025-05-24 03:47:49] INFO: [FINAL] Vehículo 281474984779335: 331 registros insertados
+[2025-05-24 03:47:49] INFO: [VEHÍCULO 281474984780699] 195 registros
+[2025-05-24 03:47:49] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 18:46:16+00:00
+[2025-05-24 03:47:49] INFO: [FINAL] Vehículo 281474984780699: 193 registros insertados
+[2025-05-24 03:47:49] INFO: [VEHÍCULO 281474984884925] 240 registros
+[2025-05-24 03:47:49] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:29:34+00:00
+[2025-05-24 03:47:49] INFO: [FINAL] Vehículo 281474984884925: 238 registros insertados
+[2025-05-24 03:47:49] INFO: [VEHÍCULO 281474984917931] 21 registros
+[2025-05-24 03:47:49] INFO: [FINAL] Vehículo 281474984917931: 20 registros insertados
+[2025-05-24 03:47:49] INFO: [VEHÍCULO 281474984939926] 127 registros
+[2025-05-24 03:47:49] INFO: [FINAL] Vehículo 281474984939926: 126 registros insertados
+[2025-05-24 03:47:49] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:50] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 03:47:50] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:51] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:47:51] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:51] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:51] INFO: [VEHÍCULO 281474985214514] 30 registros
+[2025-05-24 03:47:51] INFO: [FINAL] Vehículo 281474985214514: 29 registros insertados
+[2025-05-24 03:47:51] INFO: [VEHÍCULO 281474989145452] 224 registros
+[2025-05-24 03:47:51] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:18:14+00:00
+[2025-05-24 03:47:51] INFO: [FINAL] Vehículo 281474989145452: 222 registros insertados
+[2025-05-24 03:47:51] INFO: [VEHÍCULO 281474989447252] 47 registros
+[2025-05-24 03:47:51] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:56:15+00:00
+[2025-05-24 03:47:51] INFO: [FINAL] Vehículo 281474989447252: 45 registros insertados
+[2025-05-24 03:47:51] INFO: [VEHÍCULO 281474992703779] 14 registros
+[2025-05-24 03:47:51] INFO: [FINAL] Vehículo 281474992703779: 13 registros insertados
+[2025-05-24 03:47:51] INFO: [VEHÍCULO 281474992992431] 2 registros
+[2025-05-24 03:47:51] INFO: [FINAL] Vehículo 281474992992431: 1 registros insertados
+[2025-05-24 03:47:51] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:52] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:47:52] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:53] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:47:53] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:53] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:53] INFO: [VEHÍCULO 281474995276012] 7 registros
+[2025-05-24 03:47:53] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 15:10:34+00:00
+[2025-05-24 03:47:53] INFO: [FINAL] Vehículo 281474995276012: 5 registros insertados
+[2025-05-24 03:47:53] INFO: [VEHÍCULO 281474995276074] 228 registros
+[2025-05-24 03:47:53] INFO: [FINAL] Vehículo 281474995276074: 227 registros insertados
+[2025-05-24 03:47:53] INFO: [VEHÍCULO 281474995276402] 112 registros
+[2025-05-24 03:47:53] INFO: [FINAL] Vehículo 281474995276402: 111 registros insertados
+[2025-05-24 03:47:53] INFO: [VEHÍCULO 281474995276403] 185 registros
+[2025-05-24 03:47:53] INFO: [IGNORADO] Evento ignorado por ser muy cercano (7.0s) y sin cambio relevante
+[2025-05-24 03:47:53] INFO: [IGNORADO] Evento ignorado por ser muy cercano (22.0s) y sin cambio relevante
+[2025-05-24 03:47:53] INFO: [FINAL] Vehículo 281474995276403: 182 registros insertados
+[2025-05-24 03:47:53] INFO: [VEHÍCULO 281474995276404] 8 registros
+[2025-05-24 03:47:53] INFO: [FINAL] Vehículo 281474995276404: 7 registros insertados
+[2025-05-24 03:47:53] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:54] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 03:47:54] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:47:54] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 03:47:54] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:47:54] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:47:54] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:47:55] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 03:47:55] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-23 al 2025-05-23
+[2025-05-24 03:47:55] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-23 y 2025-05-23
+[2025-05-24 03:47:55] INFO: [FUEL-ENERGY] Día 1/1: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 03:47:55] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:47:55] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:47:56] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 03:47:56] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:47:56] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:47:57] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 03:47:57] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 03:47:57] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:47:57] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 03:47:57] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 03:47:57] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:48:32] INFO: [MANUAL] FECHA_CONSULTA_INICIO actualizada a 2025-04-29
+[2025-05-24 03:48:32] INFO: [MANUAL] FECHA_CONSULTA_FIN actualizada a 2025-04-29
+[2025-05-24 03:48:54] INFO: Sincronización manual ejecutada
+[2025-05-24 03:48:54] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:48:54] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 03:48:55] INFO: Catálogo sincronizado.
+[2025-05-24 03:48:55] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 03:48:55] INFO: [Día 1/1] Fecha: 2025-05-23
+[2025-05-24 03:48:55] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 03:48:55] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:48:57] INFO: [Página 1] Registros obtenidos: 4
+[2025-05-24 03:48:57] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:48:57] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:48:57] INFO: [VEHÍCULO 281474984438177] 270 registros
+[2025-05-24 03:48:57] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:37:30+00:00
+[2025-05-24 03:48:57] INFO: [FINAL] Vehículo 281474984438177: 268 registros insertados
+[2025-05-24 03:48:57] INFO: [VEHÍCULO 281474984440532] 105 registros
+[2025-05-24 03:48:57] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 21:26:54+00:00
+[2025-05-24 03:48:57] INFO: [FINAL] Vehículo 281474984440532: 103 registros insertados
+[2025-05-24 03:48:57] INFO: [VEHÍCULO 281474984471474] 52 registros
+[2025-05-24 03:48:57] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 11:53:44+00:00
+[2025-05-24 03:48:57] INFO: [FINAL] Vehículo 281474984471474: 50 registros insertados
+[2025-05-24 03:48:57] INFO: [VEHÍCULO 281474984489038] 2 registros
+[2025-05-24 03:48:57] INFO: [FINAL] Vehículo 281474984489038: 1 registros insertados
+[2025-05-24 03:48:57] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:48:57] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:48:57] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:48:59] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 03:48:59] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:48:59] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:48:59] INFO: [VEHÍCULO 281474984490449] 78 registros
+[2025-05-24 03:48:59] INFO: [FINAL] Vehículo 281474984490449: 77 registros insertados
+[2025-05-24 03:48:59] INFO: [VEHÍCULO 281474984779335] 337 registros
+[2025-05-24 03:48:59] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 00:57:00+00:00
+[2025-05-24 03:48:59] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:48:59] INFO: [IGNORADO] Evento ignorado por ser muy cercano (6.0s) y sin cambio relevante
+[2025-05-24 03:48:59] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:48:59] INFO: [IGNORADO] Evento ignorado por ser muy cercano (3.0s) y sin cambio relevante
+[2025-05-24 03:48:59] INFO: [FINAL] Vehículo 281474984779335: 331 registros insertados
+[2025-05-24 03:48:59] INFO: [VEHÍCULO 281474984780699] 195 registros
+[2025-05-24 03:48:59] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 18:46:16+00:00
+[2025-05-24 03:48:59] INFO: [FINAL] Vehículo 281474984780699: 193 registros insertados
+[2025-05-24 03:48:59] INFO: [VEHÍCULO 281474984884925] 240 registros
+[2025-05-24 03:48:59] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:29:34+00:00
+[2025-05-24 03:48:59] INFO: [FINAL] Vehículo 281474984884925: 238 registros insertados
+[2025-05-24 03:48:59] INFO: [VEHÍCULO 281474984917931] 21 registros
+[2025-05-24 03:48:59] INFO: [FINAL] Vehículo 281474984917931: 20 registros insertados
+[2025-05-24 03:48:59] INFO: [VEHÍCULO 281474984939926] 127 registros
+[2025-05-24 03:49:00] INFO: [FINAL] Vehículo 281474984939926: 126 registros insertados
+[2025-05-24 03:49:00] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:49:00] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 03:49:00] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:49:01] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:49:01] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:49:01] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:49:01] INFO: [VEHÍCULO 281474985214514] 30 registros
+[2025-05-24 03:49:01] INFO: [FINAL] Vehículo 281474985214514: 29 registros insertados
+[2025-05-24 03:49:01] INFO: [VEHÍCULO 281474989145452] 224 registros
+[2025-05-24 03:49:01] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:18:14+00:00
+[2025-05-24 03:49:01] INFO: [FINAL] Vehículo 281474989145452: 222 registros insertados
+[2025-05-24 03:49:01] INFO: [VEHÍCULO 281474989447252] 47 registros
+[2025-05-24 03:49:01] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:56:15+00:00
+[2025-05-24 03:49:01] INFO: [FINAL] Vehículo 281474989447252: 45 registros insertados
+[2025-05-24 03:49:01] INFO: [VEHÍCULO 281474992703779] 14 registros
+[2025-05-24 03:49:01] INFO: [FINAL] Vehículo 281474992703779: 13 registros insertados
+[2025-05-24 03:49:01] INFO: [VEHÍCULO 281474992992431] 2 registros
+[2025-05-24 03:49:01] INFO: [FINAL] Vehículo 281474992992431: 1 registros insertados
+[2025-05-24 03:49:01] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:49:02] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:49:02] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:49:04] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:49:04] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:49:04] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:49:04] INFO: [VEHÍCULO 281474995276012] 7 registros
+[2025-05-24 03:49:04] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 15:10:34+00:00
+[2025-05-24 03:49:04] INFO: [FINAL] Vehículo 281474995276012: 5 registros insertados
+[2025-05-24 03:49:04] INFO: [VEHÍCULO 281474995276074] 228 registros
+[2025-05-24 03:49:04] INFO: [FINAL] Vehículo 281474995276074: 227 registros insertados
+[2025-05-24 03:49:04] INFO: [VEHÍCULO 281474995276402] 112 registros
+[2025-05-24 03:49:04] INFO: [FINAL] Vehículo 281474995276402: 111 registros insertados
+[2025-05-24 03:49:04] INFO: [VEHÍCULO 281474995276403] 185 registros
+[2025-05-24 03:49:04] INFO: [IGNORADO] Evento ignorado por ser muy cercano (7.0s) y sin cambio relevante
+[2025-05-24 03:49:04] INFO: [IGNORADO] Evento ignorado por ser muy cercano (22.0s) y sin cambio relevante
+[2025-05-24 03:49:04] INFO: [FINAL] Vehículo 281474995276403: 182 registros insertados
+[2025-05-24 03:49:04] INFO: [VEHÍCULO 281474995276404] 8 registros
+[2025-05-24 03:49:04] INFO: [FINAL] Vehículo 281474995276404: 7 registros insertados
+[2025-05-24 03:49:04] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:49:04] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 03:49:04] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:49:05] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 03:49:05] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:49:05] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:49:05] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:49:05] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 03:49:05] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-23 al 2025-05-23
+[2025-05-24 03:49:05] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-23 y 2025-05-23
+[2025-05-24 03:49:06] INFO: [FUEL-ENERGY] Día 1/1: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 03:49:06] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:49:06] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:49:06] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 03:49:06] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:49:06] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:49:07] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 03:49:07] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 03:49:08] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:49:08] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 03:49:08] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 03:49:08] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:51:13] INFO: Cierre solicitado por el usuario.
+[2025-05-24 03:51:45] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 03:51:45] INFO: Iniciando loop del scheduler...
+[2025-05-24 03:51:45] INFO: Ejecutando sincronización inicial...
+[2025-05-24 03:51:45] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:51:45] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 03:51:46] INFO: Catálogo sincronizado.
+[2025-05-24 03:51:46] INFO: [DEBUG] FECHA_CONSULTA_INICIO leída: 2025-05-23
+[2025-05-24 03:51:46] INFO: [DEBUG] FECHA_CONSULTA_FIN leída: 2025-05-23
+[2025-05-24 03:51:46] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 03:51:47] INFO: [Día 1/1] Fecha: 2025-05-23
+[2025-05-24 03:51:47] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 03:51:47] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:51:48] INFO: [Página 1] Registros obtenidos: 4
+[2025-05-24 03:51:48] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:51:48] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:51:48] INFO: [VEHÍCULO 281474984438177] 270 registros
+[2025-05-24 03:51:48] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:37:30+00:00
+[2025-05-24 03:51:48] INFO: [FINAL] Vehículo 281474984438177: 268 registros insertados
+[2025-05-24 03:51:48] INFO: [VEHÍCULO 281474984440532] 105 registros
+[2025-05-24 03:51:48] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 21:26:54+00:00
+[2025-05-24 03:51:48] INFO: [FINAL] Vehículo 281474984440532: 103 registros insertados
+[2025-05-24 03:51:48] INFO: [VEHÍCULO 281474984471474] 52 registros
+[2025-05-24 03:51:48] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 11:53:44+00:00
+[2025-05-24 03:51:48] INFO: [FINAL] Vehículo 281474984471474: 50 registros insertados
+[2025-05-24 03:51:48] INFO: [VEHÍCULO 281474984489038] 2 registros
+[2025-05-24 03:51:48] INFO: [FINAL] Vehículo 281474984489038: 1 registros insertados
+[2025-05-24 03:51:48] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:51:48] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:51:48] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:51:50] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 03:51:50] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:51:50] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:51:50] INFO: [VEHÍCULO 281474984490449] 78 registros
+[2025-05-24 03:51:50] INFO: [FINAL] Vehículo 281474984490449: 77 registros insertados
+[2025-05-24 03:51:50] INFO: [VEHÍCULO 281474984779335] 337 registros
+[2025-05-24 03:51:50] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 00:57:00+00:00
+[2025-05-24 03:51:50] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:51:50] INFO: [IGNORADO] Evento ignorado por ser muy cercano (6.0s) y sin cambio relevante
+[2025-05-24 03:51:50] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:51:50] INFO: [IGNORADO] Evento ignorado por ser muy cercano (3.0s) y sin cambio relevante
+[2025-05-24 03:51:50] INFO: [FINAL] Vehículo 281474984779335: 331 registros insertados
+[2025-05-24 03:51:50] INFO: [VEHÍCULO 281474984780699] 195 registros
+[2025-05-24 03:51:50] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 18:46:16+00:00
+[2025-05-24 03:51:50] INFO: [FINAL] Vehículo 281474984780699: 193 registros insertados
+[2025-05-24 03:51:50] INFO: [VEHÍCULO 281474984884925] 240 registros
+[2025-05-24 03:51:50] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:29:34+00:00
+[2025-05-24 03:51:50] INFO: [FINAL] Vehículo 281474984884925: 238 registros insertados
+[2025-05-24 03:51:50] INFO: [VEHÍCULO 281474984917931] 21 registros
+[2025-05-24 03:51:50] INFO: [FINAL] Vehículo 281474984917931: 20 registros insertados
+[2025-05-24 03:51:50] INFO: [VEHÍCULO 281474984939926] 127 registros
+[2025-05-24 03:51:50] INFO: [FINAL] Vehículo 281474984939926: 126 registros insertados
+[2025-05-24 03:51:50] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:51:51] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 03:51:51] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:51:52] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:51:52] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:51:52] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:51:52] INFO: [VEHÍCULO 281474985214514] 30 registros
+[2025-05-24 03:51:52] INFO: [FINAL] Vehículo 281474985214514: 29 registros insertados
+[2025-05-24 03:51:52] INFO: [VEHÍCULO 281474989145452] 224 registros
+[2025-05-24 03:51:52] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:18:14+00:00
+[2025-05-24 03:51:52] INFO: [FINAL] Vehículo 281474989145452: 222 registros insertados
+[2025-05-24 03:51:52] INFO: [VEHÍCULO 281474989447252] 47 registros
+[2025-05-24 03:51:52] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:56:15+00:00
+[2025-05-24 03:51:52] INFO: [FINAL] Vehículo 281474989447252: 45 registros insertados
+[2025-05-24 03:51:52] INFO: [VEHÍCULO 281474992703779] 14 registros
+[2025-05-24 03:51:52] INFO: [FINAL] Vehículo 281474992703779: 13 registros insertados
+[2025-05-24 03:51:52] INFO: [VEHÍCULO 281474992992431] 2 registros
+[2025-05-24 03:51:52] INFO: [FINAL] Vehículo 281474992992431: 1 registros insertados
+[2025-05-24 03:51:52] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:51:53] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:51:53] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:51:54] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:51:54] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:51:54] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:51:54] INFO: [VEHÍCULO 281474995276012] 7 registros
+[2025-05-24 03:51:54] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 15:10:34+00:00
+[2025-05-24 03:51:54] INFO: [FINAL] Vehículo 281474995276012: 5 registros insertados
+[2025-05-24 03:51:54] INFO: [VEHÍCULO 281474995276074] 228 registros
+[2025-05-24 03:51:54] INFO: [FINAL] Vehículo 281474995276074: 227 registros insertados
+[2025-05-24 03:51:54] INFO: [VEHÍCULO 281474995276402] 112 registros
+[2025-05-24 03:51:54] INFO: [FINAL] Vehículo 281474995276402: 111 registros insertados
+[2025-05-24 03:51:54] INFO: [VEHÍCULO 281474995276403] 185 registros
+[2025-05-24 03:51:54] INFO: [IGNORADO] Evento ignorado por ser muy cercano (7.0s) y sin cambio relevante
+[2025-05-24 03:51:54] INFO: [IGNORADO] Evento ignorado por ser muy cercano (22.0s) y sin cambio relevante
+[2025-05-24 03:51:54] INFO: [FINAL] Vehículo 281474995276403: 182 registros insertados
+[2025-05-24 03:51:54] INFO: [VEHÍCULO 281474995276404] 8 registros
+[2025-05-24 03:51:54] INFO: [FINAL] Vehículo 281474995276404: 7 registros insertados
+[2025-05-24 03:51:54] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:51:55] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 03:51:55] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:51:55] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 03:51:55] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:51:55] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:51:55] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:51:56] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 03:51:56] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-23 al 2025-05-23
+[2025-05-24 03:51:56] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-23 y 2025-05-23
+[2025-05-24 03:51:56] INFO: [FUEL-ENERGY] Día 1/1: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 03:51:56] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:51:56] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:51:57] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 03:51:57] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:51:57] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:51:57] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 03:51:57] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 03:51:57] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:51:58] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 03:51:58] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 03:51:58] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:51:58] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 03:52:09] INFO: [MANUAL] FECHA_CONSULTA_INICIO actualizada a 2025-04-28
+[2025-05-24 03:52:09] INFO: [MANUAL] FECHA_CONSULTA_FIN actualizada a 2025-04-28
+[2025-05-24 03:52:13] INFO: Sincronización manual ejecutada
+[2025-05-24 03:52:13] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:52:13] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 03:52:13] INFO: Catálogo sincronizado.
+[2025-05-24 03:52:14] INFO: [DEBUG] FECHA_CONSULTA_INICIO leída: 2025-05-23
+[2025-05-24 03:52:14] INFO: [DEBUG] FECHA_CONSULTA_FIN leída: 2025-05-23
+[2025-05-24 03:52:14] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 03:52:14] INFO: [Día 1/1] Fecha: 2025-05-23
+[2025-05-24 03:52:14] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 03:52:14] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:52:16] INFO: [Página 1] Registros obtenidos: 4
+[2025-05-24 03:52:16] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:52:16] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:52:16] INFO: [VEHÍCULO 281474984438177] 270 registros
+[2025-05-24 03:52:16] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:37:30+00:00
+[2025-05-24 03:52:16] INFO: [FINAL] Vehículo 281474984438177: 268 registros insertados
+[2025-05-24 03:52:16] INFO: [VEHÍCULO 281474984440532] 105 registros
+[2025-05-24 03:52:16] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 21:26:54+00:00
+[2025-05-24 03:52:16] INFO: [FINAL] Vehículo 281474984440532: 103 registros insertados
+[2025-05-24 03:52:16] INFO: [VEHÍCULO 281474984471474] 52 registros
+[2025-05-24 03:52:16] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 11:53:44+00:00
+[2025-05-24 03:52:16] INFO: [FINAL] Vehículo 281474984471474: 50 registros insertados
+[2025-05-24 03:52:16] INFO: [VEHÍCULO 281474984489038] 2 registros
+[2025-05-24 03:52:16] INFO: [FINAL] Vehículo 281474984489038: 1 registros insertados
+[2025-05-24 03:52:16] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:52:16] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:52:16] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:52:18] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 03:52:18] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:52:18] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:52:18] INFO: [VEHÍCULO 281474984490449] 78 registros
+[2025-05-24 03:52:18] INFO: [FINAL] Vehículo 281474984490449: 77 registros insertados
+[2025-05-24 03:52:18] INFO: [VEHÍCULO 281474984779335] 337 registros
+[2025-05-24 03:52:18] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 00:57:00+00:00
+[2025-05-24 03:52:18] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:52:18] INFO: [IGNORADO] Evento ignorado por ser muy cercano (6.0s) y sin cambio relevante
+[2025-05-24 03:52:18] INFO: [IGNORADO] Evento ignorado por ser muy cercano (4.0s) y sin cambio relevante
+[2025-05-24 03:52:18] INFO: [IGNORADO] Evento ignorado por ser muy cercano (3.0s) y sin cambio relevante
+[2025-05-24 03:52:18] INFO: [FINAL] Vehículo 281474984779335: 331 registros insertados
+[2025-05-24 03:52:18] INFO: [VEHÍCULO 281474984780699] 195 registros
+[2025-05-24 03:52:18] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 18:46:16+00:00
+[2025-05-24 03:52:18] INFO: [FINAL] Vehículo 281474984780699: 193 registros insertados
+[2025-05-24 03:52:18] INFO: [VEHÍCULO 281474984884925] 240 registros
+[2025-05-24 03:52:18] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:29:34+00:00
+[2025-05-24 03:52:19] INFO: [FINAL] Vehículo 281474984884925: 238 registros insertados
+[2025-05-24 03:52:19] INFO: [VEHÍCULO 281474984917931] 21 registros
+[2025-05-24 03:52:19] INFO: [FINAL] Vehículo 281474984917931: 20 registros insertados
+[2025-05-24 03:52:19] INFO: [VEHÍCULO 281474984939926] 127 registros
+[2025-05-24 03:52:19] INFO: [FINAL] Vehículo 281474984939926: 126 registros insertados
+[2025-05-24 03:52:19] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:52:19] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 03:52:19] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:52:20] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:52:20] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:52:20] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:52:20] INFO: [VEHÍCULO 281474985214514] 30 registros
+[2025-05-24 03:52:21] INFO: [FINAL] Vehículo 281474985214514: 29 registros insertados
+[2025-05-24 03:52:21] INFO: [VEHÍCULO 281474989145452] 224 registros
+[2025-05-24 03:52:21] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 19:18:14+00:00
+[2025-05-24 03:52:21] INFO: [FINAL] Vehículo 281474989145452: 222 registros insertados
+[2025-05-24 03:52:21] INFO: [VEHÍCULO 281474989447252] 47 registros
+[2025-05-24 03:52:21] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 08:56:15+00:00
+[2025-05-24 03:52:21] INFO: [FINAL] Vehículo 281474989447252: 45 registros insertados
+[2025-05-24 03:52:21] INFO: [VEHÍCULO 281474992703779] 14 registros
+[2025-05-24 03:52:21] INFO: [FINAL] Vehículo 281474992703779: 13 registros insertados
+[2025-05-24 03:52:21] INFO: [VEHÍCULO 281474992992431] 2 registros
+[2025-05-24 03:52:21] INFO: [FINAL] Vehículo 281474992992431: 1 registros insertados
+[2025-05-24 03:52:21] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:52:21] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:52:21] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:52:22] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 03:52:22] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:52:22] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:52:22] INFO: [VEHÍCULO 281474995276012] 7 registros
+[2025-05-24 03:52:22] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-23 15:10:34+00:00
+[2025-05-24 03:52:22] INFO: [FINAL] Vehículo 281474995276012: 5 registros insertados
+[2025-05-24 03:52:22] INFO: [VEHÍCULO 281474995276074] 228 registros
+[2025-05-24 03:52:23] INFO: [FINAL] Vehículo 281474995276074: 227 registros insertados
+[2025-05-24 03:52:23] INFO: [VEHÍCULO 281474995276402] 112 registros
+[2025-05-24 03:52:23] INFO: [FINAL] Vehículo 281474995276402: 111 registros insertados
+[2025-05-24 03:52:23] INFO: [VEHÍCULO 281474995276403] 185 registros
+[2025-05-24 03:52:23] INFO: [IGNORADO] Evento ignorado por ser muy cercano (7.0s) y sin cambio relevante
+[2025-05-24 03:52:23] INFO: [IGNORADO] Evento ignorado por ser muy cercano (22.0s) y sin cambio relevante
+[2025-05-24 03:52:23] INFO: [FINAL] Vehículo 281474995276403: 182 registros insertados
+[2025-05-24 03:52:23] INFO: [VEHÍCULO 281474995276404] 8 registros
+[2025-05-24 03:52:23] INFO: [FINAL] Vehículo 281474995276404: 7 registros insertados
+[2025-05-24 03:52:23] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:52:23] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 03:52:23] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:52:24] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 03:52:24] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:52:24] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:52:24] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:52:24] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 03:52:24] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-23 al 2025-05-23
+[2025-05-24 03:52:24] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-23 y 2025-05-23
+[2025-05-24 03:52:24] INFO: [FUEL-ENERGY] Día 1/1: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 03:52:24] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:52:24] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:52:25] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 03:52:25] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:52:25] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:52:26] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 03:52:26] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 03:52:26] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:52:27] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 03:52:27] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 03:52:27] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:52:38] INFO: Cierre solicitado por el usuario.
+[2025-05-24 03:53:14] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 03:53:14] INFO: Iniciando loop del scheduler...
+[2025-05-24 03:53:14] INFO: Ejecutando sincronización inicial...
+[2025-05-24 03:53:14] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:53:14] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 03:53:15] INFO: Catálogo sincronizado.
+[2025-05-24 03:53:15] INFO: [DEBUG] FECHA_CONSULTA_INICIO leída: 2025-04-28
+[2025-05-24 03:53:15] INFO: [DEBUG] FECHA_CONSULTA_FIN leída: 2025-04-28
+[2025-05-24 03:53:15] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 03:53:15] INFO: [Día 1/1] Fecha: 2025-04-28
+[2025-05-24 03:53:15] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 03:53:15] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:53:16] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 03:53:16] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:53:16] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:53:16] INFO: [VEHÍCULO 281474984421245] 45 registros
+[2025-05-24 03:53:16] INFO: [FINAL] Vehículo 281474984421245: 44 registros insertados
+[2025-05-24 03:53:16] INFO: [VEHÍCULO 281474984438177] 74 registros
+[2025-05-24 03:53:16] INFO: [FINAL] Vehículo 281474984438177: 73 registros insertados
+[2025-05-24 03:53:16] INFO: [VEHÍCULO 281474984440532] 5 registros
+[2025-05-24 03:53:16] INFO: [FINAL] Vehículo 281474984440532: 4 registros insertados
+[2025-05-24 03:53:16] INFO: [VEHÍCULO 281474984454844] 12 registros
+[2025-05-24 03:53:16] INFO: [IGNORADO] Evento ignorado por ser muy cercano (18.0s) y sin cambio relevante
+[2025-05-24 03:53:16] INFO: [FINAL] Vehículo 281474984454844: 10 registros insertados
+[2025-05-24 03:53:16] INFO: [VEHÍCULO 281474984471474] 48 registros
+[2025-05-24 03:53:17] INFO: [FINAL] Vehículo 281474984471474: 47 registros insertados
+[2025-05-24 03:53:17] INFO: [VEHÍCULO 281474984489038] 3 registros
+[2025-05-24 03:53:17] INFO: [FINAL] Vehículo 281474984489038: 2 registros insertados
+[2025-05-24 03:53:17] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:53:17] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:53:17] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:53:19] INFO: [Página 1] Registros obtenidos: 8
+[2025-05-24 03:53:19] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:53:19] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:53:19] INFO: [VEHÍCULO 281474984490449] 64 registros
+[2025-05-24 03:53:19] INFO: [FINAL] Vehículo 281474984490449: 63 registros insertados
+[2025-05-24 03:53:19] INFO: [VEHÍCULO 281474984667006] 123 registros
+[2025-05-24 03:53:20] INFO: [FINAL] Vehículo 281474984667006: 122 registros insertados
+[2025-05-24 03:53:20] INFO: [VEHÍCULO 281474984692138] 157 registros
+[2025-05-24 03:53:20] INFO: [FINAL] Vehículo 281474984692138: 156 registros insertados
+[2025-05-24 03:53:20] INFO: [VEHÍCULO 281474984779335] 326 registros
+[2025-05-24 03:53:20] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 02:08:53+00:00
+[2025-05-24 03:53:20] INFO: [FINAL] Vehículo 281474984779335: 324 registros insertados
+[2025-05-24 03:53:20] INFO: [VEHÍCULO 281474984796823] 161 registros
+[2025-05-24 03:53:20] INFO: [FINAL] Vehículo 281474984796823: 160 registros insertados
+[2025-05-24 03:53:20] INFO: [VEHÍCULO 281474984884925] 269 registros
+[2025-05-24 03:53:20] INFO: [FINAL] Vehículo 281474984884925: 268 registros insertados
+[2025-05-24 03:53:20] INFO: [VEHÍCULO 281474984917931] 132 registros
+[2025-05-24 03:53:20] INFO: [IGNORADO] Evento ignorado por ser muy cercano (17.0s) y sin cambio relevante
+[2025-05-24 03:53:20] INFO: [FINAL] Vehículo 281474984917931: 130 registros insertados
+[2025-05-24 03:53:20] INFO: [VEHÍCULO 281474984939926] 269 registros
+[2025-05-24 03:53:20] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 23:01:38+00:00
+[2025-05-24 03:53:20] INFO: [FINAL] Vehículo 281474984939926: 267 registros insertados
+[2025-05-24 03:53:20] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:53:21] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 03:53:21] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:53:24] INFO: [Página 1] Registros obtenidos: 9
+[2025-05-24 03:53:24] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:53:24] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:53:24] INFO: [VEHÍCULO 281474985214514] 299 registros
+[2025-05-24 03:53:25] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 17:01:14+00:00
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474985214514: 297 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474985251012] 58 registros
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474985251012: 57 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474985273793] 155 registros
+[2025-05-24 03:53:25] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 12:33:13+00:00
+[2025-05-24 03:53:25] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 18:46:51+00:00
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474985273793: 152 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474985935537] 359 registros
+[2025-05-24 03:53:25] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 11:26:15+00:00
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474985935537: 357 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474989145452] 225 registros
+[2025-05-24 03:53:25] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 16:46:27+00:00
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474989145452: 223 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474989447252] 234 registros
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474989447252: 233 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474992703779] 12 registros
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474992703779: 11 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474992992431] 225 registros
+[2025-05-24 03:53:25] INFO: [FINAL] Vehículo 281474992992431: 224 registros insertados
+[2025-05-24 03:53:25] INFO: [VEHÍCULO 281474992992433] 160 registros
+[2025-05-24 03:53:26] INFO: [FINAL] Vehículo 281474992992433: 159 registros insertados
+[2025-05-24 03:53:26] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:53:26] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:53:26] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:53:28] INFO: [Página 1] Registros obtenidos: 8
+[2025-05-24 03:53:28] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:53:28] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:53:28] INFO: [VEHÍCULO 281474992992552] 203 registros
+[2025-05-24 03:53:28] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 16:37:49+00:00
+[2025-05-24 03:53:28] INFO: [FINAL] Vehículo 281474992992552: 201 registros insertados
+[2025-05-24 03:53:28] INFO: [VEHÍCULO 281474992996203] 116 registros
+[2025-05-24 03:53:28] INFO: [FINAL] Vehículo 281474992996203: 115 registros insertados
+[2025-05-24 03:53:28] INFO: [VEHÍCULO 281474995276012] 169 registros
+[2025-05-24 03:53:28] INFO: [FINAL] Vehículo 281474995276012: 168 registros insertados
+[2025-05-24 03:53:28] INFO: [VEHÍCULO 281474995276074] 230 registros
+[2025-05-24 03:53:28] INFO: [FINAL] Vehículo 281474995276074: 229 registros insertados
+[2025-05-24 03:53:28] INFO: [VEHÍCULO 281474995276402] 4 registros
+[2025-05-24 03:53:28] INFO: [IGNORADO] Evento ignorado por ser muy cercano (18.0s) y sin cambio relevante
+[2025-05-24 03:53:28] INFO: [FINAL] Vehículo 281474995276402: 2 registros insertados
+[2025-05-24 03:53:28] INFO: [VEHÍCULO 281474995276403] 183 registros
+[2025-05-24 03:53:28] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 12:35:09+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 13:39:10+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Evento ignorado por ser muy cercano (13.0s) y sin cambio relevante
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 15:46:38+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 20:33:17+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 22:41:23+00:00
+[2025-05-24 03:53:29] INFO: [FINAL] Vehículo 281474995276403: 176 registros insertados
+[2025-05-24 03:53:29] INFO: [VEHÍCULO 281474995276404] 252 registros
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 13:50:15+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 14:30:15+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 15:06:16+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 15:30:16+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 16:10:16+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 16:14:16+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 16:24:16+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 16:32:16+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 16:48:16+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 17:28:17+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 17:34:17+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 17:58:17+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 19:18:18+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 20:04:18+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 20:46:19+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 20:50:19+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 21:18:20+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 22:02:20+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 22:20:20+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 22:28:20+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 22:50:20+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 22:54:20+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 23:12:21+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 23:24:21+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 23:48:21+00:00
+[2025-05-24 03:53:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-28 23:58:21+00:00
+[2025-05-24 03:53:29] INFO: [FINAL] Vehículo 281474995276404: 225 registros insertados
+[2025-05-24 03:53:29] INFO: [VEHÍCULO 281474995511352] 5 registros
+[2025-05-24 03:53:29] INFO: [FINAL] Vehículo 281474995511352: 4 registros insertados
+[2025-05-24 03:53:29] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:53:29] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 03:53:29] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:53:30] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 03:53:30] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:53:30] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:53:30] INFO: [VEHÍCULO 281474995511888] 161 registros
+[2025-05-24 03:53:30] INFO: [FINAL] Vehículo 281474995511888: 160 registros insertados
+[2025-05-24 03:53:30] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:53:31] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 03:53:31] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-04-28 al 2025-04-28
+[2025-05-24 03:53:31] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-04-28 y 2025-04-28
+[2025-05-24 03:53:31] INFO: [FUEL-ENERGY] Día 1/1: 2025-04-28T00:00:00.00-07:00 a 2025-04-28T23:59:59.99-07:00
+[2025-05-24 03:53:31] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:53:31] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:53:32] INFO: [Página 1] Registros obtenidos: 14 | hasNext: False
+[2025-05-24 03:53:32] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:53:32] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:53:32] INFO: [Página 1] Registros obtenidos: 17 | hasNext: False
+[2025-05-24 03:53:32] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 03:53:33] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:53:33] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 03:53:33] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 03:53:33] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 03:53:33] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 03:53:53] INFO: [MANUAL] FECHA_CONSULTA_INICIO actualizada a 2025-04-29
+[2025-05-24 03:53:53] INFO: [MANUAL] FECHA_CONSULTA_FIN actualizada a 2025-04-29
+[2025-05-24 03:53:57] INFO: Sincronización manual ejecutada
+[2025-05-24 03:53:57] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 03:53:57] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 03:53:59] INFO: Catálogo sincronizado.
+[2025-05-24 03:53:59] INFO: [DEBUG] FECHA_CONSULTA_INICIO leída: 2025-04-29
+[2025-05-24 03:53:59] INFO: [DEBUG] FECHA_CONSULTA_FIN leída: 2025-04-29
+[2025-05-24 03:53:59] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 03:53:59] INFO: [Día 1/1] Fecha: 2025-04-29
+[2025-05-24 03:53:59] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 03:53:59] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:54:01] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 03:54:01] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:54:01] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:54:01] INFO: [VEHÍCULO 281474984421245] 270 registros
+[2025-05-24 03:54:01] INFO: [FINAL] Vehículo 281474984421245: 269 registros insertados
+[2025-05-24 03:54:01] INFO: [VEHÍCULO 281474984438177] 219 registros
+[2025-05-24 03:54:01] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 19:46:14+00:00
+[2025-05-24 03:54:01] INFO: [IGNORADO] Evento ignorado por ser muy cercano (3.0s) y sin cambio relevante
+[2025-05-24 03:54:01] INFO: [FINAL] Vehículo 281474984438177: 216 registros insertados
+[2025-05-24 03:54:01] INFO: [VEHÍCULO 281474984440532] 10 registros
+[2025-05-24 03:54:01] INFO: [FINAL] Vehículo 281474984440532: 9 registros insertados
+[2025-05-24 03:54:01] INFO: [VEHÍCULO 281474984468469] 180 registros
+[2025-05-24 03:54:01] INFO: [FINAL] Vehículo 281474984468469: 179 registros insertados
+[2025-05-24 03:54:01] INFO: [VEHÍCULO 281474984471474] 32 registros
+[2025-05-24 03:54:01] INFO: [IGNORADO] Evento ignorado por ser muy cercano (16.0s) y sin cambio relevante
+[2025-05-24 03:54:01] INFO: [FINAL] Vehículo 281474984471474: 30 registros insertados
+[2025-05-24 03:54:01] INFO: [VEHÍCULO 281474984489038] 22 registros
+[2025-05-24 03:54:01] INFO: [FINAL] Vehículo 281474984489038: 21 registros insertados
+[2025-05-24 03:54:01] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:54:02] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:54:02] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:54:05] INFO: [Página 1] Registros obtenidos: 9
+[2025-05-24 03:54:05] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:54:05] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:54:05] INFO: [VEHÍCULO 281474984490449] 1 registros
+[2025-05-24 03:54:05] INFO: [FINAL] Vehículo 281474984490449: 0 registros insertados
+[2025-05-24 03:54:05] INFO: [VEHÍCULO 281474984667006] 132 registros
+[2025-05-24 03:54:05] INFO: [FINAL] Vehículo 281474984667006: 131 registros insertados
+[2025-05-24 03:54:05] INFO: [VEHÍCULO 281474984692138] 187 registros
+[2025-05-24 03:54:05] INFO: [FINAL] Vehículo 281474984692138: 186 registros insertados
+[2025-05-24 03:54:05] INFO: [VEHÍCULO 281474984779335] 204 registros
+[2025-05-24 03:54:05] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 13:57:08+00:00
+[2025-05-24 03:54:05] INFO: [FINAL] Vehículo 281474984779335: 202 registros insertados
+[2025-05-24 03:54:05] INFO: [VEHÍCULO 281474984780699] 87 registros
+[2025-05-24 03:54:05] INFO: [FINAL] Vehículo 281474984780699: 86 registros insertados
+[2025-05-24 03:54:05] INFO: [VEHÍCULO 281474984796823] 276 registros
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 14:15:52+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 14:21:52+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 15:15:52+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 17:47:54+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 18:09:54+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:55:55+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 22:51:55+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 23:19:56+00:00
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 23:35:56+00:00
+[2025-05-24 03:54:06] INFO: [FINAL] Vehículo 281474984796823: 266 registros insertados
+[2025-05-24 03:54:06] INFO: [VEHÍCULO 281474984884925] 288 registros
+[2025-05-24 03:54:06] INFO: [FINAL] Vehículo 281474984884925: 287 registros insertados
+[2025-05-24 03:54:06] INFO: [VEHÍCULO 281474984917931] 96 registros
+[2025-05-24 03:54:06] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 12:09:06+00:00
+[2025-05-24 03:54:06] INFO: [FINAL] Vehículo 281474984917931: 94 registros insertados
+[2025-05-24 03:54:06] INFO: [VEHÍCULO 281474984939926] 279 registros
+[2025-05-24 03:54:06] INFO: [FINAL] Vehículo 281474984939926: 278 registros insertados
+[2025-05-24 03:54:06] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:54:06] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 03:54:06] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:54:10] INFO: [Página 1] Registros obtenidos: 9
+[2025-05-24 03:54:10] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:54:10] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:54:10] INFO: [VEHÍCULO 281474985214514] 226 registros
+[2025-05-24 03:54:10] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 20:27:27+00:00
+[2025-05-24 03:54:10] INFO: [FINAL] Vehículo 281474985214514: 224 registros insertados
+[2025-05-24 03:54:10] INFO: [VEHÍCULO 281474985251012] 263 registros
+[2025-05-24 03:54:10] INFO: [FINAL] Vehículo 281474985251012: 262 registros insertados
+[2025-05-24 03:54:10] INFO: [VEHÍCULO 281474985273793] 226 registros
+[2025-05-24 03:54:10] INFO: [FINAL] Vehículo 281474985273793: 225 registros insertados
+[2025-05-24 03:54:10] INFO: [VEHÍCULO 281474985935537] 351 registros
+[2025-05-24 03:54:10] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 08:29:19+00:00
+[2025-05-24 03:54:11] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 16:35:24+00:00
+[2025-05-24 03:54:11] INFO: [FINAL] Vehículo 281474985935537: 348 registros insertados
+[2025-05-24 03:54:11] INFO: [VEHÍCULO 281474989145452] 161 registros
+[2025-05-24 03:54:11] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 16:58:39+00:00
+[2025-05-24 03:54:11] INFO: [FINAL] Vehículo 281474989145452: 159 registros insertados
+[2025-05-24 03:54:11] INFO: [VEHÍCULO 281474989447252] 208 registros
+[2025-05-24 03:54:11] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 01:34:47+00:00
+[2025-05-24 03:54:11] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 16:22:53+00:00
+[2025-05-24 03:54:11] INFO: [FINAL] Vehículo 281474989447252: 205 registros insertados
+[2025-05-24 03:54:11] INFO: [VEHÍCULO 281474992703779] 30 registros
+[2025-05-24 03:54:11] INFO: [FINAL] Vehículo 281474992703779: 29 registros insertados
+[2025-05-24 03:54:11] INFO: [VEHÍCULO 281474992992431] 284 registros
+[2025-05-24 03:54:11] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 02:08:49+00:00
+[2025-05-24 03:54:11] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 10:38:53+00:00
+[2025-05-24 03:54:11] INFO: [FINAL] Vehículo 281474992992431: 281 registros insertados
+[2025-05-24 03:54:11] INFO: [VEHÍCULO 281474992992433] 297 registros
+[2025-05-24 03:54:11] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 01:27:45+00:00
+[2025-05-24 03:54:11] INFO: [FINAL] Vehículo 281474992992433: 295 registros insertados
+[2025-05-24 03:54:11] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:54:12] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:54:12] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:54:14] INFO: [Página 1] Registros obtenidos: 7
+[2025-05-24 03:54:14] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:54:14] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:54:14] INFO: [VEHÍCULO 281474992992552] 131 registros
+[2025-05-24 03:54:14] INFO: [FINAL] Vehículo 281474992992552: 130 registros insertados
+[2025-05-24 03:54:14] INFO: [VEHÍCULO 281474992996203] 313 registros
+[2025-05-24 03:54:14] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 18:26:56+00:00
+[2025-05-24 03:54:14] INFO: [FINAL] Vehículo 281474992996203: 311 registros insertados
+[2025-05-24 03:54:14] INFO: [VEHÍCULO 281474995276012] 213 registros
+[2025-05-24 03:54:14] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:39:44+00:00
+[2025-05-24 03:54:14] INFO: [FINAL] Vehículo 281474995276012: 211 registros insertados
+[2025-05-24 03:54:14] INFO: [VEHÍCULO 281474995276074] 231 registros
+[2025-05-24 03:54:15] INFO: [FINAL] Vehículo 281474995276074: 230 registros insertados
+[2025-05-24 03:54:15] INFO: [VEHÍCULO 281474995276403] 126 registros
+[2025-05-24 03:54:15] INFO: [FINAL] Vehículo 281474995276403: 125 registros insertados
+[2025-05-24 03:54:15] INFO: [VEHÍCULO 281474995276404] 194 registros
+[2025-05-24 03:54:15] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 13:44:39+00:00
+[2025-05-24 03:54:15] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:30:44+00:00
+[2025-05-24 03:54:15] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:56:44+00:00
+[2025-05-24 03:54:15] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 22:58:45+00:00
+[2025-05-24 03:54:15] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 23:30:45+00:00
+[2025-05-24 03:54:15] INFO: [FINAL] Vehículo 281474995276404: 188 registros insertados
+[2025-05-24 03:54:15] INFO: [VEHÍCULO 281474995511352] 2 registros
+[2025-05-24 03:54:15] INFO: [FINAL] Vehículo 281474995511352: 1 registros insertados
+[2025-05-24 03:54:15] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:54:15] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 03:54:15] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 03:54:16] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 03:54:16] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 03:54:16] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 03:54:16] INFO: [VEHÍCULO 281474995511888] 260 registros
+[2025-05-24 03:54:16] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 14:23:30+00:00
+[2025-05-24 03:54:16] INFO: [FINAL] Vehículo 281474995511888: 258 registros insertados
+[2025-05-24 03:54:16] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 03:54:17] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 03:54:17] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-04-29 al 2025-04-29
+[2025-05-24 03:54:17] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-04-29 y 2025-04-29
+[2025-05-24 03:54:17] INFO: [FUEL-ENERGY] Día 1/1: 2025-04-29T00:00:00.00-07:00 a 2025-04-29T23:59:59.99-07:00
+[2025-05-24 03:54:17] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 03:54:17] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:54:18] INFO: [Página 1] Registros obtenidos: 15 | hasNext: False
+[2025-05-24 03:54:18] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 03:54:18] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:54:18] INFO: [Página 1] Registros obtenidos: 16 | hasNext: False
+[2025-05-24 03:54:18] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 03:54:19] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 03:54:19] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 03:54:19] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 03:54:19] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:01:56] INFO: Cierre solicitado por el usuario.
+[2025-05-24 04:04:25] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 04:04:25] INFO: Iniciando loop del scheduler...
+[2025-05-24 04:04:25] INFO: Ejecutando sincronización inicial...
+[2025-05-24 04:04:25] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 04:04:25] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 04:04:26] INFO: Catálogo sincronizado.
+[2025-05-24 04:04:26] INFO: [DEBUG] FECHA_CONSULTA_INICIO leída: 2025-04-29
+[2025-05-24 04:04:26] INFO: [DEBUG] FECHA_CONSULTA_FIN leída: 2025-04-29
+[2025-05-24 04:04:26] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 04:04:26] INFO: [Día 1/1] Fecha: 2025-04-29
+[2025-05-24 04:04:26] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 04:04:26] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:04:29] INFO: [Página 1] Registros obtenidos: 6
+[2025-05-24 04:04:29] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:04:29] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:04:29] INFO: [VEHÍCULO 281474984421245] 270 registros
+[2025-05-24 04:04:29] INFO: [FINAL] Vehículo 281474984421245: 269 registros insertados
+[2025-05-24 04:04:29] INFO: [VEHÍCULO 281474984438177] 219 registros
+[2025-05-24 04:04:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 19:46:14+00:00
+[2025-05-24 04:04:29] INFO: [IGNORADO] Evento ignorado por ser muy cercano (3.0s) y sin cambio relevante
+[2025-05-24 04:04:29] INFO: [FINAL] Vehículo 281474984438177: 216 registros insertados
+[2025-05-24 04:04:29] INFO: [VEHÍCULO 281474984440532] 10 registros
+[2025-05-24 04:04:29] INFO: [FINAL] Vehículo 281474984440532: 9 registros insertados
+[2025-05-24 04:04:29] INFO: [VEHÍCULO 281474984468469] 180 registros
+[2025-05-24 04:04:29] INFO: [FINAL] Vehículo 281474984468469: 179 registros insertados
+[2025-05-24 04:04:29] INFO: [VEHÍCULO 281474984471474] 32 registros
+[2025-05-24 04:04:29] INFO: [IGNORADO] Evento ignorado por ser muy cercano (16.0s) y sin cambio relevante
+[2025-05-24 04:04:29] INFO: [FINAL] Vehículo 281474984471474: 30 registros insertados
+[2025-05-24 04:04:29] INFO: [VEHÍCULO 281474984489038] 22 registros
+[2025-05-24 04:04:29] INFO: [FINAL] Vehículo 281474984489038: 21 registros insertados
+[2025-05-24 04:04:29] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:04:29] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:04:29] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:04:32] INFO: [Página 1] Registros obtenidos: 9
+[2025-05-24 04:04:32] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:04:32] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:04:32] INFO: [VEHÍCULO 281474984490449] 1 registros
+[2025-05-24 04:04:32] INFO: [FINAL] Vehículo 281474984490449: 0 registros insertados
+[2025-05-24 04:04:32] INFO: [VEHÍCULO 281474984667006] 132 registros
+[2025-05-24 04:04:32] INFO: [FINAL] Vehículo 281474984667006: 131 registros insertados
+[2025-05-24 04:04:32] INFO: [VEHÍCULO 281474984692138] 187 registros
+[2025-05-24 04:04:32] INFO: [FINAL] Vehículo 281474984692138: 186 registros insertados
+[2025-05-24 04:04:32] INFO: [VEHÍCULO 281474984779335] 204 registros
+[2025-05-24 04:04:32] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 13:57:08+00:00
+[2025-05-24 04:04:32] INFO: [FINAL] Vehículo 281474984779335: 202 registros insertados
+[2025-05-24 04:04:32] INFO: [VEHÍCULO 281474984780699] 87 registros
+[2025-05-24 04:04:32] INFO: [FINAL] Vehículo 281474984780699: 86 registros insertados
+[2025-05-24 04:04:32] INFO: [VEHÍCULO 281474984796823] 276 registros
+[2025-05-24 04:04:32] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 14:15:52+00:00
+[2025-05-24 04:04:32] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 14:21:52+00:00
+[2025-05-24 04:04:32] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 15:15:52+00:00
+[2025-05-24 04:04:32] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 17:47:54+00:00
+[2025-05-24 04:04:32] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 18:09:54+00:00
+[2025-05-24 04:04:33] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:55:55+00:00
+[2025-05-24 04:04:33] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 22:51:55+00:00
+[2025-05-24 04:04:33] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 23:19:56+00:00
+[2025-05-24 04:04:33] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 23:35:56+00:00
+[2025-05-24 04:04:33] INFO: [FINAL] Vehículo 281474984796823: 266 registros insertados
+[2025-05-24 04:04:33] INFO: [VEHÍCULO 281474984884925] 288 registros
+[2025-05-24 04:04:33] INFO: [FINAL] Vehículo 281474984884925: 287 registros insertados
+[2025-05-24 04:04:33] INFO: [VEHÍCULO 281474984917931] 96 registros
+[2025-05-24 04:04:33] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 12:09:06+00:00
+[2025-05-24 04:04:33] INFO: [FINAL] Vehículo 281474984917931: 94 registros insertados
+[2025-05-24 04:04:33] INFO: [VEHÍCULO 281474984939926] 279 registros
+[2025-05-24 04:04:33] INFO: [FINAL] Vehículo 281474984939926: 278 registros insertados
+[2025-05-24 04:04:33] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:04:33] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 04:04:33] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:04:38] INFO: [Página 1] Registros obtenidos: 9
+[2025-05-24 04:04:38] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:04:38] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474985214514] 226 registros
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 20:27:27+00:00
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474985214514: 224 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474985251012] 263 registros
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474985251012: 262 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474985273793] 226 registros
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474985273793: 225 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474985935537] 351 registros
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 08:29:19+00:00
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 16:35:24+00:00
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474985935537: 348 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474989145452] 161 registros
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 16:58:39+00:00
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474989145452: 159 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474989447252] 208 registros
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 01:34:47+00:00
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 16:22:53+00:00
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474989447252: 205 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474992703779] 30 registros
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474992703779: 29 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474992992431] 284 registros
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 02:08:49+00:00
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 10:38:53+00:00
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474992992431: 281 registros insertados
+[2025-05-24 04:04:38] INFO: [VEHÍCULO 281474992992433] 297 registros
+[2025-05-24 04:04:38] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 01:27:45+00:00
+[2025-05-24 04:04:38] INFO: [FINAL] Vehículo 281474992992433: 295 registros insertados
+[2025-05-24 04:04:38] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:04:39] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:04:39] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:04:41] INFO: [Página 1] Registros obtenidos: 7
+[2025-05-24 04:04:41] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:04:41] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:04:41] INFO: [VEHÍCULO 281474992992552] 131 registros
+[2025-05-24 04:04:41] INFO: [FINAL] Vehículo 281474992992552: 130 registros insertados
+[2025-05-24 04:04:41] INFO: [VEHÍCULO 281474992996203] 313 registros
+[2025-05-24 04:04:41] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 18:26:56+00:00
+[2025-05-24 04:04:41] INFO: [FINAL] Vehículo 281474992996203: 311 registros insertados
+[2025-05-24 04:04:41] INFO: [VEHÍCULO 281474995276012] 213 registros
+[2025-05-24 04:04:41] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:39:44+00:00
+[2025-05-24 04:04:41] INFO: [FINAL] Vehículo 281474995276012: 211 registros insertados
+[2025-05-24 04:04:41] INFO: [VEHÍCULO 281474995276074] 231 registros
+[2025-05-24 04:04:41] INFO: [FINAL] Vehículo 281474995276074: 230 registros insertados
+[2025-05-24 04:04:41] INFO: [VEHÍCULO 281474995276403] 126 registros
+[2025-05-24 04:04:41] INFO: [FINAL] Vehículo 281474995276403: 125 registros insertados
+[2025-05-24 04:04:41] INFO: [VEHÍCULO 281474995276404] 194 registros
+[2025-05-24 04:04:41] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 13:44:39+00:00
+[2025-05-24 04:04:41] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:30:44+00:00
+[2025-05-24 04:04:41] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 21:56:44+00:00
+[2025-05-24 04:04:41] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 22:58:45+00:00
+[2025-05-24 04:04:41] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 23:30:45+00:00
+[2025-05-24 04:04:41] INFO: [FINAL] Vehículo 281474995276404: 188 registros insertados
+[2025-05-24 04:04:41] INFO: [VEHÍCULO 281474995511352] 2 registros
+[2025-05-24 04:04:41] INFO: [FINAL] Vehículo 281474995511352: 1 registros insertados
+[2025-05-24 04:04:41] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:04:42] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 04:04:42] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:04:43] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 04:04:43] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:04:43] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:04:43] INFO: [VEHÍCULO 281474995511888] 260 registros
+[2025-05-24 04:04:43] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-04-29 14:23:30+00:00
+[2025-05-24 04:04:43] INFO: [FINAL] Vehículo 281474995511888: 258 registros insertados
+[2025-05-24 04:04:43] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:04:43] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 04:04:43] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-04-29 al 2025-04-29
+[2025-05-24 04:04:43] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-04-29 y 2025-04-29
+[2025-05-24 04:04:44] INFO: [FUEL-ENERGY] Día 1/1: 2025-04-29T00:00:00.00-07:00 a 2025-04-29T23:59:59.99-07:00
+[2025-05-24 04:04:44] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:04:44] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:04:44] INFO: [Página 1] Registros obtenidos: 15 | hasNext: False
+[2025-05-24 04:04:44] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:04:44] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:04:45] INFO: [Página 1] Registros obtenidos: 16 | hasNext: False
+[2025-05-24 04:04:45] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:04:45] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:04:46] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:04:46] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 04:04:46] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:04:46] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 04:08:09] INFO: Cierre solicitado por el usuario.
+[2025-05-24 04:13:40] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 04:13:40] INFO: Iniciando loop del scheduler...
+[2025-05-24 04:13:40] INFO: Ejecutando sincronización inicial...
+[2025-05-24 04:13:40] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 04:13:40] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 04:13:41] INFO: Catálogo sincronizado.
+[2025-05-24 04:13:41] INFO: [AUTO] Sincronizando con fecha actual: 2025-05-24
+[2025-05-24 04:13:41] INFO: [REPORTE] Fecha final es hoy. Ajustando fecha de inicio de reporte_combustible a 2025-05-21
+[2025-05-24 04:13:41] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 04:13:41] INFO: [Día 1/1] Fecha: 2025-05-24
+[2025-05-24 04:13:41] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 04:13:41] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:13:42] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:13:42] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:13:42] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:13:42] INFO: [VEHÍCULO 281474984438177] 104 registros
+[2025-05-24 04:13:42] INFO: [FINAL] Vehículo 281474984438177: 103 registros insertados
+[2025-05-24 04:13:42] INFO: [VEHÍCULO 281474984440532] 55 registros
+[2025-05-24 04:13:42] INFO: [FINAL] Vehículo 281474984440532: 54 registros insertados
+[2025-05-24 04:13:42] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:13:42] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:13:42] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:13:43] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 04:13:43] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:13:43] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:13:43] INFO: [VEHÍCULO 281474984490449] 10 registros
+[2025-05-24 04:13:43] INFO: [FINAL] Vehículo 281474984490449: 9 registros insertados
+[2025-05-24 04:13:43] INFO: [VEHÍCULO 281474984667006] 2 registros
+[2025-05-24 04:13:43] INFO: [FINAL] Vehículo 281474984667006: 1 registros insertados
+[2025-05-24 04:13:43] INFO: [VEHÍCULO 281474984779335] 127 registros
+[2025-05-24 04:13:43] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-24 07:56:32+00:00
+[2025-05-24 04:13:43] INFO: [FINAL] Vehículo 281474984779335: 125 registros insertados
+[2025-05-24 04:13:43] INFO: [VEHÍCULO 281474984780699] 3 registros
+[2025-05-24 04:13:43] INFO: [FINAL] Vehículo 281474984780699: 2 registros insertados
+[2025-05-24 04:13:43] INFO: [VEHÍCULO 281474984939926] 3 registros
+[2025-05-24 04:13:43] INFO: [FINAL] Vehículo 281474984939926: 2 registros insertados
+[2025-05-24 04:13:43] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:13:44] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 04:13:44] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:13:44] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 04:13:44] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:13:44] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:13:44] INFO: [VEHÍCULO 281474989145452] 11 registros
+[2025-05-24 04:13:44] INFO: [FINAL] Vehículo 281474989145452: 10 registros insertados
+[2025-05-24 04:13:44] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:13:45] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:13:45] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:13:46] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:13:46] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:13:46] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:13:46] INFO: [VEHÍCULO 281474995276074] 69 registros
+[2025-05-24 04:13:46] INFO: [FINAL] Vehículo 281474995276074: 68 registros insertados
+[2025-05-24 04:13:46] INFO: [VEHÍCULO 281474995276402] 71 registros
+[2025-05-24 04:13:46] INFO: [FINAL] Vehículo 281474995276402: 70 registros insertados
+[2025-05-24 04:13:46] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:13:47] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 04:13:47] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:13:47] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 04:13:47] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:13:47] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:13:47] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:13:48] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 04:13:48] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-21 al 2025-05-24
+[2025-05-24 04:13:48] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-21 y 2025-05-24
+[2025-05-24 04:13:48] INFO: [FUEL-ENERGY] Día 1/4: 2025-05-21T00:00:00.00-07:00 a 2025-05-21T23:59:59.99-07:00
+[2025-05-24 04:13:48] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:13:48] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:49] INFO: [Página 1] Registros obtenidos: 14 | hasNext: False
+[2025-05-24 04:13:49] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:13:49] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:49] INFO: [Página 1] Registros obtenidos: 13 | hasNext: False
+[2025-05-24 04:13:49] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:13:49] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:50] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:13:50] INFO: [FUEL-ENERGY] Día 2/4: 2025-05-22T00:00:00.00-07:00 a 2025-05-22T23:59:59.99-07:00
+[2025-05-24 04:13:50] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:13:50] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:51] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:13:51] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:13:51] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:51] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:13:51] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:13:51] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:52] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:13:52] INFO: [FUEL-ENERGY] Día 3/4: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 04:13:52] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:13:52] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:53] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 04:13:53] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:13:53] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:53] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 04:13:53] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:13:53] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:54] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:13:54] INFO: [FUEL-ENERGY] Día 4/4: 2025-05-24T00:00:00.00-07:00 a 2025-05-24T23:59:59.99-07:00
+[2025-05-24 04:13:54] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:13:54] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:54] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:13:54] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:13:54] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:55] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:13:55] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:13:55] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:13:55] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:13:55] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 04:13:55] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:13:55] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 04:16:02] INFO: Cierre solicitado por el usuario.
+[2025-05-24 04:16:05] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 04:16:05] INFO: Iniciando loop del scheduler...
+[2025-05-24 04:16:05] INFO: Ejecutando sincronización inicial...
+[2025-05-24 04:16:05] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 04:16:05] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 04:16:06] INFO: Catálogo sincronizado.
+[2025-05-24 04:16:06] INFO: [AUTO] Sincronizando con fecha actual: 2025-05-24
+[2025-05-24 04:16:06] INFO: [REPORTE] Fecha final es hoy. Ajustando fecha de inicio de reporte_combustible a 2025-05-21
+[2025-05-24 04:16:06] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 04:16:06] INFO: [Día 1/1] Fecha: 2025-05-24
+[2025-05-24 04:16:06] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 04:16:06] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:16:07] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:16:07] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:16:07] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:16:07] INFO: [VEHÍCULO 281474984438177] 104 registros
+[2025-05-24 04:16:07] INFO: [FINAL] Vehículo 281474984438177: 103 registros insertados
+[2025-05-24 04:16:07] INFO: [VEHÍCULO 281474984440532] 55 registros
+[2025-05-24 04:16:07] INFO: [FINAL] Vehículo 281474984440532: 54 registros insertados
+[2025-05-24 04:16:07] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:16:07] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:16:07] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:16:08] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 04:16:08] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:16:08] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:16:08] INFO: [VEHÍCULO 281474984490449] 10 registros
+[2025-05-24 04:16:08] INFO: [FINAL] Vehículo 281474984490449: 9 registros insertados
+[2025-05-24 04:16:08] INFO: [VEHÍCULO 281474984667006] 2 registros
+[2025-05-24 04:16:08] INFO: [FINAL] Vehículo 281474984667006: 1 registros insertados
+[2025-05-24 04:16:08] INFO: [VEHÍCULO 281474984779335] 127 registros
+[2025-05-24 04:16:08] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-24 07:56:32+00:00
+[2025-05-24 04:16:08] INFO: [FINAL] Vehículo 281474984779335: 125 registros insertados
+[2025-05-24 04:16:08] INFO: [VEHÍCULO 281474984780699] 3 registros
+[2025-05-24 04:16:08] INFO: [FINAL] Vehículo 281474984780699: 2 registros insertados
+[2025-05-24 04:16:08] INFO: [VEHÍCULO 281474984939926] 3 registros
+[2025-05-24 04:16:08] INFO: [FINAL] Vehículo 281474984939926: 2 registros insertados
+[2025-05-24 04:16:08] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:16:09] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 04:16:09] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:16:09] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 04:16:09] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:16:09] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:16:09] INFO: [VEHÍCULO 281474989145452] 11 registros
+[2025-05-24 04:16:09] INFO: [FINAL] Vehículo 281474989145452: 10 registros insertados
+[2025-05-24 04:16:09] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:16:10] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:16:10] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:16:11] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:16:11] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:16:11] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:16:11] INFO: [VEHÍCULO 281474995276074] 69 registros
+[2025-05-24 04:16:11] INFO: [FINAL] Vehículo 281474995276074: 68 registros insertados
+[2025-05-24 04:16:11] INFO: [VEHÍCULO 281474995276402] 71 registros
+[2025-05-24 04:16:11] INFO: [FINAL] Vehículo 281474995276402: 70 registros insertados
+[2025-05-24 04:16:11] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:16:11] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 04:16:11] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:16:12] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 04:16:12] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:16:12] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:16:12] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:16:12] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 04:16:12] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-21 al 2025-05-24
+[2025-05-24 04:16:12] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-21 y 2025-05-24
+[2025-05-24 04:16:12] INFO: [FUEL-ENERGY] Día 1/4: 2025-05-21T00:00:00.00-07:00 a 2025-05-21T23:59:59.99-07:00
+[2025-05-24 04:16:12] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:16:12] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:13] INFO: [Página 1] Registros obtenidos: 14 | hasNext: False
+[2025-05-24 04:16:13] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:16:13] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:15] INFO: [Página 1] Registros obtenidos: 13 | hasNext: False
+[2025-05-24 04:16:15] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:16:15] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:16] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:16:16] INFO: [FUEL-ENERGY] Día 2/4: 2025-05-22T00:00:00.00-07:00 a 2025-05-22T23:59:59.99-07:00
+[2025-05-24 04:16:16] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:16:16] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:16] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:16:16] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:16:16] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:17] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:16:17] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:16:17] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:18] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:16:18] INFO: [FUEL-ENERGY] Día 3/4: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 04:16:18] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:16:18] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:18] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 04:16:18] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:16:18] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:19] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 04:16:19] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:16:19] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:20] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:16:20] INFO: [FUEL-ENERGY] Día 4/4: 2025-05-24T00:00:00.00-07:00 a 2025-05-24T23:59:59.99-07:00
+[2025-05-24 04:16:20] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:16:20] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:20] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:16:20] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:16:20] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:21] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:16:21] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:16:21] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:16:22] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:16:22] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 04:16:22] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:16:22] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 04:17:24] INFO: Cierre solicitado por el usuario.
+[2025-05-24 04:17:57] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 04:17:57] INFO: Iniciando loop del scheduler...
+[2025-05-24 04:17:57] INFO: Ejecutando sincronización inicial...
+[2025-05-24 04:17:57] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 04:17:57] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 04:17:58] INFO: Catálogo sincronizado.
+[2025-05-24 04:17:58] INFO: [AUTO] Sincronizando con fecha actual: 2025-05-24
+[2025-05-24 04:17:58] INFO: [REPORTE] Fecha final es hoy. Ajustando fecha de inicio de reporte_combustible a 2025-05-21
+[2025-05-24 04:17:58] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 04:17:58] INFO: [Día 1/1] Fecha: 2025-05-24
+[2025-05-24 04:17:58] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 04:17:58] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:17:59] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:17:59] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:17:59] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:17:59] INFO: [VEHÍCULO 281474984438177] 104 registros
+[2025-05-24 04:17:59] INFO: [FINAL] Vehículo 281474984438177: 103 registros insertados
+[2025-05-24 04:17:59] INFO: [VEHÍCULO 281474984440532] 56 registros
+[2025-05-24 04:17:59] INFO: [FINAL] Vehículo 281474984440532: 55 registros insertados
+[2025-05-24 04:17:59] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:00] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:00] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:00] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 04:18:00] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:00] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:00] INFO: [VEHÍCULO 281474984490449] 10 registros
+[2025-05-24 04:18:00] INFO: [FINAL] Vehículo 281474984490449: 9 registros insertados
+[2025-05-24 04:18:00] INFO: [VEHÍCULO 281474984667006] 2 registros
+[2025-05-24 04:18:00] INFO: [FINAL] Vehículo 281474984667006: 1 registros insertados
+[2025-05-24 04:18:00] INFO: [VEHÍCULO 281474984779335] 127 registros
+[2025-05-24 04:18:01] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-24 07:56:32+00:00
+[2025-05-24 04:18:01] INFO: [FINAL] Vehículo 281474984779335: 125 registros insertados
+[2025-05-24 04:18:01] INFO: [VEHÍCULO 281474984780699] 3 registros
+[2025-05-24 04:18:01] INFO: [FINAL] Vehículo 281474984780699: 2 registros insertados
+[2025-05-24 04:18:01] INFO: [VEHÍCULO 281474984939926] 3 registros
+[2025-05-24 04:18:01] INFO: [FINAL] Vehículo 281474984939926: 2 registros insertados
+[2025-05-24 04:18:01] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:01] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 04:18:01] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:02] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 04:18:02] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:02] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:02] INFO: [VEHÍCULO 281474989145452] 11 registros
+[2025-05-24 04:18:02] INFO: [FINAL] Vehículo 281474989145452: 10 registros insertados
+[2025-05-24 04:18:02] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:02] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:02] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:03] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:18:03] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:03] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:03] INFO: [VEHÍCULO 281474995276074] 70 registros
+[2025-05-24 04:18:03] INFO: [FINAL] Vehículo 281474995276074: 69 registros insertados
+[2025-05-24 04:18:03] INFO: [VEHÍCULO 281474995276402] 71 registros
+[2025-05-24 04:18:03] INFO: [FINAL] Vehículo 281474995276402: 70 registros insertados
+[2025-05-24 04:18:03] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:04] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 04:18:04] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:04] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 04:18:04] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:04] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:04] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:05] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 04:18:05] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-21 al 2025-05-24
+[2025-05-24 04:18:05] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-21 y 2025-05-24
+[2025-05-24 04:18:05] INFO: [FUEL-ENERGY] Día 1/4: 2025-05-21T00:00:00.00-07:00 a 2025-05-21T23:59:59.99-07:00
+[2025-05-24 04:18:05] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:05] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:05] INFO: [Página 1] Registros obtenidos: 14 | hasNext: False
+[2025-05-24 04:18:05] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:05] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:06] INFO: [Página 1] Registros obtenidos: 13 | hasNext: False
+[2025-05-24 04:18:06] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:06] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:07] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:18:07] INFO: [FUEL-ENERGY] Día 2/4: 2025-05-22T00:00:00.00-07:00 a 2025-05-22T23:59:59.99-07:00
+[2025-05-24 04:18:07] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:07] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:07] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:18:07] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:07] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:08] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:18:08] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:08] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:09] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:18:09] INFO: [FUEL-ENERGY] Día 3/4: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 04:18:09] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:09] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:09] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 04:18:09] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:09] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:10] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 04:18:10] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:10] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:11] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:11] INFO: [FUEL-ENERGY] Día 4/4: 2025-05-24T00:00:00.00-07:00 a 2025-05-24T23:59:59.99-07:00
+[2025-05-24 04:18:11] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:11] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:11] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:11] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:12] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:12] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:12] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:12] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:12] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:12] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 04:18:12] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:18:13] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 04:18:26] INFO: Cierre solicitado por el usuario.
+[2025-05-24 04:18:40] INFO: Intervalo configurado en 720 minutos
+[2025-05-24 04:18:40] INFO: Iniciando loop del scheduler...
+[2025-05-24 04:18:40] INFO: Ejecutando sincronización inicial...
+[2025-05-24 04:18:40] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 04:18:40] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 04:18:41] INFO: Catálogo sincronizado.
+[2025-05-24 04:18:41] INFO: [AUTO] Sincronizando con fecha actual: 2025-05-24
+[2025-05-24 04:18:41] INFO: [REPORTE] Fecha final es hoy. Ajustando fecha de inicio de reporte_combustible a 2025-05-21
+[2025-05-24 04:18:41] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 04:18:41] INFO: [Día 1/1] Fecha: 2025-05-24
+[2025-05-24 04:18:41] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 04:18:41] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:42] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:18:42] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:42] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:42] INFO: [VEHÍCULO 281474984438177] 104 registros
+[2025-05-24 04:18:42] INFO: [FINAL] Vehículo 281474984438177: 103 registros insertados
+[2025-05-24 04:18:42] INFO: [VEHÍCULO 281474984440532] 56 registros
+[2025-05-24 04:18:42] INFO: [FINAL] Vehículo 281474984440532: 55 registros insertados
+[2025-05-24 04:18:42] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:43] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:43] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:43] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 04:18:43] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:43] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:43] INFO: [VEHÍCULO 281474984490449] 10 registros
+[2025-05-24 04:18:43] INFO: [FINAL] Vehículo 281474984490449: 9 registros insertados
+[2025-05-24 04:18:43] INFO: [VEHÍCULO 281474984667006] 2 registros
+[2025-05-24 04:18:43] INFO: [FINAL] Vehículo 281474984667006: 1 registros insertados
+[2025-05-24 04:18:43] INFO: [VEHÍCULO 281474984779335] 127 registros
+[2025-05-24 04:18:43] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-24 07:56:32+00:00
+[2025-05-24 04:18:43] INFO: [FINAL] Vehículo 281474984779335: 125 registros insertados
+[2025-05-24 04:18:43] INFO: [VEHÍCULO 281474984780699] 3 registros
+[2025-05-24 04:18:43] INFO: [FINAL] Vehículo 281474984780699: 2 registros insertados
+[2025-05-24 04:18:43] INFO: [VEHÍCULO 281474984939926] 3 registros
+[2025-05-24 04:18:43] INFO: [FINAL] Vehículo 281474984939926: 2 registros insertados
+[2025-05-24 04:18:43] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:44] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 04:18:44] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:44] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 04:18:44] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:44] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:44] INFO: [VEHÍCULO 281474989145452] 11 registros
+[2025-05-24 04:18:44] INFO: [FINAL] Vehículo 281474989145452: 10 registros insertados
+[2025-05-24 04:18:44] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:45] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:45] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:46] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:18:46] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:46] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:46] INFO: [VEHÍCULO 281474995276074] 70 registros
+[2025-05-24 04:18:46] INFO: [FINAL] Vehículo 281474995276074: 69 registros insertados
+[2025-05-24 04:18:46] INFO: [VEHÍCULO 281474995276402] 71 registros
+[2025-05-24 04:18:46] INFO: [FINAL] Vehículo 281474995276402: 70 registros insertados
+[2025-05-24 04:18:46] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:46] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 04:18:46] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:18:47] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 04:18:47] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:18:47] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:18:47] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:18:47] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 04:18:47] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-21 al 2025-05-24
+[2025-05-24 04:18:47] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-21 y 2025-05-24
+[2025-05-24 04:18:48] INFO: [FUEL-ENERGY] Día 1/4: 2025-05-21T00:00:00.00-07:00 a 2025-05-21T23:59:59.99-07:00
+[2025-05-24 04:18:48] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:48] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:48] INFO: [Página 1] Registros obtenidos: 14 | hasNext: False
+[2025-05-24 04:18:48] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:48] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:49] INFO: [Página 1] Registros obtenidos: 13 | hasNext: False
+[2025-05-24 04:18:49] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:49] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:49] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:18:49] INFO: [FUEL-ENERGY] Día 2/4: 2025-05-22T00:00:00.00-07:00 a 2025-05-22T23:59:59.99-07:00
+[2025-05-24 04:18:49] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:50] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:50] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:18:50] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:50] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:51] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:18:51] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:51] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:51] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:18:51] INFO: [FUEL-ENERGY] Día 3/4: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 04:18:51] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:52] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:52] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 04:18:52] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:52] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:53] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 04:18:53] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:53] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:53] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:53] INFO: [FUEL-ENERGY] Día 4/4: 2025-05-24T00:00:00.00-07:00 a 2025-05-24T23:59:59.99-07:00
+[2025-05-24 04:18:53] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:18:53] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:54] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:54] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:18:54] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:54] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:54] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:18:54] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:18:55] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:18:55] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 04:18:55] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:18:55] INFO: Icono cargado y systray en ejecución.
+[2025-05-24 04:19:13] INFO: [STATUS] En ejecución
+[2025-05-24 04:19:20] INFO: Sincronización manual ejecutada
+[2025-05-24 04:19:20] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 04:19:20] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 04:19:21] INFO: Catálogo sincronizado.
+[2025-05-24 04:19:21] INFO: [AUTO] Sincronizando con fecha actual: 2025-05-24
+[2025-05-24 04:19:21] INFO: [REPORTE] Fecha final es hoy. Ajustando fecha de inicio de reporte_combustible a 2025-05-21
+[2025-05-24 04:19:21] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 04:19:22] INFO: [Día 1/1] Fecha: 2025-05-24
+[2025-05-24 04:19:22] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 04:19:22] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:19:23] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:19:23] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:19:23] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:19:23] INFO: [VEHÍCULO 281474984438177] 104 registros
+[2025-05-24 04:19:23] INFO: [FINAL] Vehículo 281474984438177: 103 registros insertados
+[2025-05-24 04:19:23] INFO: [VEHÍCULO 281474984440532] 57 registros
+[2025-05-24 04:19:23] INFO: [FINAL] Vehículo 281474984440532: 56 registros insertados
+[2025-05-24 04:19:23] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:19:23] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:19:23] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:19:24] INFO: [Página 1] Registros obtenidos: 5
+[2025-05-24 04:19:24] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:19:24] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:19:24] INFO: [VEHÍCULO 281474984490449] 10 registros
+[2025-05-24 04:19:24] INFO: [FINAL] Vehículo 281474984490449: 9 registros insertados
+[2025-05-24 04:19:24] INFO: [VEHÍCULO 281474984667006] 2 registros
+[2025-05-24 04:19:24] INFO: [FINAL] Vehículo 281474984667006: 1 registros insertados
+[2025-05-24 04:19:24] INFO: [VEHÍCULO 281474984779335] 127 registros
+[2025-05-24 04:19:24] INFO: [IGNORADO] Rebote post-recarga fuerte en 2025-05-24 07:56:32+00:00
+[2025-05-24 04:19:24] INFO: [FINAL] Vehículo 281474984779335: 125 registros insertados
+[2025-05-24 04:19:24] INFO: [VEHÍCULO 281474984780699] 3 registros
+[2025-05-24 04:19:24] INFO: [FINAL] Vehículo 281474984780699: 2 registros insertados
+[2025-05-24 04:19:24] INFO: [VEHÍCULO 281474984939926] 3 registros
+[2025-05-24 04:19:24] INFO: [FINAL] Vehículo 281474984939926: 2 registros insertados
+[2025-05-24 04:19:24] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:19:25] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 04:19:25] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:19:25] INFO: [Página 1] Registros obtenidos: 1
+[2025-05-24 04:19:25] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:19:25] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:19:25] INFO: [VEHÍCULO 281474989145452] 11 registros
+[2025-05-24 04:19:25] INFO: [FINAL] Vehículo 281474989145452: 10 registros insertados
+[2025-05-24 04:19:25] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:19:26] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:19:26] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:19:26] INFO: [Página 1] Registros obtenidos: 2
+[2025-05-24 04:19:26] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:19:26] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:19:26] INFO: [VEHÍCULO 281474995276074] 70 registros
+[2025-05-24 04:19:26] INFO: [FINAL] Vehículo 281474995276074: 69 registros insertados
+[2025-05-24 04:19:26] INFO: [VEHÍCULO 281474995276402] 71 registros
+[2025-05-24 04:19:26] INFO: [FINAL] Vehículo 281474995276402: 70 registros insertados
+[2025-05-24 04:19:26] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:19:27] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 04:19:27] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:19:27] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 04:19:27] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:19:27] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:19:27] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:19:28] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 04:19:28] INFO: [REPORTE] Intentando no insertar resumen diario del 2025-05-21 al 2025-05-24
+[2025-05-24 04:19:28] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2025-05-21 y 2025-05-24
+[2025-05-24 04:19:28] INFO: [FUEL-ENERGY] Día 1/4: 2025-05-21T00:00:00.00-07:00 a 2025-05-21T23:59:59.99-07:00
+[2025-05-24 04:19:28] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:19:28] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:29] INFO: [Página 1] Registros obtenidos: 14 | hasNext: False
+[2025-05-24 04:19:29] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:19:29] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:30] INFO: [Página 1] Registros obtenidos: 13 | hasNext: False
+[2025-05-24 04:19:30] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:19:30] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:31] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:19:31] INFO: [FUEL-ENERGY] Día 2/4: 2025-05-22T00:00:00.00-07:00 a 2025-05-22T23:59:59.99-07:00
+[2025-05-24 04:19:31] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:19:31] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:32] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:19:32] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:19:32] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:32] INFO: [Página 1] Registros obtenidos: 12 | hasNext: False
+[2025-05-24 04:19:32] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:19:32] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:33] INFO: [Página 1] Registros obtenidos: 1 | hasNext: False
+[2025-05-24 04:19:33] INFO: [FUEL-ENERGY] Día 3/4: 2025-05-23T00:00:00.00-07:00 a 2025-05-23T23:59:59.99-07:00
+[2025-05-24 04:19:33] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:19:33] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:34] INFO: [Página 1] Registros obtenidos: 11 | hasNext: False
+[2025-05-24 04:19:34] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:19:34] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:35] INFO: [Página 1] Registros obtenidos: 10 | hasNext: False
+[2025-05-24 04:19:35] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:19:35] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:36] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:19:36] INFO: [FUEL-ENERGY] Día 4/4: 2025-05-24T00:00:00.00-07:00 a 2025-05-24T23:59:59.99-07:00
+[2025-05-24 04:19:36] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:19:36] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:40] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:19:40] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:19:40] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:40] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:19:40] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:19:40] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:19:43] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:19:43] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 04:19:43] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:20:23] INFO: [MANUAL] FECHA_CONSULTA_INICIO actualizada a 2024-05-29
+[2025-05-24 04:20:23] INFO: [MANUAL] FECHA_CONSULTA_FIN actualizada a 2024-05-29
+[2025-05-24 04:20:23] INFO: [DEBUG] FECHA_CONSULTA_INICIO leída: 2024-05-29
+[2025-05-24 04:20:23] INFO: [DEBUG] FECHA_CONSULTA_FIN leída: 2024-05-29
+[2025-05-24 04:20:23] INFO: ---- INICIO DE SINCRONIZACIÓN ----
+[2025-05-24 04:20:23] INFO: Sincronizando catálogo de vehículos...
+[2025-05-24 04:20:24] INFO: Catálogo sincronizado.
+[2025-05-24 04:20:24] INFO: [MANUAL] Sincronizando con fechas: 2024-05-29 a 2024-05-29
+[2025-05-24 04:20:24] INFO: Iniciando descarga de datos históricos de combustible...
+[2025-05-24 04:20:24] INFO: [Día 1/1] Fecha: 2024-05-29
+[2025-05-24 04:20:24] INFO: Procesando lote 1/5: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038']
+[2025-05-24 04:20:24] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:20:28] INFO: [Página 1] Registros obtenidos: 7
+[2025-05-24 04:20:28] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:20:28] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:20:28] INFO: [VEHÍCULO 281474984421245] 207 registros
+[2025-05-24 04:20:28] INFO: [FINAL] Vehículo 281474984421245: 206 registros insertados
+[2025-05-24 04:20:28] INFO: [VEHÍCULO 281474984438177] 179 registros
+[2025-05-24 04:20:28] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 16:43:45+00:00
+[2025-05-24 04:20:28] INFO: [FINAL] Vehículo 281474984438177: 177 registros insertados
+[2025-05-24 04:20:28] INFO: [VEHÍCULO 281474984440532] 355 registros
+[2025-05-24 04:20:28] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 12:55:57+00:00
+[2025-05-24 04:20:28] INFO: [FINAL] Vehículo 281474984440532: 353 registros insertados
+[2025-05-24 04:20:28] INFO: [VEHÍCULO 281474984454844] 297 registros
+[2025-05-24 04:20:28] INFO: [FINAL] Vehículo 281474984454844: 296 registros insertados
+[2025-05-24 04:20:28] INFO: [VEHÍCULO 281474984468469] 205 registros
+[2025-05-24 04:20:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 19:11:26+00:00
+[2025-05-24 04:20:29] INFO: [FINAL] Vehículo 281474984468469: 203 registros insertados
+[2025-05-24 04:20:29] INFO: [VEHÍCULO 281474984471474] 235 registros
+[2025-05-24 04:20:29] INFO: [FINAL] Vehículo 281474984471474: 234 registros insertados
+[2025-05-24 04:20:29] INFO: [VEHÍCULO 281474984489038] 202 registros
+[2025-05-24 04:20:29] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 22:22:01+00:00
+[2025-05-24 04:20:29] INFO: [FINAL] Vehículo 281474984489038: 200 registros insertados
+[2025-05-24 04:20:29] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:20:29] INFO: Procesando lote 2/5: ['281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:20:29] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:20:35] INFO: [Página 1] Registros obtenidos: 10
+[2025-05-24 04:20:35] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:20:35] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984490449] 79 registros
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984490449: 78 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984667006] 190 registros
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984667006: 189 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984692138] 181 registros
+[2025-05-24 04:20:35] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 16:42:46+00:00
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984692138: 179 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984728012] 140 registros
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984728012: 139 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984779335] 314 registros
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984779335: 313 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984780699] 167 registros
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984780699: 166 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984796823] 193 registros
+[2025-05-24 04:20:35] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 19:41:07+00:00
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984796823: 191 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984884925] 392 registros
+[2025-05-24 04:20:35] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 05:52:23+00:00
+[2025-05-24 04:20:35] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 05:56:23+00:00
+[2025-05-24 04:20:35] INFO: [IGNORADO] Evento ignorado por ser muy cercano (7.0s) y sin cambio relevante
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984884925: 388 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984917931] 72 registros
+[2025-05-24 04:20:35] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 19:35:38+00:00
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984917931: 70 registros insertados
+[2025-05-24 04:20:35] INFO: [VEHÍCULO 281474984939926] 239 registros
+[2025-05-24 04:20:35] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 23:38:21+00:00
+[2025-05-24 04:20:35] INFO: [FINAL] Vehículo 281474984939926: 237 registros insertados
+[2025-05-24 04:20:35] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:20:36] INFO: Procesando lote 3/5: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433']
+[2025-05-24 04:20:36] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:20:39] INFO: [Página 1] Registros obtenidos: 7
+[2025-05-24 04:20:39] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:20:39] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:20:39] INFO: [VEHÍCULO 281474985214514] 346 registros
+[2025-05-24 04:20:39] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 08:46:14+00:00
+[2025-05-24 04:20:39] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 11:22:16+00:00
+[2025-05-24 04:20:39] INFO: [FINAL] Vehículo 281474985214514: 343 registros insertados
+[2025-05-24 04:20:39] INFO: [VEHÍCULO 281474985251012] 206 registros
+[2025-05-24 04:20:39] INFO: [FINAL] Vehículo 281474985251012: 205 registros insertados
+[2025-05-24 04:20:39] INFO: [VEHÍCULO 281474985273793] 86 registros
+[2025-05-24 04:20:39] INFO: [FINAL] Vehículo 281474985273793: 85 registros insertados
+[2025-05-24 04:20:39] INFO: [VEHÍCULO 281474985935537] 337 registros
+[2025-05-24 04:20:40] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 14:34:07+00:00
+[2025-05-24 04:20:40] INFO: [FINAL] Vehículo 281474985935537: 335 registros insertados
+[2025-05-24 04:20:40] INFO: [VEHÍCULO 281474989145452] 286 registros
+[2025-05-24 04:20:40] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 14:51:17+00:00
+[2025-05-24 04:20:40] INFO: [FINAL] Vehículo 281474989145452: 284 registros insertados
+[2025-05-24 04:20:40] INFO: [VEHÍCULO 281474989447234] 302 registros
+[2025-05-24 04:20:40] INFO: [IGNORADO] Evento ignorado por ser muy cercano (14.0s) y sin cambio relevante
+[2025-05-24 04:20:40] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 10:48:54+00:00
+[2025-05-24 04:20:40] INFO: [FINAL] Vehículo 281474989447234: 299 registros insertados
+[2025-05-24 04:20:40] INFO: [VEHÍCULO 281474989447252] 144 registros
+[2025-05-24 04:20:40] INFO: [IGNORADO] Rebote post-recarga fuerte en 2024-05-29 18:03:05+00:00
+[2025-05-24 04:20:40] INFO: [FINAL] Vehículo 281474989447252: 142 registros insertados
+[2025-05-24 04:20:40] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:20:40] INFO: Procesando lote 4/5: ['281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:20:40] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:20:41] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 04:20:41] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:20:41] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:20:41] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:20:42] INFO: Procesando lote 5/5: ['281474995511888']
+[2025-05-24 04:20:42] INFO: [Página 1] Solicitando datos con cursor: None
+[2025-05-24 04:20:42] INFO: [Página 1] Registros obtenidos: 0
+[2025-05-24 04:20:42] INFO: [Página 1] hasNextPage = False | endCursor = 
+[2025-05-24 04:20:42] INFO: [Página 1] Fin de paginación alcanzado.
+[2025-05-24 04:20:42] INFO: Lote procesado correctamente. Esperando 0.5 segundos...
+[2025-05-24 04:20:43] INFO: ---- Desarrollo DE SINCRONIZACIÓN ----
+[2025-05-24 04:20:43] INFO: [REPORTE] Intentando no insertar resumen diario del 2024-05-29 al 2024-05-29
+[2025-05-24 04:20:43] INFO: [FUEL-ENERGY] Sincronizando resumen de combustible entre 2024-05-29 y 2024-05-29
+[2025-05-24 04:20:43] INFO: [FUEL-ENERGY] Día 1/1: 2024-05-29T00:00:00.00-07:00 a 2024-05-29T23:59:59.99-07:00
+[2025-05-24 04:20:43] INFO: [Lote 1/3] Vehículos: ['281474981704538', '281474981977227', '281474984421245', '281474984438177', '281474984440532', '281474984454844', '281474984466754', '281474984468469', '281474984471474', '281474984489038', '281474984490449', '281474984667006', '281474984692138', '281474984728012', '281474984779335', '281474984780699', '281474984796823', '281474984884925', '281474984917931', '281474984939926']
+[2025-05-24 04:20:43] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:20:44] INFO: [Página 1] Registros obtenidos: 17 | hasNext: False
+[2025-05-24 04:20:44] INFO: [Lote 2/3] Vehículos: ['281474985214514', '281474985251012', '281474985273793', '281474985935537', '281474989145452', '281474989447234', '281474989447252', '281474992703779', '281474992992431', '281474992992433', '281474992992552', '281474992996203', '281474995150482', '281474995276012', '281474995276074', '281474995276402', '281474995276403', '281474995276404', '281474995276405', '281474995511352']
+[2025-05-24 04:20:44] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:20:44] INFO: [Página 1] Registros obtenidos: 7 | hasNext: False
+[2025-05-24 04:20:44] INFO: [Lote 3/3] Vehículos: ['281474995511888']
+[2025-05-24 04:20:44] INFO: [Página 1] Solicitando con cursor: None
+[2025-05-24 04:20:45] INFO: [Página 1] Registros obtenidos: 0 | hasNext: False
+[2025-05-24 04:20:45] INFO: [FUEL-ENERGY] Sincronización completa.
+[2025-05-24 04:20:45] INFO: ---- FIN DE SINCRONIZACIÓN ----
+[2025-05-24 04:22:13] INFO: Cierre solicitado por el usuario.

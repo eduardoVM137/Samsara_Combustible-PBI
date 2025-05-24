@@ -1,6 +1,7 @@
 import logging
 import os
 from pathlib import Path
+from logging.handlers import RotatingFileHandler
 
 def setup_logger():
     logger = logging.getLogger("samsara_sync")
@@ -11,8 +12,10 @@ def setup_logger():
         base_dir = Path(__file__).resolve().parent.parent
         log_path = base_dir / "samsara_sync.log"
 
-        # Handler para archivo
-        file_handler = logging.FileHandler(log_path, encoding="utf-8")
+        # Handler para archivo con rotación por tamaño (2 MB, 3 backups)
+        file_handler = RotatingFileHandler(
+            log_path, maxBytes=2*1024*1024, backupCount=3, encoding="utf-8"
+        )
         
         # Handler para consola
         console_handler = logging.StreamHandler()
@@ -24,7 +27,7 @@ def setup_logger():
 
         logger.addHandler(file_handler)
         logger.addHandler(console_handler)
-
+        
         # OPCIONAL: Para rotación de logs cada cierto tamaño
         # from logging.handlers import RotatingFileHandler
         # rotating_handler = RotatingFileHandler(log_path, maxBytes=5_000_000, backupCount=3, encoding='utf-8')

@@ -7,3 +7,4 @@ pystray
 Pillow
 pytz
 tkcalendar
+pyinstaller
