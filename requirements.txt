@@ -8,3 +8,5 @@ Pillow
 pytz
 tkcalendar
 pyinstaller
+winshell
+pywin32

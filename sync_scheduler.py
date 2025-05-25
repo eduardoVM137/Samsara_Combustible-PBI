@@ -14,7 +14,7 @@ from api.samsara_client import (
 )
 from db.database import get_vehicle_capacities, get_last_sync_times
 from utils.logger import logger
-
+from db.init_db import init_database,create_tables,agregar_inicio_startup
 INTERVAL = int(os.getenv("INTERVAL", 720))
 
 def obtener_fecha_inicio_manual():
@@ -35,6 +35,11 @@ def tarea_sincronizacion(fecha_inicio=None, fecha_fin=None):
     Si se pasan fechas, usa esas fechas (modo manual).
     """
     try:
+        logger.info("---- Buscado Existencia de Base de Datos ----")
+        init_database()
+        create_tables()
+        #agregar_inicio_startup()
+        
         logger.info("---- INICIO DE SINCRONIZACIÓN ----")
         sincronizar_catalogo_vehiculos()
         capacidades = get_vehicle_capacities()
